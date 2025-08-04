@@ -124,25 +124,25 @@ const impactData = [
     {
         icon: Rocket,
         title: '40% Faster Completion',
-        description: 'Complete assignments in less than 24 hours...',
+        description: 'Complete assignments in less than 24 hours, enabling students to meet tight deadlines and free up more time for other priorities.',
         color: 'hsl(var(--neon-cyan))',
     },
     {
         icon: Smile,
         title: 'Up to 30% Less Stress',
-        description: 'Outsourcing assignments...',
+        description: 'Outsourcing assignments to professionals reduces anxiety and pressure, allowing students to focus on what truly matters.',
         color: 'hsl(var(--neon-green))',
     },
     {
         icon: TrendingDown,
         title: '1.5x Higher Grade Improvement',
-        description: 'Higher-quality, professionally completed...',
+        description: 'Receive higher-quality, professionally completed assignments that result in improved academic performance.',
         color: 'hsl(var(--neon-pink))',
     },
     {
         icon: Lock,
         title: '100% Secure and Anonymous',
-        description: 'Full confidentiality...',
+        description: 'Every assignment is handled with full confidentiality, ensuring your academic privacy and security.',
         color: 'hsl(var(--neon-blue))',
     },
 ];
