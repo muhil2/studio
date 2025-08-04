@@ -322,7 +322,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="problems" className="py-16 md:py-24 bg-white text-black">
+        <section id="problems" className="py-16 md:py-24 bg-red-50 text-black">
           <div className="container mx-auto px-4">
             <div className="flex justify-center mb-4">
               <AlertTriangle className="w-12 h-12 text-destructive" />
