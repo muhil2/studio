@@ -31,6 +31,11 @@ import {
   Zap,
   AlertTriangle,
   Lightbulb,
+  Presentation,
+  DraftingCompass,
+  Cog,
+  AppWindow,
+  Computer,
 } from 'lucide-react';
 
 import { AnimatedCounter } from '@/components/animated-counter';
@@ -154,39 +159,63 @@ const impactData = [
 
 const services = [
   {
-    title: 'Academic Writing',
-    description: 'Expertly written essays, reports, and papers on any subject.',
-    icon: PenTool,
+    title: 'Presentation Slides',
+    description: 'Visually stunning presentations for academic and professional needs.',
+    icon: Presentation,
     href: '#contact',
   },
   {
-    title: 'Thesis & Research Paper',
-    description: 'Comprehensive support for your thesis and research projects.',
-    icon: BookOpen,
-    href: 'https://wa.me/8801627145339?text=Hi%20Muhil,%20I%27d%20like%20to%20inquire%20about%20your%20Thesis%20writing%20services.',
-  },
-  {
-    title: 'Software Development',
-    description: 'Custom software solutions and coding assignments.',
-    icon: Code,
+    title: 'AutoCad',
+    description: 'Precise and professional CAD drawings and designs.',
+    icon: DraftingCompass,
     href: '#contact',
   },
   {
-    title: 'Technical Services',
-    description: 'Specialized technical writing and documentation.',
+    title: 'Case Studies',
+    description: 'In-depth analysis and writing for complex case studies.',
     icon: FileText,
     href: '#contact',
   },
   {
-    title: 'Proofreading & Editing',
-    description: 'Meticulous proofreading to perfect your documents.',
-    icon: Award,
+    title: 'Thesis & Research Papers',
+    description: 'Comprehensive support for your thesis and research projects.',
+    icon: BookOpen,
     href: '#contact',
   },
   {
-    title: 'Presentation Design',
-    description: 'Visually stunning presentations for academic and professional needs.',
-    icon: GraduationCap,
+    title: 'Report/Content/Article Writing',
+    description: 'Expertly written reports, content, and articles on any subject.',
+    icon: PenTool,
+    href: '#contact',
+  },
+  {
+    title: 'Engineering Assignments (All Course)',
+    description: 'Specialized help with all types of engineering assignments.',
+    icon: Cog,
+    href: '#contact',
+  },
+  {
+    title: 'CSE Assignments (All Course)',
+    description: 'Expert assistance with computer science and engineering coursework.',
+    icon: Code,
+    href: '#contact',
+  },
+  {
+    title: 'MS Office',
+    description: 'Proficient handling of all Microsoft Office suite applications.',
+    icon: AppWindow,
+    href: '#contact',
+  },
+  {
+    title: 'Software Development',
+    description: 'Custom software solutions and coding assignments.',
+    icon: Computer,
+    href: '#contact',
+  },
+  {
+    title: 'Web Design',
+    description: 'Creative and functional web design services.',
+    icon: Globe,
     href: '#contact',
   },
 ];
@@ -278,7 +307,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="problems" className="py-16 md:py-24 bg-white text-black border-t border-b border-destructive">
+        <section id="problems" className="py-16 md:py-24 bg-white text-black border-t-2 border-b-2 border-destructive">
           <div className="container mx-auto px-4">
             <h2 className="text-3xl md:text-4xl font-bold text-center font-headline text-foreground">
               The Problem With Submitting Assignments No One Talks About
@@ -307,7 +336,7 @@ export default function Home() {
             <p className="mt-4 text-center text-gray-400 max-w-2xl mx-auto">
               Offering a range of professional services to help you succeed academically and professionally.
             </p>
-            <div className="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
               {services.map((service) => (
                 <Link href={service.href} key={service.title} target={service.href.startsWith('http') ? '_blank' : '_self'} className="group">
                   <Card className="h-full text-center bg-gray-900 border-gray-800 text-white hover:shadow-xl hover:-translate-y-2 transition-all duration-300">
@@ -333,7 +362,7 @@ export default function Home() {
           <div className="container mx-auto px-4">
             <div className="text-center">
               <div className="flex justify-center mb-4">
-                <div className="p-4 bg-green-100 rounded-full hover:bg-green-200 hover:shadow-[0_0_15px_3px] hover:shadow-green-300/70 transition-all duration-300">
+                <div className="group p-4 bg-green-100 rounded-full hover:bg-green-200 transition-all duration-300 hover:shadow-[0_0_15px_3px_rgba(52,211,153,0.7)]">
                     <Lightbulb className="w-12 h-12 text-green-500" />
                 </div>
               </div>
@@ -510,5 +539,3 @@ export default function Home() {
     </div>
   );
 }
-
-    
