@@ -63,7 +63,7 @@ const problems = [
     color: 'hsl(var(--neon-red))',
     frontText: 'Insufficient Time for Assignments',
     backText:
-      'Insufficient Time for Assignments<br/><br/>International students often juggle part-time jobs (20–30 hrs/week) with full-time studies.<br/><br/>63% of students get only 2–3 hours a day for academic work.<br/><br/>This leads to last-minute submissions and lower grades.',
+      'International students often juggle part-time jobs (20–30 hrs/week) with full-time studies.<br/><br/>63% of students get only 2–3 hours a day for academic work.<br/><br/>This leads to last-minute submissions and lower grades.',
     imageUrl: "https://imgur.com/brxJyWi.png"
   },
   {
@@ -272,7 +272,7 @@ export default function Home() {
   return (
     <div className="flex flex-col min-h-screen bg-background">
       <main className="flex-grow">
-      <section id="home" className="bg-sky-100 text-black py-16 md:py-24 overflow-hidden">
+      <section id="home" className="bg-sky-100 text-black py-16 md:py-24">
           <div className="container mx-auto px-4">
             <div className="flex flex-col items-center text-center">
               <p className="font-calibri text-3xl md:text-4xl font-bold mb-8 italic bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 text-transparent bg-clip-text">
@@ -309,19 +309,27 @@ export default function Home() {
                   </div>
                 ))}
               </div>
-              <div className="flex flex-col sm:flex-row justify-center items-center gap-4">
-                <Button asChild size="lg" className="bg-[#25D366] hover:bg-[#1EBE57] text-white font-bold transition-transform transform hover:scale-105">
-                  <Link href="https://wa.me/qr/S4BGHXIR6WOKN1" target="_blank" className="flex flex-col leading-none">
-                    <span>Hire Me</span>
-                    <span className="text-xs font-normal">Through Whatsapp</span>
+              <div className="flex flex-col sm:flex-row justify-center items-center gap-8">
+                <div className="flex flex-col items-center gap-2">
+                  <Button asChild size="lg" className="bg-[#25D366] hover:bg-[#1EBE57] text-white font-bold transition-transform transform hover:scale-105">
+                    <Link href="https://wa.me/qr/S4BGHXIR6WOKN1" target="_blank">
+                      Hire Me
+                    </Link>
+                  </Button>
+                  <Link href="https://wa.me/qr/S4BGHXIR6WOKN1" target="_blank" aria-label="WhatsApp">
+                    <WhatsappIcon className="w-8 h-8 text-[#25D366] hover:opacity-80 transition-opacity" />
                   </Link>
-                </Button>
-                <Button asChild size="lg" className="bg-[#1877F2] hover:bg-[#166FE5] text-white font-bold transition-transform transform hover:scale-105">
-                  <Link href="https://www.facebook.com/muhil.hadi.2024" target="_blank" className="flex flex-col leading-none">
-                    <span>Hire Me</span>
-                    <span className="text-xs font-normal">Through Facebook</span>
+                </div>
+                <div className="flex flex-col items-center gap-2">
+                  <Button asChild size="lg" className="bg-[#1877F2] hover:bg-[#166FE5] text-white font-bold transition-transform transform hover:scale-105">
+                    <Link href="https://www.facebook.com/muhil.hadi.2024" target="_blank">
+                      Hire Me
+                    </Link>
+                  </Button>
+                  <Link href="https://www.facebook.com/muhil.hadi.2024" target="_blank" aria-label="Facebook">
+                    <Facebook className="w-8 h-8 text-[#1877F2] hover:opacity-80 transition-opacity" />
                   </Link>
-                </Button>
+                </div>
               </div>
             </div>
           </div>
