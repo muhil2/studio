@@ -26,6 +26,7 @@ import {
   Smile,
   Star,
   Target,
+  TrendingUp,
   TrendingDown,
   Users,
   Zap,
@@ -146,7 +147,7 @@ const impactData = [
         color: 'hsl(var(--neon-pink))',
     },
     {
-        icon: TrendingDown,
+        icon: TrendingUp,
         title: '1.5x Higher Grade Improvement',
         description: 'Receive higher-quality, professionally completed assignments that result in improved academic performance.',
         color: 'hsl(var(--neon-green))',
