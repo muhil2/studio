@@ -17,38 +17,38 @@ interface TestimonialSliderProps {
 
 export function TestimonialSlider({ testimonials }: TestimonialSliderProps) {
   const sliderRef = useRef<HTMLDivElement>(null);
+  const animationFrameRef = useRef<number>();
+
+  const startAnimation = () => {
+    const slider = sliderRef.current;
+    if (!slider) return;
+
+    const scroll = () => {
+      slider.scrollLeft += 0.5;
+      if (slider.scrollLeft >= slider.scrollWidth / 2) {
+        slider.scrollLeft = 0;
+      }
+      animationFrameRef.current = requestAnimationFrame(scroll);
+    };
+    animationFrameRef.current = requestAnimationFrame(scroll);
+  };
+
+  const stopAnimation = () => {
+    if (animationFrameRef.current) {
+      cancelAnimationFrame(animationFrameRef.current);
+    }
+  };
 
   useEffect(() => {
     const slider = sliderRef.current;
     if (!slider) return;
 
-    let animationFrameId: number;
-
-    const scroll = () => {
-      if (slider) {
-        slider.scrollLeft += 0.5;
-        if (slider.scrollLeft >= slider.scrollWidth / 2) {
-          slider.scrollLeft = 0;
-        }
-      }
-      animationFrameId = requestAnimationFrame(scroll);
-    };
-
-    const startAnimation = () => {
-        animationFrameId = requestAnimationFrame(scroll);
-    };
-
-    const stopAnimation = () => {
-        cancelAnimationFrame(animationFrameId);
-    };
-
+    startAnimation();
     slider.addEventListener('mouseenter', stopAnimation);
     slider.addEventListener('mouseleave', startAnimation);
-    
-    startAnimation();
 
     return () => {
-      cancelAnimationFrame(animationFrameId);
+      stopAnimation();
       if (slider) {
         slider.removeEventListener('mouseenter', stopAnimation);
         slider.removeEventListener('mouseleave', startAnimation);
