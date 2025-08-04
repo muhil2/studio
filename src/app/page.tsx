@@ -56,7 +56,7 @@ const problems = [
     frontText: 'Insufficient Time for Assignments',
     backText:
       'International students often work part-time (20–30 hrs/week) besides full-time studies. 63% say they barely get 2–3 hours a day for academic work. | Result: last-minute submissions & lower grades.',
-    imageUrl: "https://placehold.co/400x400.png"
+    imageUrl: "https://imgur.com/brxJyWi.png"
   },
   {
     title: 'Academic Stress & Mental Fatigue',
