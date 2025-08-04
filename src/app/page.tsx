@@ -501,59 +501,59 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="contact" className="py-16 md:py-24 bg-secondary">
+        <section id="contact" className="py-16 md:py-24 bg-black">
           <div className="container mx-auto px-4">
             <div className="flex justify-center mb-4">
                 <div className="p-3 bg-primary/10 rounded-full">
                     <Phone className="w-12 h-12 text-primary" />
                 </div>
             </div>
-            <h2 className="text-3xl md:text-4xl font-bold text-center font-headline text-foreground">
+            <h2 className="text-3xl md:text-4xl font-bold text-center font-headline text-white">
               Get In Touch
             </h2>
-            <p className="mt-4 text-center text-muted-foreground max-w-2xl mx-auto">
+            <p className="mt-4 text-center text-gray-400 max-w-2xl mx-auto">
               Ready to start? Have a question? Reach out to me, and I'll get back to you promptly.
             </p>
             <div className="mt-12 max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12">
               <div className="flex flex-col space-y-6">
                 <div className="flex items-start gap-4">
-                  <div className="p-3 bg-primary/10 rounded-full">
+                  <div className="p-3 bg-gray-800 rounded-full">
                     <Mail className="w-6 h-6 text-red-600" />
                   </div>
                   <div>
-                    <h3 className="font-bold text-lg text-foreground">Email</h3>
-                    <a href="mailto:assignmentyess@gmail.com" className="text-muted-foreground hover:text-primary transition-colors">
+                    <h3 className="font-bold text-lg text-white">Email</h3>
+                    <a href="mailto:assignmentyess@gmail.com" className="text-gray-400 hover:text-primary transition-colors">
                       assignmentyess@gmail.com
                     </a>
                   </div>
                 </div>
                 <div className="flex items-start gap-4">
-                   <div className="p-3 bg-primary/10 rounded-full">
+                   <div className="p-3 bg-gray-800 rounded-full">
                     <WhatsappIcon className="w-6 h-6 text-green-500" />
                   </div>
                   <div>
-                    <h3 className="font-bold text-lg text-foreground">Phone / WhatsApp</h3>
-                    <a href="tel:+8801627145339" className="text-muted-foreground hover:text-primary transition-colors">
+                    <h3 className="font-bold text-lg text-white">Phone / WhatsApp</h3>
+                    <a href="tel:+8801627145339" className="text-gray-400 hover:text-primary transition-colors">
                       +8801627145339
                     </a>
                   </div>
                 </div>
                 <div className="flex items-start gap-4">
-                  <div className="p-3 bg-primary/10 rounded-full">
+                  <div className="p-3 bg-gray-800 rounded-full">
                     <MapPin className="w-6 h-6 text-primary" />
                   </div>
                   <div>
-                    <h3 className="font-bold text-lg text-foreground">Location</h3>
-                    <p className="text-muted-foreground">Bangladesh</p>
+                    <h3 className="font-bold text-lg text-white">Location</h3>
+                    <p className="text-gray-400">Bangladesh</p>
                   </div>
                 </div>
-                <Separator className="my-4" />
+                <Separator className="my-4 bg-gray-800" />
                 <div>
-                  <h3 className="font-bold text-lg text-foreground mb-4">Connect With Me</h3>
+                  <h3 className="font-bold text-lg text-white mb-4">Connect With Me</h3>
                    <div className="flex space-x-4">
                     {socialLinks.map((social) => (
                       <Link href={social.href} key={social.name} target="_blank" aria-label={social['aria-label']}>
-                         <Button variant="outline" size="icon" className="group h-12 w-12 rounded-full transition-all hover:bg-transparent hover:glow-border" style={{'--glow-color': social.glowColor} as React.CSSProperties}>
+                         <Button variant="outline" size="icon" className="group h-12 w-12 rounded-full bg-gray-800 border-gray-700 transition-all hover:bg-gray-800 hover:border-transparent hover:glow-border" style={{'--glow-color': social.glowColor} as React.CSSProperties}>
                             <social.icon className={`h-6 w-6 ${social.color} transition-colors`} />
                           </Button>
                       </Link>
@@ -561,7 +561,7 @@ export default function Home() {
                   </div>
                 </div>
               </div>
-              <div className="bg-card p-8 rounded-lg shadow-lg">
+              <div className="bg-gray-900 p-8 rounded-lg shadow-lg">
                 <ContactForm />
               </div>
             </div>
