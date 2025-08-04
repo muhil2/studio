@@ -255,15 +255,9 @@ export default function Home() {
               </div>
               <div className="md:w-1/2 mt-12 md:mt-0 flex justify-center md:justify-end">
                 <div className="relative w-60 h-60 md:w-80 md:h-80">
-                  <div 
-                    className="absolute inset-0 rounded-full" 
-                    style={{boxShadow: '0 0 40px 10px hsl(var(--neon-purple)), 0 0 20px 5px hsl(var(--neon-purple)) inset'}}
-                  />
                   <div
-                    className="relative w-full h-full rounded-full border-4"
-                    style={{'--glow-color': 'hsl(var(--neon-cyan))' } as React.CSSProperties}
+                    className="relative w-full h-full rounded-full border-4 border-blue-500"
                   >
-                    <div className="absolute -inset-1 rounded-full glow-border" />
                     <Image
                       src="https://i.imgur.com/QllfG6k.jpeg"
                       alt="Muhil Hadi"
