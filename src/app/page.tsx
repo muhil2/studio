@@ -56,6 +56,7 @@ const problems = [
     frontText: 'Insufficient Time for Assignments',
     backText:
       'International students often work part-time (20–30 hrs/week) besides full-time studies. 63% say they barely get 2–3 hours a day for academic work. | Result: last-minute submissions & lower grades.',
+    imageUrl: "https://placehold.co/400x400.png"
   },
   {
     title: 'Academic Stress & Mental Fatigue',
@@ -64,6 +65,7 @@ const problems = [
     frontText: 'Academic Stress & Mental Fatigue',
     backText:
       'Balancing studies, jobs, and living abroad causes high mental strain. 7 out of 10 international students report burnout due to assignment pressure. | Result: anxiety, poor focus, lack of motivation.',
+    imageUrl: "https://placehold.co/400x400.png"
   },
   {
     title: 'Sleepless & Exhausting Routines',
@@ -72,6 +74,7 @@ const problems = [
     frontText: 'Sleepless & Exhausting Routines',
     backText:
       'Many survive on <5 hrs of sleep due to tight deadlines and multiple tasks. 54% admit pulling all-nighters before submission dates. | Result: low-quality rushed assignments.',
+    imageUrl: "https://placehold.co/400x400.png"
   },
   {
     title: 'Strict Formatting & Referencing Rules',
@@ -80,6 +83,7 @@ const problems = [
     frontText: 'Strict Formatting & Referencing Rules',
     backText:
       'Universities abroad are very strict about APA/Harvard/IEEE formats. 47% students lose marks only because of formatting errors. | Result: dissatisfied students despite hard work.',
+    imageUrl: 'https://i.imgur.com/kLKAuHw.png'
   },
   {
     title: 'Overlapping Deadlines Every Month',
@@ -88,6 +92,7 @@ const problems = [
     frontText: 'Overlapping Deadlines Every Month',
     backText:
       'Multiple courseworks are often due within the same week. 72% submit assignments just 1–2 hours before the deadline. | Result: stress, panic & compromised quality.',
+    imageUrl: "https://placehold.co/400x400.png"
   },
 ];
 
@@ -287,7 +292,7 @@ export default function Home() {
                   color={problem.color}
                   frontText={problem.frontText}
                   backText={problem.backText}
-                  imageUrl="https://placehold.co/400x400.png"
+                  imageUrl={problem.imageUrl}
                 />
               ))}
             </div>
