@@ -13,6 +13,7 @@ export default {
         body: ['"PT Sans"', 'sans-serif'],
         headline: ['"Times New Roman"', 'Times', 'serif'],
         code: ['monospace'],
+        calibri: ['Calibri', 'sans-serif'],
       },
       colors: {
         background: 'hsl(var(--background))',

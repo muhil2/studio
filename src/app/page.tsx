@@ -343,7 +343,7 @@ export default function Home() {
                   <Card key={benefit.title} className="group p-6 border-2 bg-blue-950 text-white border-transparent hover:border-[var(--glow-color)] hover:shadow-lg transition-all" style={{ '--glow-color': benefit.color } as React.CSSProperties}>
                       <div className="flex items-center gap-4 mb-3">
                           <benefit.icon className="w-8 h-8" style={{ color: benefit.color }}/>
-                          <h3 className="text-xl font-bold font-headline">{benefit.title}</h3>
+                          <h3 className="text-xl font-bold font-calibri">{benefit.title}</h3>
                       </div>
                       <p className="text-gray-300">{benefit.description}</p>
                   </Card>
