@@ -373,7 +373,7 @@ export default function Home() {
                           <service.icon className="w-8 h-8 text-primary" />
                         </div>
                       </div>
-                      <CardTitle className={`${service.title === 'Presentation Slides' ? 'font-calibri' : 'font-headline'} text-white`}>{service.title}</CardTitle>
+                      <CardTitle className="font-headline text-white">{service.title}</CardTitle>
                     </CardHeader>
                     <CardContent className="flex-grow">
                       <p className="text-gray-400">{service.description}</p>
