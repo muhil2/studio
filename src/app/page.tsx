@@ -565,7 +565,7 @@ export default function Home() {
                     {socialLinks.map((social) => (
                       <Link href={social.href} key={social.name} target="_blank" aria-label={social['aria-label']}>
                          <Button variant="outline" size="icon" className="group h-12 w-12 rounded-full transition-all hover:bg-transparent hover:glow-border" style={{'--glow-color': social.glowColor} as React.CSSProperties}>
-                            <social.icon className={`h-6 w-6 ${social.color} group-hover:text-white transition-colors`} />
+                            <social.icon className={`h-6 w-6 ${social.color} transition-colors`} />
                           </Button>
                       </Link>
                     ))}
