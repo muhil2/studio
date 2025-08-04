@@ -36,6 +36,8 @@ import {
   Cog,
   AppWindow,
   Computer,
+  Network,
+  BarChart,
 } from 'lucide-react';
 
 import { AnimatedCounter } from '@/components/animated-counter';
@@ -183,8 +185,8 @@ const services = [
     href: '#contact',
   },
   {
-    title: 'Report/Content/Article Writing',
-    description: 'Expertly written reports, content, and articles on any subject.',
+    title: 'Report Writing',
+    description: 'Expertly written reports on any subject.',
     icon: PenTool,
     href: '#contact',
   },
@@ -216,6 +218,18 @@ const services = [
     title: 'Web Design',
     description: 'Creative and functional web design services.',
     icon: Globe,
+    href: '#contact',
+  },
+  {
+    title: 'Networking Projects',
+    description: 'Reliable solutions for networking assignments and projects.',
+    icon: Network,
+    href: '#contact',
+  },
+  {
+    title: 'Power Bi',
+    description: 'Data visualization and business intelligence dashboards.',
+    icon: BarChart,
     href: '#contact',
   },
 ];
@@ -336,7 +350,7 @@ export default function Home() {
             <p className="mt-4 text-center text-gray-400 max-w-2xl mx-auto">
               Offering a range of professional services to help you succeed academically and professionally.
             </p>
-            <div className="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
+            <div className="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {services.map((service) => (
                 <Link href={service.href} key={service.title} target={service.href.startsWith('http') ? '_blank' : '_self'} className="group">
                   <Card className="h-full text-center bg-gray-900 border-gray-800 text-white hover:shadow-xl hover:-translate-y-2 transition-all duration-300">
