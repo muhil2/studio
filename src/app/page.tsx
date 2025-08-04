@@ -1,3 +1,4 @@
+
 import Image from 'next/image';
 import Link from 'next/link';
 import {
@@ -327,7 +328,7 @@ export default function Home() {
           <div className="container mx-auto px-4">
             <div className="text-center">
               <div className="flex justify-center mb-4">
-                <div className="p-4 bg-green-100 rounded-full hover:bg-green-200 hover:shadow-[0_0_20px_5px] hover:shadow-green-300 transition-all duration-300">
+                <div className="p-4 bg-green-100 rounded-full hover:bg-green-200 hover:shadow-[0_0_15px_3px] hover:shadow-green-300/70 transition-all duration-300">
                     <Lightbulb className="w-12 h-12 text-green-500" />
                 </div>
               </div>
