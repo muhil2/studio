@@ -209,7 +209,7 @@ export default function Home() {
   return (
     <div className="flex flex-col min-h-screen bg-background">
       <main className="flex-grow">
-        <section id="home" className="relative bg-sky-50 text-black py-16 md:py-24 overflow-hidden">
+        <section id="home" className="relative bg-sky-100 text-black py-16 md:py-24 overflow-hidden">
           <div className="absolute top-0 left-0 right-0 p-4 text-center z-10">
             <p className="font-headline text-2xl md:text-3xl font-bold text-primary">
               “While You Progress in Life, I’ll Progress Your Assignments”
@@ -335,7 +335,7 @@ export default function Home() {
             <div className="mt-12 grid grid-cols-1 lg:grid-cols-3 gap-8">
               <div className="lg:col-span-1 flex flex-col gap-6">
                 {majorBenefits.map((benefit) => (
-                  <Card key={benefit.title} className="group p-6 border-2 bg-black text-white border-transparent hover:border-[var(--glow-color)] hover:shadow-lg transition-all" style={{ '--glow-color': benefit.color } as React.CSSProperties}>
+                  <Card key={benefit.title} className="group p-6 border-2 bg-blue-950 text-white border-transparent hover:border-[var(--glow-color)] hover:shadow-lg transition-all" style={{ '--glow-color': benefit.color } as React.CSSProperties}>
                       <div className="flex items-center gap-4 mb-3">
                           <benefit.icon className="w-8 h-8" style={{ color: benefit.color }}/>
                           <h3 className="text-xl font-bold font-headline">{benefit.title}</h3>
