@@ -3,17 +3,21 @@
 import { zodResolver } from '@hookform/resolvers/zod';
 import { useForm } from 'react-hook-form';
 import { z } from 'zod';
-import { Send } from 'lucide-react';
+import { Calendar as CalendarIcon, Send } from 'lucide-react';
 import { useToast } from "@/hooks/use-toast"
+import { format } from "date-fns"
 
 import { Button } from '@/components/ui/button';
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '@/components/ui/form';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
+import { Popover, PopoverContent, PopoverTrigger } from '@/components/ui/popover';
+import { Calendar } from '@/components/ui/calendar';
+import { cn } from '@/lib/utils';
 
 const formSchema = z.object({
-  name: z.string().min(2, { message: 'Name must be at least 2 characters.' }),
-  email: z.string().email({ message: 'Please enter a valid email.' }),
+  assignmentFile: z.any().optional(),
+  deadline: z.date().optional(),
   message: z.string().min(10, { message: 'Message must be at least 10 characters.' }),
 });
 
@@ -22,12 +26,28 @@ export function ContactForm() {
 
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
-    defaultValues: { name: '', email: '', message: '' },
+    defaultValues: { message: '' },
   });
 
   function onSubmit(values: z.infer<typeof formSchema>) {
     const phoneNumber = '8801627145339'; // The number from the prompt
-    const text = `Hello Muhil, my name is ${values.name}. My email is ${values.email}. \n\nMessage: ${values.message}`;
+    let text = `Hello Muhil.\n\n`;
+
+    if (values.deadline) {
+      text += `My deadline is ${format(values.deadline, "PPP")}.\n\n`;
+    }
+
+    text += `Message: ${values.message}`;
+    
+    // File handling is not directly sent via WhatsApp URL.
+    // This will just open whatsapp. The user has to attach the file manually.
+    if (values.assignmentFile && values.assignmentFile.length > 0) {
+      toast({
+        title: "Please attach the file in WhatsApp",
+        description: "Your message is ready, please attach your file in the WhatsApp chat.",
+      });
+    }
+
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(text)}`;
     
     window.open(whatsappUrl, '_blank');
@@ -45,12 +65,12 @@ export function ContactForm() {
       <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
         <FormField
           control={form.control}
-          name="name"
+          name="assignmentFile"
           render={({ field }) => (
             <FormItem>
-              <FormLabel className="text-white">Your Name</FormLabel>
+              <FormLabel className="text-white">Attach Your Assignment Instruction File Here</FormLabel>
               <FormControl>
-                <Input placeholder="John Doe" {...field} />
+                <Input type="file" onChange={(e) => field.onChange(e.target.files)} className="text-gray-400"/>
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -58,13 +78,41 @@ export function ContactForm() {
         />
         <FormField
           control={form.control}
-          name="email"
+          name="deadline"
           render={({ field }) => (
-            <FormItem>
-              <FormLabel className="text-white">Your Email</FormLabel>
-              <FormControl>
-                <Input placeholder="john.doe@example.com" {...field} />
-              </FormControl>
+            <FormItem className="flex flex-col">
+              <FormLabel className="text-white">Deadline</FormLabel>
+              <Popover>
+                <PopoverTrigger asChild>
+                  <FormControl>
+                    <Button
+                      variant={"outline"}
+                      className={cn(
+                        "w-full pl-3 text-left font-normal",
+                        !field.value && "text-muted-foreground"
+                      )}
+                    >
+                      {field.value ? (
+                        format(field.value, "PPP")
+                      ) : (
+                        <span>Pick a date</span>
+                      )}
+                      <CalendarIcon className="ml-auto h-4 w-4 opacity-50" />
+                    </Button>
+                  </FormControl>
+                </PopoverTrigger>
+                <PopoverContent className="w-auto p-0" align="start">
+                  <Calendar
+                    mode="single"
+                    selected={field.value}
+                    onSelect={field.onChange}
+                    disabled={(date) =>
+                      date < new Date(new Date().setHours(0,0,0,0))
+                    }
+                    initialFocus
+                  />
+                </PopoverContent>
+              </Popover>
               <FormMessage />
             </FormItem>
           )}
