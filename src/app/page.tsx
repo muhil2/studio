@@ -92,7 +92,7 @@ const problems = [
     frontText: 'Overlapping Deadlines Every Month',
     backText:
       'Multiple courseworks are often due within the same week. 72% submit assignments just 1–2 hours before the deadline. | Result: stress, panic & compromised quality.',
-    imageUrl: "https://placehold.co/400x400.png"
+    imageUrl: "https://i.imgur.com/a5udyWy.png"
   },
 ];
 
