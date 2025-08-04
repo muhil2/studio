@@ -63,7 +63,7 @@ const problems = [
     color: 'hsl(var(--neon-red))',
     frontText: 'Insufficient Time for Assignments',
     backText:
-      'Insufficient Time for Assignments<br/><br/>International students often juggle part-time jobs (20–30 hrs/week) with full-time studies.<br/><br/>63% of students get only 2–3 hours a day for academic work.<br/><br/>This leads to last-minute submissions and lower grades.',
+      'International students often juggle part-time jobs (20–30 hrs/week) with full-time studies.<br/><br/>63% of students get only 2–3 hours a day for academic work.<br/><br/>This leads to last-minute submissions and lower grades.',
     imageUrl: "https://imgur.com/brxJyWi.png"
   },
   {
@@ -345,7 +345,7 @@ export default function Home() {
                   frontText={problem.frontText}
                   backText={problem.backText}
                   imageUrl={problem.imageUrl}
-                  cardClassName="bg-gradient-to-br from-red-500/20 to-orange-400/20 border-2 border-destructive"
+                  cardClassName="bg-gradient-to-br from-red-500/20 to-orange-400/20 border-2 border-destructive shadow-[0_0_15px_rgba(239,68,68,0.4)]"
                 />
               ))}
             </div>
