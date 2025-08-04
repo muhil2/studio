@@ -272,7 +272,7 @@ export default function Home() {
   return (
     <div className="flex flex-col min-h-screen bg-background">
       <main className="flex-grow">
-      <section id="home" className="bg-sky-100 text-black py-16 md:py-24 overflow-hidden">
+      <section id="home" className="bg-sky-100 text-black py-16 md:py-24">
           <div className="container mx-auto px-4">
             <div className="flex flex-col items-center text-center">
               <p className="font-calibri text-3xl md:text-4xl font-bold mb-8 italic bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 text-transparent bg-clip-text">
