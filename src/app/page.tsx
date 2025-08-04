@@ -63,7 +63,7 @@ const problems = [
     color: 'hsl(var(--neon-red))',
     frontText: 'Insufficient Time for Assignments',
     backText:
-      'International students often juggle part-time jobs (20–30 hrs/week) with full-time studies.<br/><br/>63% of students get only 2–3 hours a day for academic work.<br/><br/>This leads to last-minute submissions and lower grades.',
+      'Insufficient Time for Assignments<br/><br/>International students often juggle part-time jobs (20–30 hrs/week) with full-time studies.<br/><br/>63% of students get only 2–3 hours a day for academic work.<br/><br/>This leads to last-minute submissions and lower grades.',
     imageUrl: "https://imgur.com/brxJyWi.png"
   },
   {
@@ -183,7 +183,7 @@ const services = [
     title: 'Thesis & Research Papers',
     description: 'Comprehensive support for your thesis and research projects.',
     icon: BookOpen,
-    href: 'https://drive.google.com/drive/folders/1-13R5GwFeLGlZhCNAiE3SKGJ1UU0yaBW',
+    href: 'https://wa.me/qr/S4BGHXIR6WOKN1',
   },
   {
     title: 'Report Writing',
@@ -345,7 +345,7 @@ export default function Home() {
                   frontText={problem.frontText}
                   backText={problem.backText}
                   imageUrl={problem.imageUrl}
-                  cardClassName="bg-gradient-to-br from-red-500/20 to-orange-400/20 border-2 border-destructive shadow-[0_0_15px_rgba(239,68,68,0.4)]"
+                  cardClassName="bg-destructive/10 border-2 border-destructive shadow-[0_0_2px_#fff,inset_0_0_2px_#fff,0_0_5px_#ef4444,0_0_15px_#ef4444,0_0_30px_#ef4444]"
                 />
               ))}
             </div>
