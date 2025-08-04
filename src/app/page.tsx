@@ -329,8 +329,9 @@ export default function Home() {
               <h2 className="text-3xl md:text-4xl font-bold font-headline text-black">
                 Our Solution
               </h2>
-              <p className="mt-2 text-center text-muted-foreground italic inline-block border-b-4 border-primary pb-2">
+              <p className="mt-2 text-center text-muted-foreground italic inline-block pb-2">
                 Revolutionary Assignment Writing Platform
+                <span className="block h-1 w-24 bg-primary mx-auto mt-2"></span>
               </p>
             </div>
             <div className="mt-12 grid grid-cols-1 lg:grid-cols-3 gap-8">
@@ -348,8 +349,9 @@ export default function Home() {
               <div className="lg:col-span-2">
                 <Card className="p-6 border-2 border-blue-500 rounded-lg shadow-lg">
                     <div className="text-center mb-6">
-                    <h3 className="text-2xl font-bold font-headline text-black">
+                    <h3 className="text-2xl font-bold font-headline text-black inline-block relative pb-2">
                         Key Benefits
+                        <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-1/2 h-1 bg-sky-400"></span>
                     </h3>
                     </div>
                     <div className="flex flex-col gap-4">
