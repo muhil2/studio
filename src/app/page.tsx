@@ -65,7 +65,7 @@ const problems = [
     frontText: 'Academic Stress & Mental Fatigue',
     backText:
       'Balancing studies, jobs, and living abroad causes high mental strain. 7 out of 10 international students report burnout due to assignment pressure. | Result: anxiety, poor focus, lack of motivation.',
-    imageUrl: "https://imgur.com/a48FDt1"
+    imageUrl: "https://imgur.com/a48FDt1.png"
   },
   {
     title: 'Sleepless & Exhausting Routines',
@@ -74,7 +74,7 @@ const problems = [
     frontText: 'Sleepless & Exhausting Routines',
     backText:
       'Many survive on <5 hrs of sleep due to tight deadlines and multiple tasks. 54% admit pulling all-nighters before submission dates. | Result: low-quality rushed assignments.',
-    imageUrl: "https://imgur.com/a48FDt1"
+    imageUrl: "https://imgur.com/Tj4Hx5R.png"
   },
   {
     title: 'Strict Formatting & Referencing Rules',
