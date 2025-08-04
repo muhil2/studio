@@ -63,7 +63,7 @@ const problems = [
     color: 'hsl(var(--neon-red))',
     frontText: 'Insufficient Time for Assignments',
     backText:
-      'International students often work part-time (20–30 hrs/week) besides full-time studies. 63% say they barely get 2–3 hours a day for academic work. | Result: last-minute submissions & lower grades.',
+      'Problem: Insufficient Time for Assignments. International students often juggle part-time jobs (20–30 hrs/week) with full-time studies. Key Statistic: 63% of students get only 2–3 hours a day for academic work. Result: This leads to last-minute submissions and lower grades.',
     imageUrl: "https://imgur.com/brxJyWi.png"
   },
   {
@@ -310,13 +310,13 @@ export default function Home() {
                 ))}
               </div>
               <div className="flex flex-col sm:flex-row justify-center items-center gap-4">
-                <Button asChild size="lg" className="bg-[#25D366] hover:bg-[#1EBE57] text-white font-bold shadow-lg transition-transform transform hover:scale-105">
+                <Button asChild size="lg" className="bg-[#25D366] hover:bg-[#1EBE57] text-white font-bold transition-transform transform hover:scale-105">
                   <Link href="https://wa.me/qr/S4BGHXIR6WOKN1" target="_blank" className="flex flex-col leading-none">
                     <span>Hire Me</span>
                     <span className="text-xs font-normal">Through Whatsapp</span>
                   </Link>
                 </Button>
-                <Button asChild size="lg" className="bg-[#1877F2] hover:bg-[#166FE5] text-white font-bold shadow-lg transition-transform transform hover:scale-105">
+                <Button asChild size="lg" className="bg-[#1877F2] hover:bg-[#166FE5] text-white font-bold transition-transform transform hover:scale-105">
                   <Link href="https://www.facebook.com/muhil.hadi.2024" target="_blank" className="flex flex-col leading-none">
                     <span>Hire Me</span>
                     <span className="text-xs font-normal">Through Facebook</span>
