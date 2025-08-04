@@ -68,7 +68,7 @@ export function ContactForm() {
           name="assignmentFile"
           render={({ field }) => (
             <FormItem>
-              <FormLabel className="text-white">Attach Your Assignment Instruction File Here</FormLabel>
+              <FormLabel className="text-white font-bold">Attach Your Assignment Instruction File Here</FormLabel>
               <FormControl>
                 <Input type="file" onChange={(e) => field.onChange(e.target.files)} className="text-gray-400"/>
               </FormControl>
@@ -81,7 +81,7 @@ export function ContactForm() {
           name="deadline"
           render={({ field }) => (
             <FormItem className="flex flex-col">
-              <FormLabel className="text-white">Deadline</FormLabel>
+              <FormLabel className="text-white font-bold">Deadline</FormLabel>
               <Popover>
                 <PopoverTrigger asChild>
                   <FormControl>
@@ -122,7 +122,7 @@ export function ContactForm() {
           name="message"
           render={({ field }) => (
             <FormItem>
-              <FormLabel className="text-white">Your Message</FormLabel>
+              <FormLabel className="text-white font-bold">Your Message</FormLabel>
               <FormControl>
                 <Textarea placeholder="Tell me how I can help you..." {...field} rows={4} />
               </FormControl>
