@@ -74,7 +74,7 @@ const problems = [
     frontText: 'Sleepless & Exhausting Routines',
     backText:
       'Many survive on <5 hrs of sleep due to tight deadlines and multiple tasks. 54% admit pulling all-nighters before submission dates. | Result: low-quality rushed assignments.',
-    imageUrl: "https://placehold.co/400x400.png"
+    imageUrl: "https://i.imgur.com/a48FDt1.png"
   },
   {
     title: 'Strict Formatting & Referencing Rules',
