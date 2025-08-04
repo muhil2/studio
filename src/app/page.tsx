@@ -375,7 +375,7 @@ export default function Home() {
                     {impactData.map((item, index) => (
                         <div key={index} className="group relative p-6 rounded-lg bg-gray-900 border border-gray-700 text-center transition-all duration-300 hover:bg-gray-800"
                             style={{ '--glow-color': item.color } as React.CSSProperties}>
-                            <div className="absolute -inset-px rounded-lg bg-[var(--glow-color)] opacity-0 group-hover:opacity-75 blur transition-opacity duration-300"></div>
+                            <div className="absolute -inset-px rounded-lg bg-[var(--glow-color)] opacity-0 group-hover:opacity-25 blur transition-opacity duration-300"></div>
                             <div className="relative">
                                 <div className="flex justify-center mb-4">
                                     <div className="p-3 rounded-full bg-gray-800 group-hover:bg-gray-700 transition-colors">
