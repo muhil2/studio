@@ -22,7 +22,6 @@ export function TestimonialSlider({ testimonials }: TestimonialSliderProps) {
     const slider = sliderRef.current;
     if (!slider) return;
 
-    const duplicatedTestimonials = [...testimonials, ...testimonials];
     let animationFrameId: number;
 
     const scroll = () => {
@@ -50,8 +49,10 @@ export function TestimonialSlider({ testimonials }: TestimonialSliderProps) {
 
     return () => {
       cancelAnimationFrame(animationFrameId);
-      slider.removeEventListener('mouseenter', stopAnimation);
-      slider.removeEventListener('mouseleave', startAnimation);
+      if (slider) {
+        slider.removeEventListener('mouseenter', stopAnimation);
+        slider.removeEventListener('mouseleave', startAnimation);
+      }
     };
   }, [testimonials]);
 
@@ -61,7 +62,7 @@ export function TestimonialSlider({ testimonials }: TestimonialSliderProps) {
     <div className="relative w-full overflow-hidden">
         <div 
             ref={sliderRef}
-            className="flex w-max animate-scroll"
+            className="flex w-max"
         >
         {allTestimonials.map((testimonial, index) => (
           <Card key={index} className="w-80 mx-4 flex-shrink-0 p-6 shadow-lg rounded-xl">
