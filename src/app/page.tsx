@@ -263,9 +263,9 @@ const WhatsappIcon = (props: React.SVGProps<SVGSVGElement>) => (
   );
 
 const socialLinks = [
-  { name: 'whatsapp', icon: WhatsappIcon, href: 'https://wa.me/qr/S4BGHXIR6WOKN1', 'aria-label': 'WhatsApp', color: 'text-green-500 hover:text-white', hoverBg: 'hover:bg-green-500' },
-  { name: 'facebook', icon: Facebook, href: 'https://www.facebook.com/muhil.hadi.2024', 'aria-label': 'Facebook', color: 'text-blue-600 hover:text-white', hoverBg: 'hover:bg-blue-600' },
-  { name: 'email', icon: Mail, href: 'mailto:assignmentyess@gmail.com', 'aria-label': 'Gmail', color: 'text-red-600 hover:text-white', hoverBg: 'hover:bg-red-600' },
+  { name: 'whatsapp', icon: WhatsappIcon, href: 'https://wa.me/qr/S4BGHXIR6WOKN1', 'aria-label': 'WhatsApp', color: 'text-green-500', glowColor: 'var(--glow-green)' },
+  { name: 'facebook', icon: Facebook, href: 'https://www.facebook.com/muhil.hadi.2024', 'aria-label': 'Facebook', color: 'text-blue-600', glowColor: 'var(--glow-blue)' },
+  { name: 'email', icon: Mail, href: 'mailto:assignmentyess@gmail.com', 'aria-label': 'Gmail', color: 'text-red-600', glowColor: 'var(--glow-red)' },
 ];
 
 export default function Home() {
@@ -564,8 +564,8 @@ export default function Home() {
                    <div className="flex space-x-4">
                     {socialLinks.map((social) => (
                       <Link href={social.href} key={social.name} target="_blank" aria-label={social['aria-label']}>
-                         <Button variant="outline" size="icon" className={`h-12 w-12 rounded-full transition-all ${social.hoverBg}`}>
-                            <social.icon className={`h-6 w-6 ${social.color}`} />
+                         <Button variant="outline" size="icon" className="group h-12 w-12 rounded-full transition-all hover:bg-transparent hover:glow-border" style={{'--glow-color': social.glowColor} as React.CSSProperties}>
+                            <social.icon className={`h-6 w-6 ${social.color} group-hover:text-white transition-colors`} />
                           </Button>
                       </Link>
                     ))}

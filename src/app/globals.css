@@ -43,6 +43,9 @@
     --neon-green: 142 71% 45%;
     --neon-pink: 326 100% 54%;
     --neon-red: 350 90% 60%;
+    --glow-green: #25D366;
+    --glow-blue: #1877F2;
+    --glow-red: #D44638;
   }
 
   .dark {
@@ -93,5 +96,9 @@
 @layer utilities {
   .glow-border {
     box-shadow: 0 0 5px var(--glow-color), 0 0 10px var(--glow-color), 0 0 15px var(--glow-color);
+  }
+  
+  .hover\\:glow-border:hover {
+      box-shadow: 0 0 5px var(--glow-color), 0 0 10px var(--glow-color), 0 0 15px var(--glow-color);
   }
 }
