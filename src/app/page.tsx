@@ -3,42 +3,148 @@ import Link from 'next/link';
 import {
   Award,
   BookOpen,
+  BrainCircuit,
   Briefcase,
+  CheckCircle,
+  Clock,
   Code,
   Facebook,
   FileText,
   Globe,
   GraduationCap,
+  HeartHandshake,
+  Lock,
   Mail,
   MapPin,
   MessageSquare,
+  Moon,
   PenTool,
   Phone,
+  Rocket,
+  ShieldCheck,
+  Smile,
   Star,
+  Target,
+  TrendingDown,
   Users,
+  Zap,
+  AlertTriangle,
+  Lightbulb,
 } from 'lucide-react';
 
 import { AnimatedCounter } from '@/components/animated-counter';
 import { ContactForm } from '@/components/contact-form';
 import { FlipCard } from '@/components/flip-card';
+import { TestimonialSlider } from '@/components/testimonial-slider';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Separator } from '@/components/ui/separator';
 
-const stats = [
-  { value: 790, label: 'Projects Completed', icon: Briefcase },
-  { value: 300, label: 'Active Clients', icon: Users },
-  { value: 98, label: 'Customer Satisfaction', icon: Star, suffix: '%' },
-  { value: 6, label: 'Countries Served', icon: Globe },
+const heroStats = [
+  { value: 790, label: 'Projects completed', suffix: '+' },
+  { value: 300, label: 'Active Clients', suffix: '+' },
+  { value: 4, label: 'Years of Experience' },
+  { value: 6, label: 'Countries Served', suffix: '+' },
 ];
 
 const problems = [
-  'A study shows after every 8hr work time a person needs at least 5 hours of break to focus again, whereas a lot of students have their work pressure and cannot get enough time to sleep let alone rest',
-  'Deadlines are very near and lecture has not been completed',
-  'Not getting good marks',
-  'Cannot focus on other productive works rather than study & job',
-  'Cannot get the time to hangout with buddies',
+  {
+    title: 'Problem 1',
+    iconName: 'TrendingDown',
+    color: 'hsl(var(--neon-red))',
+    frontText: 'Insufficient Time for Assignments',
+    backText:
+      'International students often work part-time (20–30 hrs/week) besides full-time studies. 63% say they barely get 2–3 hours a day for academic work. | Result: last-minute submissions & lower grades.',
+  },
+  {
+    title: 'Problem 2',
+    iconName: 'BrainCircuit',
+    color: 'hsl(var(--neon-purple))',
+    frontText: 'Academic Stress & Mental Fatigue',
+    backText:
+      'Balancing studies, jobs, and living abroad causes high mental strain. 7 out of 10 international students report burnout due to assignment pressure. | Result: anxiety, poor focus, lack of motivation.',
+  },
+  {
+    title: 'Problem 3',
+    iconName: 'Moon',
+    color: 'hsl(var(--neon-blue))',
+    frontText: 'Sleepless & Exhausting Routines',
+    backText:
+      'Many survive on <5 hrs of sleep due to tight deadlines and multiple tasks. 54% admit pulling all-nighters before submission dates. | Result: low-quality rushed assignments.',
+  },
+  {
+    title: 'Problem 4',
+    iconName: 'AlertTriangle',
+    color: 'hsl(var(--primary))',
+    frontText: 'Strict Formatting & Referencing Rules',
+    backText:
+      'Universities abroad are very strict about APA/Harvard/IEEE formats. 47% students lose marks only because of formatting errors. | Result: dissatisfied students despite hard work.',
+  },
+  {
+    title: 'Problem 5',
+    iconName: 'Clock',
+    color: 'hsl(var(--neon-green))',
+    frontText: 'Overlapping Deadlines Every Month',
+    backText:
+      'Multiple courseworks are often due within the same week. 72% submit assignments just 1–2 hours before the deadline. | Result: stress, panic & compromised quality.',
+  },
+];
+
+const majorBenefits = [
+    {
+      icon: Lock,
+      title: 'Total Privacy & Confidentiality',
+      description: 'Your identity and work stay 100% anonymous — we never reveal your assignments to universities, friends, or anyone else.',
+      color: 'hsl(var(--neon-cyan))',
+    },
+    {
+      icon: BrainCircuit,
+      title: '76+ Subject-Specialist Writers',
+      description: 'A powerful team of experienced writers from different academic majors to handle any type of assignment with expertise.',
+      color: 'hsl(var(--neon-purple))',
+    },
+    {
+      icon: BookOpen,
+      title: 'One-Stop Academic Support Hub',
+      description: 'From essays to theses — get every kind of academic work done under one roof, fast and professionally.',
+      color: 'hsl(var(--neon-blue))',
+    },
+  ];
+
+  const keyBenefits = [
+    { icon: ShieldCheck, text: 'Free Turnitin Reports Guaranteeing 0% AI & Plagiarism Detection', color: 'hsl(var(--neon-green))' },
+    { icon: Target, text: 'In-depth Research & Data-Driven Analytics for Authentic, High-Quality Content', color: 'hsl(var(--neon-red))' },
+    { icon: Clock, text: 'Always On-Time — Your Deadlines Are My Priority', color: 'hsl(var(--neon-blue))' },
+    { icon: HeartHandshake, text: '24/7 Friendly Support Designed Especially for Students', color: 'hsl(var(--neon-purple))' },
+    { icon: Star, text: 'Top Grades Delivered at a Price Every Student Can Afford', color: 'hsl(var(--primary))' },
+  ];
+
+const impactData = [
+    {
+        icon: Rocket,
+        title: '40% Faster Completion',
+        description: 'Complete assignments in less than 24 hours...',
+        color: 'hsl(var(--neon-cyan))',
+    },
+    {
+        icon: Smile,
+        title: 'Up to 30% Less Stress',
+        description: 'Outsourcing assignments...',
+        color: 'hsl(var(--neon-green))',
+    },
+    {
+        icon: TrendingDown,
+        title: '1.5x Higher Grade Improvement',
+        description: 'Higher-quality, professionally completed...',
+        color: 'hsl(var(--neon-pink))',
+    },
+    {
+        icon: Lock,
+        title: '100% Secure and Anonymous',
+        description: 'Full confidentiality...',
+        color: 'hsl(var(--neon-blue))',
+    },
 ];
 
 const services = [
@@ -52,7 +158,7 @@ const services = [
     title: 'Thesis & Research Paper',
     description: 'Comprehensive support for your thesis and research projects.',
     icon: BookOpen,
-    href: 'https://drive.google.com/drive/folders/1-13R5GwFeLGlZhCNAiE3SKGJ1UU0yaBW?usp=sharing',
+    href: 'https://wa.me/8801627145339?text=Hi%20Muhil,%20I%27d%20like%20to%20inquire%20about%20your%20Thesis%20writing%20services.',
   },
   {
     title: 'Software Development',
@@ -80,43 +186,17 @@ const services = [
   },
 ];
 
-const portfolio = [
-  {
-    title: 'Thesis & Research Paper',
-    description: 'A collection of high-quality academic research work.',
-    href: 'https://drive.google.com/drive/folders/1-13R5GwFeLGlZhCNAiE3SKGJ1UU0yaBW?usp=sharing',
-    image: 'https://placehold.co/600x400.png',
-    dataAiHint: 'research paper',
-  },
-  {
-    title: 'Web App Development',
-    description: 'Custom web application for a small business.',
-    href: '#',
-    image: 'https://placehold.co/600x400.png',
-    dataAiHint: 'web application',
-  },
-  {
-    title: 'Case Study Analysis',
-    description: 'In-depth analysis for a business management course.',
-    href: '#',
-    image: 'https://placehold.co/600x400.png',
-    dataAiHint: 'business analysis',
-  },
-];
-
 const testimonials = [
-  {
-    name: 'Ariyan Hossain',
-    role: 'MBA student at Kings Own Institute',
-    quote: 'Thanks Bhaiya I have completed all of my course without getting any academic pressure',
-    avatar: 'AH',
-  },
-  {
-    name: 'Anamul Hauque',
-    role: '8th semester student at Kings Own Institute',
-    quote: 'I could not do assignments after returning home from my job, thank you soo much for handling all of my courses',
-    avatar: 'AH',
-  },
+  { name: 'Rifat Imtiaz', university: 'University of Toronto (Canada)', quote: "I can't thank you enough! … Forever grateful bhai..", initials: 'RI' },
+  { name: 'Rumana Tabassum', university: 'NUS (Singapore)', quote: 'I was struggling … Thanks again!', initials: 'RT' },
+  { name: 'Mona Hossain', university: 'Oxford (UK)', quote: "I was so stressed … Couldn’t have done it without you.", initials: 'MH' },
+  { name: 'Ahmed Khan', university: 'Aga Khan University (Pakistan)', quote: 'Assamualikum brother … truly appreciate your help.', initials: 'AK' },
+  { name: 'Faruq Islam Taj', university: 'University of Sydney (Australia)', quote: "I was about to give up … you’re nothing but an angel bro", initials: 'FT' },
+  { name: 'Mia Harris', university: 'UBC (Canada)', quote: 'I was struggling … so thankful for your support!', initials: 'MH' },
+  { name: 'Rakesh Gupta', university: 'Stanford (USA)', quote: 'You took a huge burden off… I recommend everyone.', initials: 'RG' },
+  { name: 'Sophia Lee', university: 'University of Melbourne (Australia)', quote: 'Your service was exactly what I needed … I’m so grateful.', initials: 'SL' },
+  { name: 'Chitrokor Rahman', university: 'University of Manchester (UK)', quote: "Never thought … I couldn't ask for more!", initials: 'CR' },
+  { name: 'Abrar Masum', university: 'University of Melbourne', quote: 'Thanks bhaiya … thanks a lot!!', initials: 'AM' },
 ];
 
 const socialLinks = [
@@ -128,89 +208,97 @@ const socialLinks = [
 export default function Home() {
   return (
     <div className="flex flex-col min-h-screen bg-background">
-      <header className="bg-primary text-primary-foreground text-center p-3 font-bold text-sm md:text-base sticky top-0 z-50 shadow-md">
-        Completing Your Toughest Assignments Within a Day
-      </header>
-
       <main className="flex-grow">
-        <section id="home" className="py-16 md:py-24 text-center">
-          <div className="container mx-auto px-4">
-            <h1 className="font-headline text-5xl md:text-7xl font-extrabold text-foreground">
-              Muhil Hadi
-            </h1>
-            <p className="mt-2 text-xl md:text-2xl text-muted-foreground font-semibold">
-              Professional Assignment Writer
+        <section id="home" className="relative bg-black text-white py-16 md:py-24 overflow-hidden">
+          <div className="absolute top-0 left-0 right-0 p-4 text-center bg-black bg-opacity-50 z-10">
+            <p className="font-headline text-lg md:text-xl font-bold italic" style={{ color: '#00FFFF' }}>
+              “While You Progress in Life, I’ll Progress Your Assignments”
             </p>
-            <p className="mt-6 max-w-3xl mx-auto text-base md:text-lg text-foreground/80">
-              I'm a dedicated professional living in Bangladesh with expertise in academic writing, software development, and technical services. With a keen eye for detail and commitment to excellence, I deliver high-quality solutions tailored to meet your specific needs and requirements. I also don’t take any advance payments — I will let you see the overall quality of the work first. And of course I’m from Bangladesh, so the charge will be very less! Thank you!!!!!
-            </p>
-
-            <div className="mt-12 max-w-4xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8">
-              {stats.map((stat) => (
-                <div key={stat.label} className="flex flex-col items-center">
-                  <stat.icon className="w-10 h-10 text-primary mb-2" />
-                  <div className="text-4xl font-bold text-foreground">
-                    <AnimatedCounter targetValue={stat.value} />
-                    {stat.suffix}
-                  </div>
-                  <p className="text-sm text-muted-foreground mt-1">{stat.label}</p>
+          </div>
+          <div className="container mx-auto px-4 relative z-0">
+            <div className="flex flex-col md:flex-row items-center justify-between">
+              <div className="md:w-1/2 text-center md:text-left">
+                <h1 className="font-headline text-6xl md:text-8xl font-extrabold text-white">
+                  Muhil Hadi
+                </h1>
+                <p className="mt-2 text-2xl md:text-3xl text-gray-300 font-semibold">
+                  Professional Assignment Writer
+                </p>
+                <p className="mt-6 max-w-xl text-sm md:text-base text-gray-400">
+                  I'm a dedicated professional living in Bangladesh with expertise in academic writing, software development, and technical services. With a keen eye for detail and commitment to excellence, I deliver high-quality solutions tailored to meet your specific needs and requirements. I also don't take any advance payments — I will let you see the overall quality of the work first. And of course I’m from Bangladesh, so the charge will be very less! Thank you!!!!!
+                </p>
+                <div className="mt-8 grid grid-cols-2 gap-6">
+                  {heroStats.map((stat) => (
+                    <div key={stat.label} className="flex items-center gap-3">
+                      <div className="text-4xl font-bold text-cyan-400">
+                        <AnimatedCounter targetValue={stat.value} />
+                        {stat.suffix}
+                      </div>
+                      <p className="text-sm text-gray-300">{stat.label}</p>
+                    </div>
+                  ))}
                 </div>
-              ))}
-            </div>
-
-            <div className="mt-12 flex flex-col sm:flex-row justify-center items-center gap-4">
-              <Button asChild size="lg" className="bg-[#25D366] hover:bg-[#1EBE57] text-white font-bold shadow-lg transition-transform transform hover:scale-105">
-                <Link href="https://wa.me/qr/S4BGHXIR6WOKN1" target="_blank">
-                  Hire Me
-                </Link>
-              </Button>
-              <Button asChild size="lg" variant="secondary" className="font-bold shadow-lg transition-transform transform hover:scale-105">
-                <Link href="https://www.facebook.com/muhil.hadi.2024" target="_blank">
-                  Hire Me Through Facebook
-                </Link>
-              </Button>
-            </div>
-            
-            <p className="mt-8 font-headline text-lg font-bold text-foreground/90">
-              4 Years of Experience Completing Assignments All Over the World
-            </p>
-
-            <div className="mt-12 flex justify-center">
-              <div className="relative w-60 h-60 md:w-72 md:h-72">
-                <Image
-                  src="https://i.imgur.com/QllfG6k.jpeg"
-                  alt="Muhil Hadi"
-                  width={288}
-                  height={288}
-                  className="rounded-full object-cover border-4 border-primary shadow-2xl"
-                  priority
-                />
+                 <div className="mt-10 flex flex-col sm:flex-row justify-center md:justify-start items-center gap-4">
+                  <Button asChild size="lg" className="bg-[#25D366] hover:bg-[#1EBE57] text-white font-bold shadow-lg transition-transform transform hover:scale-105">
+                    <Link href="https://wa.me/qr/S4BGHXIR6WOKN1" target="_blank">
+                      Hire Me Through Whatsapp
+                    </Link>
+                  </Button>
+                  <Button asChild size="lg" className="bg-[#1877F2] hover:bg-[#166FE5] text-white font-bold shadow-lg transition-transform transform hover:scale-105">
+                    <Link href="https://www.facebook.com/muhil.hadi.2024" target="_blank">
+                      Hire Me Through Facebook
+                    </Link>
+                  </Button>
+                </div>
+              </div>
+              <div className="md:w-1/2 mt-12 md:mt-0 flex justify-center md:justify-end">
+                <div className="relative w-60 h-60 md:w-80 md:h-80">
+                  <div 
+                    className="absolute inset-0 rounded-full" 
+                    style={{boxShadow: '0 0 40px 10px hsl(var(--neon-purple)), 0 0 20px 5px hsl(var(--neon-purple)) inset'}}
+                  />
+                  <div
+                    className="relative w-full h-full rounded-full border-4"
+                    style={{'--glow-color': 'hsl(var(--neon-cyan))' } as React.CSSProperties}
+                  >
+                    <div className="absolute -inset-1 rounded-full glow-border" />
+                    <Image
+                      src="https://i.imgur.com/QllfG6k.jpeg"
+                      alt="Muhil Hadi"
+                      width={320}
+                      height={320}
+                      className="rounded-full object-cover w-full h-full"
+                      priority
+                    />
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </section>
 
-        <section id="problems" className="py-16 md:py-24 bg-secondary">
+        <section id="problems" className="py-16 md:py-24 bg-white text-black">
           <div className="container mx-auto px-4">
             <h2 className="text-3xl md:text-4xl font-bold text-center font-headline text-foreground">
-              Facing These Challenges?
+              The Problem With Submitting Assignments No One Talks About
             </h2>
-            <p className="mt-4 text-center text-muted-foreground max-w-2xl mx-auto">
-              Students often juggle multiple responsibilities, leading to common struggles. See if any of these sound familiar.
-            </p>
             <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
               {problems.map((problem, index) => (
                 <FlipCard
                   key={index}
-                  problem={problem}
-                  imageUrl="https://i.imgur.com/LIjORL2.jpeg"
+                  title={problem.title}
+                  iconName={problem.iconName}
+                  color={problem.color}
+                  frontText={problem.frontText}
+                  backText={problem.backText}
+                  imageUrl="https://placehold.co/400x400.png"
                 />
               ))}
             </div>
           </div>
         </section>
-
-        <section id="services" className="py-16 md:py-24">
+        
+        <section id="services" className="py-16 md:py-24 bg-secondary">
           <div className="container mx-auto px-4">
             <h2 className="text-3xl md:text-4xl font-bold text-center font-headline text-foreground">
               My Services
@@ -240,90 +328,72 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="portfolio" className="py-16 md:py-24 bg-secondary">
+        <section id="solution" className="py-16 md:py-24 bg-white text-blue-900">
           <div className="container mx-auto px-4">
-            <h2 className="text-3xl md:text-4xl font-bold text-center font-headline text-foreground">
-              My Portfolio
+            <h2 className="text-3xl md:text-4xl font-bold text-center font-headline text-black">
+              Our Solution
             </h2>
-            <p className="mt-4 text-center text-muted-foreground max-w-2xl mx-auto">
-              A glimpse into the quality and variety of work I deliver.
+            <p className="mt-2 text-center text-muted-foreground italic">
+              Revolutionary Assignment Writing Platform
             </p>
-            <div className="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {portfolio.map((item) => (
-                <Link href={item.href} key={item.title} target="_blank" className="group">
-                  <Card className="overflow-hidden h-full hover:shadow-xl hover:-translate-y-2 transition-all duration-300">
-                    <div className="relative h-48">
-                      <Image
-                        src={item.image}
-                        alt={item.title}
-                        fill
-                        className="object-cover group-hover:scale-105 transition-transform duration-500"
-                        data-ai-hint={item.dataAiHint}
-                      />
-                    </div>
-                    <CardHeader>
-                      <CardTitle className="font-headline">{item.title}</CardTitle>
-                    </CardHeader>
-                    <CardContent>
-                      <p className="text-muted-foreground">{item.description}</p>
-                    </CardContent>
+            <div className="mt-12 grid grid-cols-1 lg:grid-cols-3 gap-8">
+              <div className="lg:col-span-1 flex flex-col gap-6">
+                {majorBenefits.map((benefit) => (
+                  <Card key={benefit.title} className="group p-6 border-2 border-transparent hover:border-[var(--glow-color)] hover:shadow-lg transition-all" style={{ '--glow-color': benefit.color } as React.CSSProperties}>
+                      <div className="flex items-center gap-4 mb-3">
+                          <benefit.icon className="w-8 h-8" style={{ color: benefit.color }}/>
+                          <h3 className="text-xl font-bold font-headline">{benefit.title}</h3>
+                      </div>
+                      <p className="text-muted-foreground">{benefit.description}</p>
                   </Card>
-                </Link>
-              ))}
+                ))}
+              </div>
+              <div className="lg:col-span-2 grid grid-cols-1 sm:grid-cols-2 gap-6">
+                {keyBenefits.map((benefit) => (
+                   <Card key={benefit.text} className="group flex items-center p-4 border-2 border-transparent hover:border-[var(--glow-color)] hover:shadow-md transition-all" style={{'--glow-color': benefit.color} as React.CSSProperties}>
+                      <benefit.icon className="w-10 h-10 mr-4 flex-shrink-0" style={{color: benefit.color}} />
+                      <p className="font-semibold">{benefit.text}</p>
+                   </Card>
+                ))}
+              </div>
             </div>
           </div>
         </section>
 
-        <section id="testimonials" className="py-16 md:py-24">
+        <section id="impact" className="py-16 md:py-24 bg-black">
+            <div className="container mx-auto px-4">
+                <h2 className="text-3xl md:text-4xl font-bold text-center text-white font-headline">Service Impact</h2>
+                <p className="mt-2 text-center text-gray-400 italic">Your Assignments—Handled Like Magic, Delivered Overnight</p>
+                <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                    {impactData.map((item, index) => (
+                        <div key={index} className="group relative p-6 rounded-lg bg-gray-900 border border-gray-700 text-center transition-all duration-300 hover:bg-gray-800"
+                            style={{ '--glow-color': item.color } as React.CSSProperties}>
+                            <div className="absolute -inset-px rounded-lg bg-[var(--glow-color)] opacity-0 group-hover:opacity-75 blur transition-opacity duration-300"></div>
+                            <div className="relative">
+                                <div className="flex justify-center mb-4">
+                                    <div className="p-3 rounded-full bg-gray-800 group-hover:bg-gray-700 transition-colors">
+                                        <item.icon className="w-8 h-8" style={{ color: item.color }} />
+                                    </div>
+                                </div>
+                                <h3 className="text-xl font-bold text-white mb-2">{item.title}</h3>
+                                <p className="text-gray-400">{item.description}</p>
+                            </div>
+                        </div>
+                    ))}
+                </div>
+            </div>
+        </section>
+
+        <section id="testimonials" className="py-16 md:py-24 bg-white">
           <div className="container mx-auto px-4">
             <h2 className="text-3xl md:text-4xl font-bold text-center font-headline text-foreground">
-              Client Testimonials
+              What Our Clients Say
             </h2>
-            <p className="mt-4 text-center text-muted-foreground max-w-2xl mx-auto">
-              Hear what my clients have to say about my services.
+            <p className="mt-4 text-center text-muted-foreground italic max-w-2xl mx-auto">
+              Success Stories from Students Using Our Service
             </p>
-            <div className="mt-12 grid grid-cols-1 lg:grid-cols-2 gap-8">
-              {testimonials.map((testimonial) => (
-                <Card key={testimonial.name} className="p-6">
-                  <CardContent className="p-0">
-                    <div className="flex items-center mb-4">
-                      <Avatar className="h-12 w-12 mr-4">
-                        <AvatarFallback className="bg-primary text-primary-foreground font-bold">{testimonial.avatar}</AvatarFallback>
-                      </Avatar>
-                      <div>
-                        <p className="font-bold text-foreground">{testimonial.name}</p>
-                        <p className="text-sm text-muted-foreground">{testimonial.role}</p>
-                      </div>
-                    </div>
-                    <div className="flex items-center mb-4">
-                      {[...Array(5)].map((_, i) => (
-                        <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
-                      ))}
-                    </div>
-                    <blockquote className="text-foreground/80 italic border-l-4 border-primary pl-4">
-                      "{testimonial.quote}"
-                    </blockquote>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
-            <div className="mt-12 flex flex-wrap justify-center gap-4 md:gap-8">
-              <Image
-                src="https://i.imgur.com/5qIpd8i.png"
-                alt="Testimonial screenshot 1"
-                width={300}
-                height={600}
-                className="rounded-lg shadow-lg border-2 border-border object-contain"
-                data-ai-hint="mobile screenshot"
-              />
-              <Image
-                src="https://i.imgur.com/3pjx9eC.png"
-                alt="Testimonial screenshot 2"
-                width={300}
-                height={600}
-                className="rounded-lg shadow-lg border-2 border-border object-contain"
-                data-ai-hint="chat message"
-              />
+            <div className="mt-12">
+              <TestimonialSlider testimonials={testimonials} />
             </div>
           </div>
         </section>

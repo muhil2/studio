@@ -4,19 +4,19 @@
 
 @layer base {
   :root {
-    --background: 0 0% 95%;
+    --background: 0 0% 100%;
     --foreground: 72 45% 11%;
     --card: 0 0% 100%;
     --card-foreground: 72 45% 11%;
     --popover: 0 0% 100%;
     --popover-foreground: 72 45% 11%;
-    --primary: 28 89% 50%;
+    --primary: 28 89% 50%; /* Saturated Orange */
     --primary-foreground: 0 0% 100%;
-    --secondary: 0 0% 96.1%;
+    --secondary: 0 0% 95%; /* Light Gray */
     --secondary-foreground: 72 45% 11%;
     --muted: 0 0% 90%;
     --muted-foreground: 0 0% 45.1%;
-    --accent: 72 45% 11%;
+    --accent: 72 45% 16%; /* Desaturated Black */
     --accent-foreground: 0 0% 98%;
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
@@ -37,21 +37,28 @@
     --sidebar-accent-foreground: 240 5.9% 10%;
     --sidebar-border: 220 13% 91%;
     --sidebar-ring: 217.2 91.2% 59.8%;
+    --neon-cyan: 180 100% 50%;
+    --neon-blue: 217 91% 60%;
+    --neon-purple: 262 85% 56%;
+    --neon-green: 142 71% 45%;
+    --neon-pink: 326 100% 54%;
+    --neon-red: 350 90% 60%;
   }
+
   .dark {
     --background: 72 45% 8%;
-    --foreground: 0 0% 95%;
+    --foreground: 0 0% 98%;
     --card: 72 20% 12%;
-    --card-foreground: 0 0% 95%;
+    --card-foreground: 0 0% 98%;
     --popover: 72 45% 8%;
-    --popover-foreground: 0 0% 95%;
+    --popover-foreground: 0 0% 98%;
     --primary: 28 89% 50%;
     --primary-foreground: 0 0% 100%;
-    --secondary: 72 20% 15%;
+    --secondary: 0 0% 15%;
     --secondary-foreground: 0 0% 98%;
     --muted: 72 20% 15%;
     --muted-foreground: 0 0% 63.9%;
-    --accent: 0 0% 95%;
+    --accent: 0 0% 98%;
     --accent-foreground: 72 45% 8%;
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 0 0% 98%;
@@ -80,5 +87,11 @@
   }
   body {
     @apply bg-background text-foreground;
+  }
+}
+
+@layer utilities {
+  .glow-border {
+    box-shadow: 0 0 5px var(--glow-color), 0 0 10px var(--glow-color), 0 0 15px var(--glow-color);
   }
 }

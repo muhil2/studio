@@ -3,24 +3,36 @@ import { useState } from 'react';
 import Image from 'next/image';
 import { Card, CardContent } from '@/components/ui/card';
 import { cn } from '@/lib/utils';
+import * as LucideIcons from 'lucide-react';
+
+type IconName = keyof typeof LucideIcons;
 
 export function FlipCard({
-  problem,
+  title,
+  iconName,
+  color,
+  frontText,
+  backText,
   imageUrl,
 }: {
-  problem: string;
+  title: string;
+  iconName: IconName;
+  color: string;
+  frontText: string;
+  backText: string;
   imageUrl: string;
 }) {
   const [isFlipped, setIsFlipped] = useState(false);
+  const Icon = LucideIcons[iconName] as LucideIcons.LucideIcon;
 
   return (
     <div
-      className="group w-full h-56 cursor-pointer [perspective:1000px]"
+      className="group w-full h-64 cursor-pointer [perspective:1000px]"
       onClick={() => setIsFlipped(!isFlipped)}
       role="button"
       tabIndex={0}
       onKeyDown={(e) => (e.key === 'Enter' || e.key === ' ') && setIsFlipped(!isFlipped)}
-      aria-label="Click to flip card and see details"
+      aria-label={`Click to flip card and see details for ${title}`}
     >
       <div
         className={cn(
@@ -29,27 +41,29 @@ export function FlipCard({
         )}
       >
         {/* Front */}
-        <div className="absolute w-full h-full [backface-visibility:hidden]">
-          <Card className="w-full h-full overflow-hidden">
+        <div className="absolute w-full h-full [backface-visibility:hidden] overflow-hidden rounded-lg">
+          <Card className="w-full h-full border-2 border-transparent group-hover:border-[var(--glow-color)] transition-all" style={{ '--glow-color': color } as React.CSSProperties}>
             <Image
               src={imageUrl}
-              alt="Card Background"
+              alt={frontText}
               fill
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
               className="object-cover group-hover:scale-105 transition-transform duration-500"
-              data-ai-hint="work student"
+              data-ai-hint="student studying"
             />
             <div className="absolute inset-0 bg-black/50 group-hover:bg-black/40 transition-colors" />
-             <div className="absolute inset-0 flex items-center justify-center">
-              <span className="text-white font-bold text-lg bg-black/30 p-2 rounded">Click to Reveal</span>
+             <div className="absolute inset-0 flex flex-col items-center justify-center p-4">
+              <span className="text-white text-center font-bold text-xl bg-black/40 p-3 rounded">{title}</span>
+              <span className="text-white text-center font-semibold mt-2 bg-black/40 p-2 rounded">{frontText}</span>
             </div>
           </Card>
         </div>
         {/* Back */}
-        <div className="absolute w-full h-full [backface-visibility:hidden] [transform:rotateY(180deg)]">
-          <Card className="w-full h-full flex items-center justify-center bg-primary text-primary-foreground">
-            <CardContent className="p-4 text-center">
-              <p className="font-semibold">{problem}</p>
+        <div className="absolute w-full h-full [backface-visibility:hidden] [transform:rotateY(180deg)] overflow-hidden rounded-lg">
+          <Card className="w-full h-full flex flex-col items-center justify-center p-4" style={{ backgroundColor: color }}>
+             <Icon className="w-12 h-12 text-white mb-4" />
+            <CardContent className="p-0 text-center">
+              <p className="font-semibold text-white">{backText}</p>
             </CardContent>
           </Card>
         </div>
