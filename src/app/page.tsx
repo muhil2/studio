@@ -50,7 +50,7 @@ const heroStats = [
 
 const problems = [
   {
-    title: 'Problem 1',
+    title: 'Insufficient Time for Assignments',
     iconName: 'TrendingDown',
     color: 'hsl(var(--neon-red))',
     frontText: 'Insufficient Time for Assignments',
@@ -58,7 +58,7 @@ const problems = [
       'International students often work part-time (20–30 hrs/week) besides full-time studies. 63% say they barely get 2–3 hours a day for academic work. | Result: last-minute submissions & lower grades.',
   },
   {
-    title: 'Problem 2',
+    title: 'Academic Stress & Mental Fatigue',
     iconName: 'BrainCircuit',
     color: 'hsl(var(--neon-purple))',
     frontText: 'Academic Stress & Mental Fatigue',
@@ -66,7 +66,7 @@ const problems = [
       'Balancing studies, jobs, and living abroad causes high mental strain. 7 out of 10 international students report burnout due to assignment pressure. | Result: anxiety, poor focus, lack of motivation.',
   },
   {
-    title: 'Problem 3',
+    title: 'Sleepless & Exhausting Routines',
     iconName: 'Moon',
     color: 'hsl(var(--neon-blue))',
     frontText: 'Sleepless & Exhausting Routines',
@@ -74,7 +74,7 @@ const problems = [
       'Many survive on <5 hrs of sleep due to tight deadlines and multiple tasks. 54% admit pulling all-nighters before submission dates. | Result: low-quality rushed assignments.',
   },
   {
-    title: 'Problem 4',
+    title: 'Strict Formatting & Referencing Rules',
     iconName: 'AlertTriangle',
     color: 'hsl(var(--primary))',
     frontText: 'Strict Formatting & Referencing Rules',
@@ -82,7 +82,7 @@ const problems = [
       'Universities abroad are very strict about APA/Harvard/IEEE formats. 47% students lose marks only because of formatting errors. | Result: dissatisfied students despite hard work.',
   },
   {
-    title: 'Problem 5',
+    title: 'Overlapping Deadlines Every Month',
     iconName: 'Clock',
     color: 'hsl(var(--neon-green))',
     frontText: 'Overlapping Deadlines Every Month',
@@ -131,13 +131,13 @@ const impactData = [
         icon: Smile,
         title: 'Up to 30% Less Stress',
         description: 'Outsourcing assignments to professionals reduces anxiety and pressure, allowing students to focus on what truly matters.',
-        color: 'hsl(var(--neon-green))',
+        color: 'hsl(var(--neon-pink))',
     },
     {
         icon: TrendingDown,
         title: '1.5x Higher Grade Improvement',
         description: 'Receive higher-quality, professionally completed assignments that result in improved academic performance.',
-        color: 'hsl(var(--neon-pink))',
+        color: 'hsl(var(--neon-green))',
     },
     {
         icon: Lock,
@@ -380,7 +380,7 @@ export default function Home() {
                 <p className="mt-2 text-center text-gray-300 italic">Your Assignments—Handled Like Magic, Delivered Overnight</p>
                 <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
                     {impactData.map((item, index) => (
-                        <div key={index} className="group relative p-6 rounded-lg bg-gray-900 border border-gray-700 text-center transition-all duration-300 hover:bg-gray-800 hover:shadow-[0_0_15px_var(--glow-color)]"
+                        <div key={index} className="group relative p-6 rounded-lg bg-gray-900 border border-gray-700 text-center transition-all duration-300 hover:bg-gray-800 hover:shadow-[0_0_5px_var(--glow-color)]"
                             style={{ '--glow-color': 'rgba(255, 165, 0, 0.3)' } as React.CSSProperties}>
                             <div className="absolute -inset-px rounded-lg bg-[var(--glow-color)] opacity-0 group-hover:opacity-10 transition-opacity duration-300"></div>
                             <div className="relative">

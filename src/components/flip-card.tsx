@@ -53,7 +53,6 @@ export function FlipCard({
             />
             <div className="absolute inset-0 bg-black/50 group-hover:bg-black/40 transition-colors" />
              <div className="absolute inset-0 flex flex-col items-center justify-center p-4">
-              <span className="text-white text-center font-bold text-xl bg-black/40 p-3 rounded">{title}</span>
               <span className="text-white text-center font-semibold mt-2 bg-black/40 p-2 rounded">{frontText}</span>
             </div>
           </Card>
