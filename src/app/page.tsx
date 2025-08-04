@@ -211,7 +211,7 @@ export default function Home() {
       <main className="flex-grow">
         <section id="home" className="relative bg-black text-white py-16 md:py-24 overflow-hidden">
           <div className="absolute top-0 left-0 right-0 p-4 text-center bg-black bg-opacity-50 z-10">
-            <p className="font-headline text-lg md:text-xl font-bold italic" style={{ color: '#00FFFF' }}>
+            <p className="font-headline text-2xl md:text-3xl font-bold italic" style={{ color: '#00FFFF' }}>
               “While You Progress in Life, I’ll Progress Your Assignments”
             </p>
           </div>
@@ -287,7 +287,7 @@ export default function Home() {
                 <FlipCard
                   key={index}
                   title={problem.title}
-                  iconName={problem.iconName}
+                  iconName={problem.iconName as keyof typeof import('lucide-react')}
                   color={problem.color}
                   frontText={problem.frontText}
                   backText={problem.backText}
