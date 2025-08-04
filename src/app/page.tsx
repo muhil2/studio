@@ -209,32 +209,32 @@ export default function Home() {
   return (
     <div className="flex flex-col min-h-screen bg-background">
       <main className="flex-grow">
-        <section id="home" className="relative bg-black text-white py-16 md:py-24 overflow-hidden">
-          <div className="absolute top-0 left-0 right-0 p-4 text-center bg-black bg-opacity-50 z-10">
-            <p className="font-headline text-2xl md:text-3xl font-bold italic" style={{ color: '#00FFFF' }}>
+        <section id="home" className="relative bg-white text-black py-16 md:py-24 overflow-hidden">
+          <div className="absolute top-0 left-0 right-0 p-4 text-center z-10">
+            <p className="font-headline text-2xl md:text-3xl font-bold italic text-primary">
               “While You Progress in Life, I’ll Progress Your Assignments”
             </p>
           </div>
-          <div className="container mx-auto px-4 relative z-0">
+          <div className="container mx-auto px-4 relative z-0 mt-16">
             <div className="flex flex-col md:flex-row items-center justify-between">
               <div className="md:w-1/2 text-center md:text-left">
-                <h1 className="font-headline text-6xl md:text-8xl font-extrabold text-white">
+                <h1 className="font-headline text-6xl md:text-8xl font-extrabold text-black">
                   Muhil Hadi
                 </h1>
-                <p className="mt-2 text-2xl md:text-3xl text-gray-300 font-semibold">
+                <p className="mt-2 text-2xl md:text-3xl text-gray-600 font-semibold">
                   Professional Assignment Writer
                 </p>
-                <p className="mt-6 max-w-xl text-sm md:text-base text-gray-400">
+                <p className="mt-6 max-w-xl text-sm md:text-base text-gray-500">
                   I'm a dedicated professional living in Bangladesh with expertise in academic writing, software development, and technical services. With a keen eye for detail and commitment to excellence, I deliver high-quality solutions tailored to meet your specific needs and requirements. I also don't take any advance payments — I will let you see the overall quality of the work first. And of course I’m from Bangladesh, so the charge will be very less! Thank you!!!!!
                 </p>
                 <div className="mt-8 grid grid-cols-2 gap-6">
                   {heroStats.map((stat) => (
                     <div key={stat.label} className="flex items-center gap-3">
-                      <div className="text-4xl font-bold text-cyan-400">
+                      <div className="text-4xl font-bold text-primary">
                         <AnimatedCounter targetValue={stat.value} />
                         {stat.suffix}
                       </div>
-                      <p className="text-sm text-gray-300">{stat.label}</p>
+                      <p className="text-sm text-gray-600">{stat.label}</p>
                     </div>
                   ))}
                 </div>
