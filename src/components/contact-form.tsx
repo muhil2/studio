@@ -82,7 +82,7 @@ export function ContactForm() {
             </FormItem>
           )}
         />
-        <Button type="submit" className="w-full font-bold" size="lg">
+        <Button type="submit" className="w-full font-bold bg-green-500 hover:bg-green-600 text-white" size="lg">
           <Send className="mr-2 h-4 w-4" />
           Send Message via WhatsApp
         </Button>
