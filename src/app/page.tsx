@@ -430,6 +430,9 @@ export default function Home() {
 
         <section id="impact" className="py-16 md:py-24 bg-black">
             <div className="container mx-auto px-4">
+                <div className="flex justify-center mb-4">
+                    <Star className="w-12 h-12" style={{ color: 'hsl(var(--neon-blue))' }} />
+                </div>
                 <h2 className="text-3xl md:text-4xl font-bold text-center text-white font-headline">Service Impact</h2>
                 <p className="mt-2 text-center text-gray-300 italic">Your Assignments—Handled Like Magic, Delivered Overnight</p>
                 <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
