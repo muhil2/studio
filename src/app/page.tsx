@@ -63,7 +63,7 @@ const problems = [
     color: 'hsl(var(--neon-red))',
     frontText: 'Insufficient Time for Assignments',
     backText:
-      'International students often juggle part-time jobs (20–30 hrs/week) with full-time studies.<br/><br/>63% of students get only 2–3 hours a day for academic work.<br/><br/>This leads to last-minute submissions and lower grades.',
+      'Insufficient Time for Assignments<br/>International students often juggle part-time jobs (20–30 hrs/week) with full-time studies.<br/>63% of students get only 2–3 hours a day for academic work.<br/>This leads to last-minute submissions and lower grades.',
     imageUrl: "https://imgur.com/brxJyWi.png"
   },
   {
@@ -317,7 +317,9 @@ export default function Home() {
                     </Link>
                   </Button>
                   <Link href="https://wa.me/qr/S4BGHXIR6WOKN1" target="_blank" aria-label="WhatsApp">
-                    <WhatsappIcon className="w-8 h-8 text-[#25D366] hover:opacity-80 transition-opacity" />
+                    <div className="w-10 h-10 bg-[#25D366] rounded-full flex items-center justify-center hover:opacity-80 transition-opacity">
+                      <WhatsappIcon className="w-6 h-6 text-white" />
+                    </div>
                   </Link>
                 </div>
                 <div className="flex flex-col items-center gap-2">
@@ -327,7 +329,9 @@ export default function Home() {
                     </Link>
                   </Button>
                   <Link href="https://www.facebook.com/muhil.hadi.2024" target="_blank" aria-label="Facebook">
-                    <Facebook className="w-8 h-8 text-[#1877F2] hover:opacity-80 transition-opacity" />
+                    <div className="w-10 h-10 bg-[#1877F2] rounded-full flex items-center justify-center hover:opacity-80 transition-opacity">
+                      <Facebook className="w-6 h-6 text-white" />
+                    </div>
                   </Link>
                 </div>
               </div>
