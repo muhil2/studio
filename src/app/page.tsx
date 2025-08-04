@@ -310,14 +310,16 @@ export default function Home() {
                 ))}
               </div>
               <div className="flex flex-col sm:flex-row justify-center items-center gap-4">
-                <Button asChild size="lg" className="bg-[#25D366] hover:bg-[#1EBE57] text-white font-bold shadow-lg transition-transform transform hover:scale-105 glow-border" style={{'--glow-color': 'rgba(0,0,0,0.3)'} as React.CSSProperties}>
-                  <Link href="https://wa.me/qr/S4BGHXIR6WOKN1" target="_blank">
-                    Hire Me Through Whatsapp
+                <Button asChild size="lg" className="bg-[#25D366] hover:bg-[#1EBE57] text-white font-bold shadow-lg transition-transform transform hover:scale-105">
+                  <Link href="https://wa.me/qr/S4BGHXIR6WOKN1" target="_blank" className="flex flex-col">
+                    <span>Hire Me</span>
+                    <span className="text-xs font-normal">Through Whatsapp</span>
                   </Link>
                 </Button>
-                <Button asChild size="lg" className="bg-[#1877F2] hover:bg-[#166FE5] text-white font-bold shadow-lg transition-transform transform hover:scale-105 glow-border" style={{'--glow-color': 'rgba(0,0,0,0.3)'} as React.CSSProperties}>
-                  <Link href="https://www.facebook.com/muhil.hadi.2024" target="_blank">
-                    Hire Me Through Facebook
+                <Button asChild size="lg" className="bg-[#1877F2] hover:bg-[#166FE5] text-white font-bold shadow-lg transition-transform transform hover:scale-105">
+                  <Link href="https://www.facebook.com/muhil.hadi.2024" target="_blank" className="flex flex-col">
+                    <span>Hire Me</span>
+                    <span className="text-xs font-normal">Through Facebook</span>
                   </Link>
                 </Button>
               </div>
