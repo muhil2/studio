@@ -35,7 +35,6 @@ import {
 import { AnimatedCounter } from '@/components/animated-counter';
 import { ContactForm } from '@/components/contact-form';
 import { FlipCard } from '@/components/flip-card';
-import { TestimonialSlider } from '@/components/testimonial-slider';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
@@ -370,12 +369,12 @@ export default function Home() {
         <section id="impact" className="py-16 md:py-24 bg-black">
             <div className="container mx-auto px-4">
                 <h2 className="text-3xl md:text-4xl font-bold text-center text-white font-headline">Service Impact</h2>
-                <p className="mt-2 text-center text-gray-400 italic">Your Assignments—Handled Like Magic, Delivered Overnight</p>
+                <p className="mt-2 text-center text-gray-300 italic">Your Assignments—Handled Like Magic, Delivered Overnight</p>
                 <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
                     {impactData.map((item, index) => (
                         <div key={index} className="group relative p-6 rounded-lg bg-gray-900 border border-gray-700 text-center transition-all duration-300 hover:bg-gray-800"
                             style={{ '--glow-color': item.color } as React.CSSProperties}>
-                            <div className="absolute -inset-px rounded-lg bg-[var(--glow-color)] opacity-0 group-hover:opacity-25 blur transition-opacity duration-300"></div>
+                            <div className="absolute -inset-px rounded-lg bg-[var(--glow-color)] opacity-0 group-hover:opacity-10 transition-opacity duration-300"></div>
                             <div className="relative">
                                 <div className="flex justify-center mb-4">
                                     <div className="p-3 rounded-full bg-gray-800 group-hover:bg-gray-700 transition-colors">
@@ -399,8 +398,30 @@ export default function Home() {
             <p className="mt-4 text-center text-muted-foreground italic max-w-2xl mx-auto">
               Success Stories from Students Using Our Service
             </p>
-            <div className="mt-12">
-              <TestimonialSlider testimonials={testimonials} />
+            <div className="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {testimonials.map((testimonial, index) => (
+                <Card key={index} className="p-6 shadow-lg rounded-xl">
+                  <CardContent className="p-0">
+                    <div className="flex items-center mb-4">
+                      <Avatar className="h-14 w-14 mr-4 border-2 border-primary">
+                        <AvatarFallback className="bg-primary/20 text-primary font-bold text-xl">{testimonial.initials}</AvatarFallback>
+                      </Avatar>
+                      <div>
+                        <p className="font-bold text-lg text-foreground">{testimonial.name}</p>
+                        <p className="text-sm text-muted-foreground">{testimonial.university}</p>
+                      </div>
+                    </div>
+                    <div className="flex items-center mb-4">
+                      {[...Array(5)].map((_, i) => (
+                        <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
+                      ))}
+                    </div>
+                    <blockquote className="text-foreground/80 italic text-sm">
+                      "{testimonial.quote}"
+                    </blockquote>
+                  </CardContent>
+                </Card>
+              ))}
             </div>
           </div>
         </section>
