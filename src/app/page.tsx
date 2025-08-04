@@ -254,15 +254,11 @@ const WhatsappIcon = (props: React.SVGProps<SVGSVGElement>) => (
       width="24"
       height="24"
       viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
+      fill="currentColor"
       {...props}
     >
-      <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
-      <path d="M14.05 14.05a2 2 0 0 1-2.83 0L10 12.83l-1.22 1.22a2 2 0 0 1-2.83-2.83L7.17 10l-1.22-1.22a2 2 0 0 1 2.83-2.83L10 7.17l1.22-1.22a2 2 0 0 1 2.83 2.83L12.83 10l1.22 1.22a2 2 0 0 1 0 2.83z" />
+        <path d="M16.6 14.2l-1.5-0.7c-0.3-0.1-0.5-0.1-0.7 0.1l-0.9 1.1c-1.3-0.7-2.5-1.9-3.2-3.2l1.1-0.9c0.2-0.2 0.3-0.5 0.1-0.7l-0.7-1.5c-0.2-0.3-0.5-0.5-0.8-0.5h-1.6c-0.4,0-0.7,0.3-0.7,0.7c0,4.4,3.6,8,8,8c0.4,0,0.7-0.3,0.7-0.7v-1.6C17.1 14.7 16.9 14.4 16.6 14.2z"/>
+        <path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10s10-4.5 10-10S17.5 2 12 2zm0 18c-4.4 0-8-3.6-8-8s3.6-8 8-8s8 3.6 8 8S16.4 20 12 20z"/>
     </svg>
   );
 
@@ -367,6 +363,9 @@ export default function Home() {
         
         <section id="services" className="py-16 md:py-24 bg-black">
           <div className="container mx-auto px-4">
+            <div className="flex justify-center mb-4">
+              <Star className="w-12 h-12" style={{ color: 'hsl(var(--neon-blue))' }} />
+            </div>
             <h2 className="text-3xl md:text-4xl font-bold text-center font-headline text-white">
               My Services
             </h2>
@@ -539,7 +538,7 @@ export default function Home() {
                 </div>
                 <div className="flex items-start gap-4">
                    <div className="p-3 bg-primary/10 rounded-full">
-                    <Phone className="w-6 h-6 text-primary" />
+                    <WhatsappIcon className="w-6 h-6 text-green-500" />
                   </div>
                   <div>
                     <h3 className="font-bold text-lg text-foreground">Phone / WhatsApp</h3>
