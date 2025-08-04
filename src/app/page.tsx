@@ -263,9 +263,9 @@ const WhatsappIcon = (props: React.SVGProps<SVGSVGElement>) => (
   );
 
 const socialLinks = [
-  { icon: WhatsappIcon, href: 'https://wa.me/qr/S4BGHXIR6WOKN1', 'aria-label': 'WhatsApp' },
-  { icon: Facebook, href: 'https://www.facebook.com/muhil.hadi.2024', 'aria-label': 'Facebook' },
-  { icon: Mail, href: 'mailto:assignmentyess@gmail.com', 'aria-label': 'Gmail' },
+  { name: 'whatsapp', icon: WhatsappIcon, href: 'https://wa.me/qr/S4BGHXIR6WOKN1', 'aria-label': 'WhatsApp', color: 'text-green-500 hover:text-white', hoverBg: 'hover:bg-green-500' },
+  { name: 'facebook', icon: Facebook, href: 'https://www.facebook.com/muhil.hadi.2024', 'aria-label': 'Facebook', color: 'text-blue-600 hover:text-white', hoverBg: 'hover:bg-blue-600' },
+  { name: 'email', icon: Mail, href: 'mailto:assignmentyess@gmail.com', 'aria-label': 'Gmail', color: 'text-red-600 hover:text-white', hoverBg: 'hover:bg-red-600' },
 ];
 
 export default function Home() {
@@ -515,7 +515,9 @@ export default function Home() {
         <section id="contact" className="py-16 md:py-24 bg-secondary">
           <div className="container mx-auto px-4">
             <div className="flex justify-center mb-4">
-                <Phone className="w-12 h-12 text-primary" />
+                <div className="p-3 bg-primary/10 rounded-full">
+                    <Phone className="w-12 h-12 text-primary" />
+                </div>
             </div>
             <h2 className="text-3xl md:text-4xl font-bold text-center font-headline text-foreground">
               Get In Touch
@@ -527,7 +529,7 @@ export default function Home() {
               <div className="flex flex-col space-y-6">
                 <div className="flex items-start gap-4">
                   <div className="p-3 bg-primary/10 rounded-full">
-                    <Mail className="w-6 h-6 text-primary" />
+                    <Mail className="w-6 h-6 text-red-600" />
                   </div>
                   <div>
                     <h3 className="font-bold text-lg text-foreground">Email</h3>
@@ -561,9 +563,9 @@ export default function Home() {
                   <h3 className="font-bold text-lg text-foreground mb-4">Connect With Me</h3>
                    <div className="flex space-x-4">
                     {socialLinks.map((social) => (
-                      <Link href={social.href} key={social.href} target="_blank" aria-label={social['aria-label']}>
-                         <Button variant="outline" size="icon" className="h-12 w-12 rounded-full hover:bg-primary hover:text-primary-foreground transition-all">
-                            <social.icon className="h-6 w-6" />
+                      <Link href={social.href} key={social.name} target="_blank" aria-label={social['aria-label']}>
+                         <Button variant="outline" size="icon" className={`h-12 w-12 rounded-full transition-all ${social.hoverBg}`}>
+                            <social.icon className={`h-6 w-6 ${social.color}`} />
                           </Button>
                       </Link>
                     ))}
