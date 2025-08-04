@@ -335,12 +335,12 @@ export default function Home() {
             <div className="mt-12 grid grid-cols-1 lg:grid-cols-3 gap-8">
               <div className="lg:col-span-1 flex flex-col gap-6">
                 {majorBenefits.map((benefit) => (
-                  <Card key={benefit.title} className="group p-6 border-2 border-transparent hover:border-[var(--glow-color)] hover:shadow-lg transition-all" style={{ '--glow-color': benefit.color } as React.CSSProperties}>
+                  <Card key={benefit.title} className="group p-6 border-2 bg-black text-white border-transparent hover:border-[var(--glow-color)] hover:shadow-lg transition-all" style={{ '--glow-color': benefit.color } as React.CSSProperties}>
                       <div className="flex items-center gap-4 mb-3">
                           <benefit.icon className="w-8 h-8" style={{ color: benefit.color }}/>
                           <h3 className="text-xl font-bold font-headline">{benefit.title}</h3>
                       </div>
-                      <p className="text-muted-foreground">{benefit.description}</p>
+                      <p className="text-gray-300">{benefit.description}</p>
                   </Card>
                 ))}
               </div>
@@ -350,7 +350,7 @@ export default function Home() {
                   {keyBenefits.map((benefit) => (
                     <Card key={benefit.text} className="group flex items-center p-4 border-2 border-transparent hover:border-[var(--glow-color)] hover:shadow-md transition-all" style={{'--glow-color': benefit.color} as React.CSSProperties}>
                         <benefit.icon className="w-10 h-10 mr-4 flex-shrink-0" style={{color: benefit.color}} />
-                        <p className="font-semibold">{benefit.text}</p>
+                        <p className="font-semibold text-black">{benefit.text}</p>
                     </Card>
                   ))}
                 </div>
