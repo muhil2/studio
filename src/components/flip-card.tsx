@@ -44,13 +44,13 @@ export function FlipCard({
       >
         {/* Front */}
         <div className="absolute w-full h-full [backface-visibility:hidden] overflow-hidden rounded-lg">
-          <Card className={cn("w-full h-full border-2 border-transparent group-hover:border-[var(--glow-color)] transition-all", cardClassName)} style={{ '--glow-color': color } as React.CSSProperties}>
+          <Card className={cn("w-full h-full", cardClassName)}>
             <Image
               src={imageUrl}
               alt={frontText}
               fill
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-              className="object-cover group-hover:scale-105 transition-transform duration-500"
+              className="object-cover group-hover:scale-105 transition-transform duration-500 opacity-20"
               
             />
             <div className="absolute inset-0 bg-black/50 group-hover:bg-black/40 transition-colors" />

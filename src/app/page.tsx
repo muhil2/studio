@@ -345,7 +345,7 @@ export default function Home() {
                   frontText={problem.frontText}
                   backText={problem.backText}
                   imageUrl={problem.imageUrl}
-                  cardClassName="border-2 border-destructive problem-card-glow"
+                  cardClassName="bg-gradient-to-br from-red-500/20 to-orange-400/20 border-2 border-destructive"
                 />
               ))}
             </div>
