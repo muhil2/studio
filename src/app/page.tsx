@@ -326,9 +326,11 @@ export default function Home() {
 
         <section id="solution" className="py-16 md:py-24 bg-white text-blue-900">
           <div className="container mx-auto px-4">
-            <h2 className="text-3xl md:text-4xl font-bold text-center font-headline text-black">
-              Our Solution
-            </h2>
+            <div className="text-center">
+                <h2 className="inline-block text-3xl md:text-4xl font-bold font-headline text-black border-b-4 border-primary pb-2">
+                Our Solution
+                </h2>
+            </div>
             <p className="mt-2 text-center text-muted-foreground italic">
               Revolutionary Assignment Writing Platform
             </p>
@@ -345,19 +347,21 @@ export default function Home() {
                 ))}
               </div>
               <div className="lg:col-span-2">
-                <div className="text-center">
-                  <h3 className="inline-block text-2xl font-bold font-headline text-black border-b-4 border-primary pb-2">
-                    Key Benefits
-                  </h3>
-                </div>
-                <div className="mt-6 flex flex-col gap-4">
-                  {keyBenefits.map((benefit) => (
-                    <Card key={benefit.text} className="group flex items-center p-4 border-2 border-transparent hover:border-[var(--glow-color)] hover:shadow-md transition-all" style={{'--glow-color': benefit.color} as React.CSSProperties}>
-                        <benefit.icon className="w-10 h-10 mr-4 flex-shrink-0" style={{color: benefit.color}} />
-                        <p className="font-semibold text-black">{benefit.text}</p>
-                    </Card>
-                  ))}
-                </div>
+                <Card className="p-6 border-2 border-blue-500 rounded-lg shadow-lg">
+                    <div className="text-center mb-6">
+                    <h3 className="text-2xl font-bold font-headline text-black">
+                        Key Benefits
+                    </h3>
+                    </div>
+                    <div className="flex flex-col gap-4">
+                    {keyBenefits.map((benefit) => (
+                        <Card key={benefit.text} className="group flex items-center p-4 border-2 border-transparent hover:border-[var(--glow-color)] hover:shadow-md transition-all" style={{'--glow-color': benefit.color} as React.CSSProperties}>
+                            <benefit.icon className="w-10 h-10 mr-4 flex-shrink-0" style={{color: benefit.color}} />
+                            <p className="font-semibold text-black">{benefit.text}</p>
+                        </Card>
+                    ))}
+                    </div>
+                </Card>
               </div>
             </div>
           </div>
