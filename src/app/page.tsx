@@ -278,7 +278,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="problems" className="py-16 md:py-24 bg-white text-black">
+        <section id="problems" className="py-16 md:py-24 bg-white text-black border-4 border-red-500">
           <div className="container mx-auto px-4">
             <h2 className="text-3xl md:text-4xl font-bold text-center font-headline text-foreground">
               The Problem With Submitting Assignments No One Talks About
