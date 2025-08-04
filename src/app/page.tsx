@@ -326,6 +326,9 @@ export default function Home() {
         <section id="solution" className="py-16 md:py-24 bg-white text-blue-900">
           <div className="container mx-auto px-4">
             <div className="text-center">
+              <div className="flex justify-center mb-4">
+                <Lightbulb className="w-12 h-12 text-green-500 animate-pulse" />
+              </div>
               <h2 className="text-3xl md:text-4xl font-bold font-headline text-black">
                 Our Solution
               </h2>
