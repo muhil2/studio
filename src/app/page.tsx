@@ -551,7 +551,7 @@ export default function Home() {
                 </div>
                 <Separator className="my-4 bg-gray-800" />
                 <div>
-                  <h3 className="font-bold text-lg text-white mb-4">Connect With Me</h3>
+                  <h3 className="font-bold text-lg text-white mb-4">Connect With Me by Just One Click</h3>
                    <div className="flex space-x-4">
                     {socialLinks.map((social) => (
                       <Link href={social.href} key={social.name} target="_blank" aria-label={social['aria-label']}>
