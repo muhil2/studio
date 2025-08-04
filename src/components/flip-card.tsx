@@ -14,6 +14,7 @@ export function FlipCard({
   frontText,
   backText,
   imageUrl,
+  cardClassName,
 }: {
   title: string;
   iconName: IconName;
@@ -21,6 +22,7 @@ export function FlipCard({
   frontText: string;
   backText: string;
   imageUrl: string;
+  cardClassName?: string;
 }) {
   const [isFlipped, setIsFlipped] = useState(false);
   const Icon = LucideIcons[iconName] as LucideIcons.LucideIcon;
@@ -42,7 +44,7 @@ export function FlipCard({
       >
         {/* Front */}
         <div className="absolute w-full h-full [backface-visibility:hidden] overflow-hidden rounded-lg">
-          <Card className="w-full h-full border-2 border-transparent group-hover:border-[var(--glow-color)] transition-all" style={{ '--glow-color': color } as React.CSSProperties}>
+          <Card className={cn("w-full h-full border-2 border-transparent group-hover:border-[var(--glow-color)] transition-all", cardClassName)} style={{ '--glow-color': color } as React.CSSProperties}>
             <Image
               src={imageUrl}
               alt={frontText}
@@ -59,7 +61,7 @@ export function FlipCard({
         </div>
         {/* Back */}
         <div className="absolute w-full h-full [backface-visibility:hidden] [transform:rotateY(180deg)] overflow-hidden rounded-lg">
-          <Card className="w-full h-full flex flex-col items-center justify-center p-4" style={{ backgroundColor: color }}>
+          <Card className={cn("w-full h-full flex flex-col items-center justify-center p-4", cardClassName)} style={{ backgroundColor: color }}>
              <Icon className="w-12 h-12 text-white mb-4" />
             <CardContent className="p-0 text-center">
               <p className="font-semibold text-white">{backText}</p>

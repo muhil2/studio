@@ -322,8 +322,11 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="problems" className="py-16 md:py-24 bg-white text-black border-t-2 border-b-2 border-destructive">
+        <section id="problems" className="py-16 md:py-24 bg-white text-black">
           <div className="container mx-auto px-4">
+            <div className="flex justify-center mb-4">
+              <AlertTriangle className="w-12 h-12 text-destructive" />
+            </div>
             <h2 className="text-3xl md:text-4xl font-bold text-center font-headline text-foreground">
               The Problem With Submitting Assignments No One Talks About
             </h2>
@@ -337,6 +340,7 @@ export default function Home() {
                   frontText={problem.frontText}
                   backText={problem.backText}
                   imageUrl={problem.imageUrl}
+                  cardClassName="border-2 border-destructive"
                 />
               ))}
             </div>
