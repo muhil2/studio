@@ -224,9 +224,11 @@ export default function Home() {
                 <p className="mt-2 text-2xl md:text-3xl text-gray-600 font-semibold">
                   Professional Assignment Writer
                 </p>
-                <p className="mt-6 max-w-xl text-sm md:text-base text-gray-500">
-                  I'm a dedicated professional living in Bangladesh with expertise in academic writing, software development, and technical services. With a keen eye for detail and commitment to excellence, I deliver high-quality solutions tailored to meet your specific needs and requirements. I also don't take any advance payments — I will let you see the overall quality of the work first. And of course I’m from Bangladesh, so the charge will be very less! Thank you!!!!!
-                </p>
+                <div className="mt-6 bg-primary/10 border-l-4 border-primary text-primary-foreground p-6 rounded-lg shadow-md">
+                  <p className="text-sm md:text-base text-accent-foreground/80">
+                    I'm a dedicated professional living in Bangladesh with expertise in academic writing, software development, and technical services. With a keen eye for detail and commitment to excellence, I deliver high-quality solutions tailored to meet your specific needs and requirements. I also don't take any advance payments — I will let you see the overall quality of the work first. And of course I’m from Bangladesh, so the charge will be very less! Thank you!!!!!
+                  </p>
+                </div>
                 <div className="mt-8 grid grid-cols-2 gap-6">
                   {heroStats.map((stat) => (
                     <div key={stat.label} className="flex items-center gap-3">
