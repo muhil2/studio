@@ -327,7 +327,9 @@ export default function Home() {
           <div className="container mx-auto px-4">
             <div className="text-center">
               <div className="flex justify-center mb-4">
-                <Lightbulb className="w-12 h-12 text-green-500 animate-pulse" />
+                <div className="p-4 bg-green-100 rounded-full hover:bg-green-200 hover:shadow-[0_0_20px_5px] hover:shadow-green-300 transition-all duration-300">
+                    <Lightbulb className="w-12 h-12 text-green-500" />
+                </div>
               </div>
               <h2 className="text-3xl md:text-4xl font-bold font-headline text-black">
                 Our Solution
