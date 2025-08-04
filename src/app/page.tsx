@@ -275,7 +275,7 @@ export default function Home() {
       <section id="home" className="bg-sky-100 text-black py-16 md:py-24 overflow-hidden">
           <div className="container mx-auto px-4">
             <div className="flex flex-col items-center text-center">
-              <p className="font-calibri text-3xl md:text-4xl font-bold text-primary mb-8 italic">
+              <p className="font-calibri text-3xl md:text-4xl font-bold mb-8 italic bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 text-transparent bg-clip-text">
                 “While You Progress in Life, I’ll Progress Your Assignments”
               </p>
               <h1 className="font-headline text-6xl md:text-8xl font-extrabold text-black">
