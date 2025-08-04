@@ -326,10 +326,10 @@ export default function Home() {
         <section id="solution" className="py-16 md:py-24 bg-white text-blue-900">
           <div className="container mx-auto px-4">
             <div className="text-center">
-                <h2 className="text-3xl md:text-4xl font-bold font-headline text-black">
+                <h2 className="text-3xl md:text-4xl font-bold font-headline text-black border-b-4 border-primary pb-2">
                 Our Solution
                 </h2>
-                 <p className="mt-2 text-center text-muted-foreground italic border-b-4 border-primary pb-2">
+                 <p className="mt-2 text-center text-muted-foreground italic">
                   Revolutionary Assignment Writing Platform
                 </p>
             </div>
