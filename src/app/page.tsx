@@ -353,7 +353,7 @@ export default function Home() {
             <div className="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {services.map((service) => (
                 <Link href={service.href} key={service.title} target={service.href.startsWith('http') ? '_blank' : '_self'} className="group">
-                  <Card className="h-full text-center bg-gray-900 border-gray-800 text-white hover:shadow-xl hover:-translate-y-2 transition-all duration-300">
+                  <Card className="h-full text-center bg-gray-900 border-gray-800 text-white hover:shadow-xl hover:-translate-y-2 transition-all duration-300 flex flex-col">
                     <CardHeader>
                       <div className="flex justify-center mb-4">
                         <div className="p-4 bg-primary/20 rounded-full">
@@ -362,9 +362,14 @@ export default function Home() {
                       </div>
                       <CardTitle className="font-headline text-white">{service.title}</CardTitle>
                     </CardHeader>
-                    <CardContent>
+                    <CardContent className="flex-grow">
                       <p className="text-gray-400">{service.description}</p>
                     </CardContent>
+                    <div className="p-6 pt-0">
+                      <Button className="bg-yellow-500 hover:bg-yellow-600 text-black font-bold">
+                        View Demo
+                      </Button>
+                    </div>
                   </Card>
                 </Link>
               ))}
