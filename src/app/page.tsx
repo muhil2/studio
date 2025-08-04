@@ -281,7 +281,7 @@ export default function Home() {
               <h1 className="font-headline text-6xl md:text-8xl font-extrabold text-black">
                 Muhil Hadi
               </h1>
-              <p className="mt-2 text-2xl md:text-3xl text-gray-600 font-semibold">
+              <p className="mt-2 text-xl md:text-2xl text-gray-600 font-semibold italic">
                 Professional Assignment Writer
               </p>
               <div className="mt-12 mb-8">
