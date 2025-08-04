@@ -383,7 +383,7 @@ export default function Home() {
                                     </div>
                                 </div>
                                 <h3 className="text-xl font-bold text-white mb-2">{item.title}</h3>
-                                <p className="text-gray-400">{item.description}</p>
+                                <p className="text-gray-300">{item.description}</p>
                             </div>
                         </div>
                     ))}
