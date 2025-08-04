@@ -211,7 +211,7 @@ export default function Home() {
       <main className="flex-grow">
         <section id="home" className="relative bg-sky-50 text-black py-16 md:py-24 overflow-hidden">
           <div className="absolute top-0 left-0 right-0 p-4 text-center z-10">
-            <p className="font-headline text-2xl md:text-3xl font-bold italic text-primary">
+            <p className="font-headline text-2xl md:text-3xl font-bold text-primary">
               “While You Progress in Life, I’ll Progress Your Assignments”
             </p>
           </div>
@@ -294,28 +294,28 @@ export default function Home() {
           </div>
         </section>
         
-        <section id="services" className="py-16 md:py-24 bg-secondary">
+        <section id="services" className="py-16 md:py-24 bg-black">
           <div className="container mx-auto px-4">
-            <h2 className="text-3xl md:text-4xl font-bold text-center font-headline text-foreground">
+            <h2 className="text-3xl md:text-4xl font-bold text-center font-headline text-white">
               My Services
             </h2>
-            <p className="mt-4 text-center text-muted-foreground max-w-2xl mx-auto">
+            <p className="mt-4 text-center text-gray-400 max-w-2xl mx-auto">
               Offering a range of professional services to help you succeed academically and professionally.
             </p>
             <div className="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {services.map((service) => (
                 <Link href={service.href} key={service.title} target={service.href.startsWith('http') ? '_blank' : '_self'} className="group">
-                  <Card className="h-full text-center hover:shadow-xl hover:-translate-y-2 transition-all duration-300">
+                  <Card className="h-full text-center bg-gray-900 border-gray-800 text-white hover:shadow-xl hover:-translate-y-2 transition-all duration-300">
                     <CardHeader>
                       <div className="flex justify-center mb-4">
-                        <div className="p-4 bg-primary/10 rounded-full">
+                        <div className="p-4 bg-primary/20 rounded-full">
                           <service.icon className="w-8 h-8 text-primary" />
                         </div>
                       </div>
-                      <CardTitle className="font-headline">{service.title}</CardTitle>
+                      <CardTitle className="font-headline text-white">{service.title}</CardTitle>
                     </CardHeader>
                     <CardContent>
-                      <p className="text-muted-foreground">{service.description}</p>
+                      <p className="text-gray-400">{service.description}</p>
                     </CardContent>
                   </Card>
                 </Link>
