@@ -63,7 +63,7 @@ const problems = [
     color: 'hsl(var(--neon-red))',
     frontText: 'Insufficient Time for Assignments',
     backText:
-      'Problem: Insufficient Time for Assignments. International students often juggle part-time jobs (20–30 hrs/week) with full-time studies. Key Statistic: 63% of students get only 2–3 hours a day for academic work. Result: This leads to last-minute submissions and lower grades.',
+      '<b>Problem:</b> Insufficient Time for Assignments<br/><br/>International students often juggle part-time jobs (20–30 hrs/week) with full-time studies.<br/><br/><b>Key Statistic</b><br/>63% of students get only 2–3 hours a day for academic work.<br/><br/><b>Result</b><br/>This leads to last-minute submissions and lower grades.',
     imageUrl: "https://imgur.com/brxJyWi.png"
   },
   {
@@ -330,7 +330,7 @@ export default function Home() {
         <section id="problems" className="py-16 md:py-24 bg-red-50 text-black">
           <div className="container mx-auto px-4">
             <div className="flex justify-center mb-4">
-              <AlertTriangle className="w-16 h-16 text-destructive" />
+              <AlertTriangle className="w-24 h-24 text-destructive" />
             </div>
             <h2 className="text-3xl md:text-4xl font-bold text-center font-headline text-foreground">
               The Problem With Submitting Assignments No One Talks About

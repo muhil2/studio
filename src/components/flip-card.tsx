@@ -64,7 +64,7 @@ export function FlipCard({
           <Card className={cn("w-full h-full flex flex-col items-center justify-center p-4", cardClassName)} style={{ backgroundColor: color }}>
              <Icon className="w-12 h-12 text-white mb-4" />
             <CardContent className="p-0 text-center">
-              <p className="font-semibold text-white">{backText}</p>
+              <p className="font-semibold text-white" dangerouslySetInnerHTML={{ __html: backText }}></p>
             </CardContent>
           </Card>
         </div>
