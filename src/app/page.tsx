@@ -225,7 +225,7 @@ export default function Home() {
                   Professional Assignment Writer
                 </p>
                 <div className="mt-6 bg-primary/10 border-l-4 border-primary text-primary-foreground p-6 rounded-lg shadow-md">
-                  <p className="text-sm md:text-base text-accent-foreground/80">
+                  <p className="text-sm md:text-base text-black">
                     I'm a dedicated professional living in Bangladesh with expertise in academic writing, software development, and technical services. With a keen eye for detail and commitment to excellence, I deliver high-quality solutions tailored to meet your specific needs and requirements. I also don't take any advance payments — I will let you see the overall quality of the work first. And of course I’m from Bangladesh, so the charge will be very less! Thank you!!!!!
                   </p>
                 </div>
@@ -241,12 +241,12 @@ export default function Home() {
                   ))}
                 </div>
                  <div className="mt-10 flex flex-col sm:flex-row justify-center md:justify-start items-center gap-4">
-                  <Button asChild size="lg" className="bg-[#25D366] hover:bg-[#1EBE57] text-white font-bold shadow-lg transition-transform transform hover:scale-105">
+                  <Button asChild size="lg" className="bg-[#25D366] hover:bg-[#1EBE57] text-white font-bold shadow-lg transition-transform transform hover:scale-105 glow-border" style={{'--glow-color': 'rgba(0,0,0,0.3)'} as React.CSSProperties}>
                     <Link href="https://wa.me/qr/S4BGHXIR6WOKN1" target="_blank">
                       Hire Me Through Whatsapp
                     </Link>
                   </Button>
-                  <Button asChild size="lg" className="bg-[#1877F2] hover:bg-[#166FE5] text-white font-bold shadow-lg transition-transform transform hover:scale-105">
+                  <Button asChild size="lg" className="bg-[#1877F2] hover:bg-[#166FE5] text-white font-bold shadow-lg transition-transform transform hover:scale-105 glow-border" style={{'--glow-color': 'rgba(0,0,0,0.3)'} as React.CSSProperties}>
                     <Link href="https://www.facebook.com/muhil.hadi.2024" target="_blank">
                       Hire Me Through Facebook
                     </Link>
@@ -256,7 +256,7 @@ export default function Home() {
               <div className="md:w-1/2 mt-12 md:mt-0 flex justify-center md:justify-end">
                 <div className="relative w-60 h-60 md:w-80 md:h-80">
                   <div
-                    className="relative w-full h-full rounded-full border-4 border-blue-500"
+                    className="relative w-full h-full rounded-full border-8 border-primary"
                   >
                     <Image
                       src="https://i.imgur.com/QllfG6k.jpeg"
