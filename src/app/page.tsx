@@ -326,12 +326,12 @@ export default function Home() {
         <section id="solution" className="py-16 md:py-24 bg-white text-blue-900">
           <div className="container mx-auto px-4">
             <div className="text-center">
-                <h2 className="text-3xl md:text-4xl font-bold font-headline text-black border-b-4 border-primary pb-2">
+              <h2 className="text-3xl md:text-4xl font-bold font-headline text-black">
                 Our Solution
-                </h2>
-                 <p className="mt-2 text-center text-muted-foreground italic">
-                  Revolutionary Assignment Writing Platform
-                </p>
+              </h2>
+              <p className="mt-2 text-center text-muted-foreground italic inline-block border-b-4 border-primary pb-2">
+                Revolutionary Assignment Writing Platform
+              </p>
             </div>
             <div className="mt-12 grid grid-cols-1 lg:grid-cols-3 gap-8">
               <div className="lg:col-span-1 flex flex-col gap-6">
