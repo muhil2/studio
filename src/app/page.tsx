@@ -326,10 +326,10 @@ export default function Home() {
         <section id="solution" className="py-16 md:py-24 bg-white text-blue-900">
           <div className="container mx-auto px-4">
             <div className="text-center">
-                <h2 className="inline-block text-3xl md:text-4xl font-bold font-headline text-black">
+                <h2 className="text-3xl md:text-4xl font-bold font-headline text-black">
                 Our Solution
                 </h2>
-                 <p className="mt-2 text-center text-muted-foreground italic inline-block border-b-4 border-primary pb-2">
+                 <p className="mt-2 text-center text-muted-foreground italic border-b-4 border-primary pb-2">
                   Revolutionary Assignment Writing Platform
                 </p>
             </div>
@@ -373,7 +373,7 @@ export default function Home() {
                 <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
                     {impactData.map((item, index) => (
                         <div key={index} className="group relative p-6 rounded-lg bg-gray-900 border border-gray-700 text-center transition-all duration-300 hover:bg-gray-800 hover:shadow-[0_0_15px_var(--glow-color)]"
-                            style={{ '--glow-color': item.color } as React.CSSProperties}>
+                            style={{ '--glow-color': 'rgba(255, 165, 0, 0.3)' } as React.CSSProperties}>
                             <div className="absolute -inset-px rounded-lg bg-[var(--glow-color)] opacity-0 group-hover:opacity-10 transition-opacity duration-300"></div>
                             <div className="relative">
                                 <div className="flex justify-center mb-4">
