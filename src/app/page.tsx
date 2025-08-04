@@ -345,7 +345,7 @@ export default function Home() {
                   frontText={problem.frontText}
                   backText={problem.backText}
                   imageUrl={problem.imageUrl}
-                  cardClassName="bg-destructive/10 border-2 border-destructive shadow-[0_0_2px_#fff,inset_0_0_2px_#fff,0_0_5px_#ef4444,0_0_15px_#ef4444,0_0_30px_#ef4444]"
+                  cardClassName="bg-destructive/10 border-2 border-destructive"
                 />
               ))}
             </div>
