@@ -274,7 +274,7 @@ export default function Home() {
       <main className="flex-grow">
         <section id="home" className="relative bg-sky-100 text-black py-16 md:py-24 overflow-hidden">
           <div className="absolute top-0 left-0 right-0 p-4 text-center z-10">
-            <p className="font-headline text-2xl md:text-3xl font-bold text-primary">
+            <p className="font-calibri text-3xl md:text-4xl font-bold text-primary">
               “While You Progress in Life, I’ll Progress Your Assignments”
             </p>
           </div>
