@@ -330,7 +330,7 @@ export default function Home() {
         <section id="problems" className="py-16 md:py-24 bg-red-50 text-black">
           <div className="container mx-auto px-4">
             <div className="flex justify-center mb-4">
-              <AlertTriangle className="w-12 h-12 text-destructive" />
+              <AlertTriangle className="w-16 h-16 text-destructive" />
             </div>
             <h2 className="text-3xl md:text-4xl font-bold text-center font-headline text-foreground">
               The Problem With Submitting Assignments No One Talks About
