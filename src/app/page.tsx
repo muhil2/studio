@@ -209,7 +209,7 @@ export default function Home() {
   return (
     <div className="flex flex-col min-h-screen bg-background">
       <main className="flex-grow">
-        <section id="home" className="relative bg-white text-black py-16 md:py-24 overflow-hidden">
+        <section id="home" className="relative bg-sky-50 text-black py-16 md:py-24 overflow-hidden">
           <div className="absolute top-0 left-0 right-0 p-4 text-center z-10">
             <p className="font-headline text-2xl md:text-3xl font-bold italic text-primary">
               “While You Progress in Life, I’ll Progress Your Assignments”
