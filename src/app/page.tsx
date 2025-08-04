@@ -199,7 +199,7 @@ const services = [
   {
     title: 'CSE Assignments (All Course)',
     description: 'Expert assistance with computer science and engineering coursework.',
-    icon: Code,
+    icon: Computer,
     href: '#contact',
   },
   {
