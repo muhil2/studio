@@ -272,55 +272,21 @@ export default function Home() {
   return (
     <div className="flex flex-col min-h-screen bg-background">
       <main className="flex-grow">
-        <section id="home" className="relative bg-sky-100 text-black py-16 md:py-24 overflow-hidden">
-          <div className="absolute top-0 left-0 right-0 p-4 text-center z-10">
-            <p className="font-calibri text-3xl md:text-4xl font-bold text-primary">
-              “While You Progress in Life, I’ll Progress Your Assignments”
-            </p>
-          </div>
-          <div className="container mx-auto px-4 relative z-0 mt-16">
-            <div className="flex flex-col md:flex-row items-center justify-between">
-              <div className="md:w-1/2 text-center md:text-left">
-                <h1 className="font-headline text-6xl md:text-8xl font-extrabold text-black">
-                  Muhil Hadi
-                </h1>
-                <p className="mt-2 text-2xl md:text-3xl text-gray-600 font-semibold">
-                  Professional Assignment Writer
-                </p>
-                <div className="mt-6 bg-primary/10 border-l-4 border-primary text-primary-foreground p-6 rounded-lg shadow-md">
-                  <p className="text-sm md:text-base text-black">
-                    I'm a dedicated professional living in Bangladesh with expertise in academic writing, software development, and technical services. With a keen eye for detail and commitment to excellence, I deliver high-quality solutions tailored to meet your specific needs and requirements. I also don't take any advance payments — I will let you see the overall quality of the work first. And of course I’m from Bangladesh, so the charge will be very less! Thank you!!!!!
-                  </p>
-                </div>
-                <div className="mt-8 grid grid-cols-2 gap-y-8 gap-x-6">
-                  {heroStats.map((stat) => (
-                    <div key={stat.label} className="flex flex-col">
-                      <div className="text-5xl font-bold text-primary">
-                        <AnimatedCounter targetValue={stat.value} />
-                        {stat.suffix}
-                      </div>
-                      <p className="text-sm text-gray-600 mt-1">{stat.label}</p>
-                    </div>
-                  ))}
-                </div>
-                 <div className="mt-10 flex flex-col sm:flex-row justify-center md:justify-start items-center gap-4">
-                  <Button asChild size="lg" className="bg-[#25D366] hover:bg-[#1EBE57] text-white font-bold shadow-lg transition-transform transform hover:scale-105 glow-border" style={{'--glow-color': 'rgba(0,0,0,0.3)'} as React.CSSProperties}>
-                    <Link href="https://wa.me/qr/S4BGHXIR6WOKN1" target="_blank">
-                      Hire Me Through Whatsapp
-                    </Link>
-                  </Button>
-                  <Button asChild size="lg" className="bg-[#1877F2] hover:bg-[#166FE5] text-white font-bold shadow-lg transition-transform transform hover:scale-105 glow-border" style={{'--glow-color': 'rgba(0,0,0,0.3)'} as React.CSSProperties}>
-                    <Link href="https://www.facebook.com/muhil.hadi.2024" target="_blank">
-                      Hire Me Through Facebook
-                    </Link>
-                  </Button>
-                </div>
-              </div>
-              <div className="md:w-1/2 mt-12 md:mt-0 flex justify-center md:justify-end">
+      <section id="home" className="bg-sky-100 text-black py-16 md:py-24 overflow-hidden">
+          <div className="container mx-auto px-4">
+            <div className="flex flex-col items-center text-center">
+              <p className="font-calibri text-3xl md:text-4xl font-bold text-primary mb-8">
+                “While You Progress in Life, I’ll Progress Your Assignments”
+              </p>
+              <h1 className="font-headline text-6xl md:text-8xl font-extrabold text-black">
+                Muhil Hadi
+              </h1>
+              <p className="mt-2 text-2xl md:text-3xl text-gray-600 font-semibold">
+                Professional Assignment Writer
+              </p>
+              <div className="mt-12 mb-8">
                 <div className="relative w-60 h-60 md:w-80 md:h-80">
-                  <div
-                    className="relative w-full h-full rounded-full border-8 border-primary"
-                  >
+                  <div className="relative w-full h-full rounded-full border-8 border-primary">
                     <Image
                       src="https://i.imgur.com/QllfG6k.jpeg"
                       alt="Muhil Hadi"
@@ -331,6 +297,29 @@ export default function Home() {
                     />
                   </div>
                 </div>
+              </div>
+              <div className="grid grid-cols-2 sm:grid-cols-4 gap-y-8 gap-x-6 w-full max-w-3xl mb-10">
+                {heroStats.map((stat) => (
+                  <div key={stat.label} className="flex flex-col">
+                    <div className="text-5xl font-bold text-primary">
+                      <AnimatedCounter targetValue={stat.value} />
+                      {stat.suffix}
+                    </div>
+                    <p className="text-sm text-gray-600 mt-1">{stat.label}</p>
+                  </div>
+                ))}
+              </div>
+              <div className="flex flex-col sm:flex-row justify-center items-center gap-4">
+                <Button asChild size="lg" className="bg-[#25D366] hover:bg-[#1EBE57] text-white font-bold shadow-lg transition-transform transform hover:scale-105 glow-border" style={{'--glow-color': 'rgba(0,0,0,0.3)'} as React.CSSProperties}>
+                  <Link href="https://wa.me/qr/S4BGHXIR6WOKN1" target="_blank">
+                    Hire Me Through Whatsapp
+                  </Link>
+                </Button>
+                <Button asChild size="lg" className="bg-[#1877F2] hover:bg-[#166FE5] text-white font-bold shadow-lg transition-transform transform hover:scale-105 glow-border" style={{'--glow-color': 'rgba(0,0,0,0.3)'} as React.CSSProperties}>
+                  <Link href="https://www.facebook.com/muhil.hadi.2024" target="_blank">
+                    Hire Me Through Facebook
+                  </Link>
+                </Button>
               </div>
             </div>
           </div>
