@@ -72,7 +72,7 @@ const problems = [
     color: 'hsl(var(--neon-red))',
     frontText: 'Academic Stress & Mental Fatigue',
     backText:
-      'Balancing studies, jobs, and living abroad causes high mental strain. 7 out of 10 international students report burnout due to assignment pressure. | Result: anxiety, poor focus, lack of motivation.',
+      '&#x2022; Balancing studies, jobs, and living abroad causes high mental strain.<br/>&#x2022; 7 out of 10 international students report burnout due to assignment pressure.<br/>&#x2022; This leads to anxiety, poor focus, and a lack of motivation.',
     imageUrl: "https://imgur.com/a48FDt1.png"
   },
   {
@@ -81,7 +81,7 @@ const problems = [
     color: 'hsl(var(--neon-red))',
     frontText: 'Sleepless & Exhausting Routines',
     backText:
-      'Many survive on <5 hrs of sleep due to tight deadlines and multiple tasks. 54% admit pulling all-nighters before submission dates. | Result: low-quality rushed assignments.',
+      '&#x2022; Many students survive on less than 5 hours of sleep due to tight deadlines.<br/>&#x2022; 54% admit to pulling all-nighters before submissions.<br/>&#x2022; This results in low-quality, rushed assignments.',
     imageUrl: "https://imgur.com/Tj4Hx5R.png"
   },
   {
@@ -90,7 +90,7 @@ const problems = [
     color: 'hsl(var(--neon-red))',
     frontText: 'Strict Formatting & Referencing Rules',
     backText:
-      'Universities abroad are very strict about APA/Harvard/IEEE formats. 47% students lose marks only because of formatting errors. | Result: dissatisfied students despite hard work.',
+      '&#x2022; Universities abroad are very strict about APA, Harvard, and IEEE formats.<br/>&#x2022; 47% of students lose marks due to formatting errors alone.<br/>&#x2022; This leaves students dissatisfied despite their hard work.',
     imageUrl: 'https://imgur.com/kLKAuHw.png'
   },
   {
@@ -99,7 +99,7 @@ const problems = [
     color: 'hsl(var(--neon-red))',
     frontText: 'Overlapping Deadlines Every Month',
     backText:
-      'Multiple courseworks are often due within the same week. 72% submit assignments just 1–2 hours before the deadline. | Result: stress, panic & compromised quality.',
+      '&#x2022; Multiple courseworks are often due within the same week.<br/>&#x2022; 72% submit assignments just 1–2 hours before the deadline.<br/>&#x2022; This causes stress, panic, and compromised quality.',
     imageUrl: "https://imgur.com/a5udyWy.png"
   },
 ];
