@@ -118,8 +118,24 @@ const majorBenefits = [
     },
   ];
 
+const TurnitinIcon = (props: React.SVGProps<SVGSVGElement>) => (
+    <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 24 24"
+        fill="currentColor"
+        width="24"
+        height="24"
+        {...props}
+    >
+        <path d="M21.52,11.29,19.24,9a.5.5,0,0,0-.7,0l-1.63,1.62a.5.5,0,0,0,0,.71l.51.51a.5.5,0,0,1,0,.71L13,16.29a.5.5,0,0,1-.71,0l-1-1a.5.5,0,0,0-.71,0l-1,1a.5.5,0,0,0,0,.71l2.28,2.28a.5.5,0,0,0,.71,0l8-8A.5.5,0,0,0,21.52,11.29Z" />
+        <path d="M11,10.29a.5.5,0,0,0,0-.71l-1-1a.5.5,0,0,0-.71,0l-1,1a.5.5,0,0,0,0,.71L10.29,12,8.29,14a.5.5,0,0,0,0,.71l1,1a.5.5,0,0,0,.71,0l1-1a.5.5,0,0,0,0-.71Z" />
+        <path d="M12,2A10,10,0,1,0,22,12,10,10,0,0,0,12,2Zm5.21,14.5a.5.5,0,0,1-.71,0L13.71,13.7a.5.5,0,0,0-.71,0l-1,1a.5.5,0,0,1-.71,0L9,12.41l-1.63,1.63a.5.5,0,0,1-.7.01l-2.29-2.29a.5.5,0,0,1,0-.71l8-8a.5.5,0,0,1,.71,0l2.28,2.28a.5.5,0,0,1,0,.71l-.51.51a.5.5,0,0,0,0,.71l4.3,4.29A.5.5,0,0,1,17.21,16.5Z" />
+    </svg>
+);
+
+
   const keyBenefits = [
-    { icon: ShieldCheck, text: 'Free Turnitin Reports Guaranteeing 0% AI & Plagiarism Detection', color: 'hsl(var(--neon-green))' },
+    { icon: TurnitinIcon, text: 'Free Turnitin Reports Guaranteeing 0% AI & Plagiarism Detection', color: 'hsl(var(--neon-green))' },
     { icon: Target, text: 'In-depth Research & Data-Driven Analytics for Authentic, High-Quality Content', color: 'hsl(var(--neon-red))' },
     { icon: Clock, text: 'Always On-Time — Your Deadlines Are My Priority', color: 'hsl(var(--neon-blue))' },
     { icon: HeartHandshake, text: '24/7 Friendly Support Designed Especially for Students', color: 'hsl(var(--neon-purple))' },
