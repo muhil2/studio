@@ -337,7 +337,7 @@ export default function Home() {
             <h2 className="text-3xl md:text-4xl font-bold text-center font-headline text-foreground">
               The Problem With Submitting Assignments No One Talks About
             </h2>
-            <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
+            <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6 [perspective:1000px]">
               {problems.map((problem, index) => (
                 <ProblemCard
                   key={index}
