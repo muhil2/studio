@@ -121,7 +121,7 @@ const majorBenefits = [
   ];
 
   const keyBenefits = [
-    { icon: ShieldCheck, text: 'Free Turnitin Reports Guaranteeing 0% AI & Plagiarism Detection', color: 'hsl(var(--neon-blue))' },
+    { icon: ShieldCheck, text: 'Free Turnitin Reports Guaranteeing 0% AI & Plagiarism Detection', color: 'hsl(var(--neon-green))' },
     { icon: Target, text: 'In-depth Research & Data-Driven Analytics for Authentic, High-Quality Content', color: 'hsl(var(--neon-red))' },
     { icon: Clock, text: 'Always On-Time — Your Deadlines Are My Priority', color: 'hsl(var(--neon-blue))' },
     { icon: HeartHandshake, text: '24/7 Friendly Support Designed Especially for Students', color: 'hsl(var(--neon-purple))' },
@@ -378,7 +378,7 @@ export default function Home() {
                 <Link href={service.href} key={service.title} target={service.href.startsWith('http') ? '_blank' : '_self'} className="group">
                   <Card className={cn(
                       "h-full text-center bg-gray-900 border-gray-800 text-white hover:shadow-xl hover:-translate-y-2 transition-all duration-300 flex flex-col",
-                      service.title === 'And Much More' && "border fire-gradient-border"
+                      service.title === 'And Much More' && "border-2 fire-gradient-border"
                     )}>
                     <CardHeader>
                       <div className="flex justify-center mb-4">
@@ -442,7 +442,7 @@ export default function Home() {
                     <div className="flex flex-col gap-4">
                     {keyBenefits.map((benefit) => (
                         <Card key={benefit.text} className="group flex items-center p-4 border-2 border-transparent hover:border-[var(--glow-color)] hover:shadow-md transition-all" style={{'--glow-color': benefit.color} as React.CSSProperties}>
-                            <benefit.icon className="w-10 h-10 mr-4 flex-shrink-0" style={{color: "hsl(var(--neon-blue))"}} />
+                            <benefit.icon className="w-10 h-10 mr-4 flex-shrink-0" style={{color: benefit.color}} />
                             <p className="font-semibold text-black">{benefit.text}</p>
                         </Card>
                     ))}
