@@ -161,16 +161,10 @@ const services = [
     href: 'https://drive.google.com/drive/folders/1--jW9E08YAhy8jJwAftWY-eWnBJrjyWF',
   },
   {
-    title: 'AutoCad',
-    description: 'Precise and professional CAD drawings and designs.',
-    icon: DraftingCompass,
-    href: 'https://drive.google.com/drive/folders/1-BWmvpk5SWU2S5TwtYbQ0nTgb4XQaK4M',
-  },
-  {
-    title: 'Case Studies',
-    description: 'In-depth analysis and writing for complex case studies.',
-    icon: FileText,
-    href: 'https://drive.google.com/drive/folders/1--lWLHiiQ08t0J4SpbBoyk5JgDr--TAS',
+    title: 'Report Writing',
+    description: 'Expertly written reports on any subject.',
+    icon: PenTool,
+    href: 'https://drive.google.com/drive/folders/1-JgU7AEHgdo0xRjNCZqcu2Tb0bjR8IFl',
   },
   {
     title: 'Thesis & Research Papers',
@@ -179,10 +173,10 @@ const services = [
     href: 'https://drive.google.com/drive/folders/1-13R5GwFeLGlZhCNAiE3SKGJ1UU0yaBW',
   },
   {
-    title: 'Report Writing',
-    description: 'Expertly written reports on any subject.',
-    icon: PenTool,
-    href: 'https://drive.google.com/drive/folders/1-JgU7AEHgdo0xRjNCZqcu2Tb0bjR8IFl',
+    title: 'CSE Assignments (All Course)',
+    description: 'Expert assistance with computer science and engineering coursework.',
+    icon: Computer,
+    href: 'https://drive.google.com/drive/folders/11s7_lpLTVX6j4hj6z_ATzJlMwqQrDn0F',
   },
   {
     title: 'Engineering Assignments (All Course)',
@@ -191,16 +185,16 @@ const services = [
     href: 'https://drive.google.com/drive/folders/1-L499PhKn-JwUolD4zSa0kHa762UA_3P',
   },
   {
-    title: 'CSE Assignments (All Course)',
-    description: 'Expert assistance with computer science and engineering coursework.',
-    icon: Computer,
-    href: 'https://drive.google.com/drive/folders/11s7_lpLTVX6j4hj6z_ATzJlMwqQrDn0F',
-  },
-  {
     title: 'MS Office',
     description: 'Proficient handling of all Microsoft Office suite applications.',
     icon: AppWindow,
     href: 'https://drive.google.com/drive/folders/1-ILsW38aCeLnTf6UL1jl1rIHZbqfkqqA',
+  },
+  {
+    title: 'Networking Projects',
+    description: 'Reliable solutions for networking assignments and projects.',
+    icon: Network,
+    href: 'https://drive.google.com/drive/folders/11NDnkHoB1F1DeYKv0yL07-tY820K9gP-',
   },
   {
     title: 'Software Development',
@@ -213,12 +207,6 @@ const services = [
     description: 'Creative and functional web design services.',
     icon: Globe,
     href: 'https://drive.google.com/drive/folders/1-28JZn-zjuFbL8lzaT1vaIfLHkjZFkCq',
-  },
-  {
-    title: 'Networking Projects',
-    description: 'Reliable solutions for networking assignments and projects.',
-    icon: Network,
-    href: 'https://drive.google.com/drive/folders/11NDnkHoB1F1DeYKv0yL07-tY820K9gP-',
   },
   {
     title: 'Power Bi',
