@@ -69,7 +69,7 @@ const problems = [
   {
     title: 'Academic Stress & Mental Fatigue',
     iconName: 'BrainCircuit',
-    color: 'hsl(var(--neon-purple))',
+    color: 'hsl(var(--neon-red))',
     frontText: 'Academic Stress & Mental Fatigue',
     backText:
       'Balancing studies, jobs, and living abroad causes high mental strain. 7 out of 10 international students report burnout due to assignment pressure. | Result: anxiety, poor focus, lack of motivation.',
@@ -78,7 +78,7 @@ const problems = [
   {
     title: 'Sleepless & Exhausting Routines',
     iconName: 'Moon',
-    color: 'hsl(var(--neon-blue))',
+    color: 'hsl(var(--neon-red))',
     frontText: 'Sleepless & Exhausting Routines',
     backText:
       'Many survive on <5 hrs of sleep due to tight deadlines and multiple tasks. 54% admit pulling all-nighters before submission dates. | Result: low-quality rushed assignments.',
@@ -87,7 +87,7 @@ const problems = [
   {
     title: 'Strict Formatting & Referencing Rules',
     iconName: 'AlertTriangle',
-    color: 'hsl(var(--primary))',
+    color: 'hsl(var(--neon-red))',
     frontText: 'Strict Formatting & Referencing Rules',
     backText:
       'Universities abroad are very strict about APA/Harvard/IEEE formats. 47% students lose marks only because of formatting errors. | Result: dissatisfied students despite hard work.',
@@ -96,7 +96,7 @@ const problems = [
   {
     title: 'Overlapping Deadlines Every Month',
     iconName: 'Clock',
-    color: 'hsl(var(--neon-green))',
+    color: 'hsl(var(--neon-red))',
     frontText: 'Overlapping Deadlines Every Month',
     backText:
       'Multiple courseworks are often due within the same week. 72% submit assignments just 1–2 hours before the deadline. | Result: stress, panic & compromised quality.',
