@@ -262,16 +262,16 @@ export default function Home() {
   return (
     <div className="flex flex-col min-h-screen bg-background">
       <main className="flex-grow">
-      <section id="home" className="bg-sky-100 text-black py-16 md:py-24">
+      <section id="home" className="bg-white text-black py-16 md:py-24">
           <div className="container mx-auto px-4">
             <div className="flex flex-col items-center text-center">
               <p className="font-calibri text-3xl md:text-4xl font-bold mb-8 italic bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 text-transparent bg-clip-text">
                 “While You Progress in Life, I’ll Progress Your Assignments”
               </p>
-              <h1 className="font-headline text-6xl md:text-8xl font-extrabold text-black">
+              <h1 className="font-headline text-6xl md:text-8xl font-extrabold text-foreground">
                 Muhil Hadi
               </h1>
-              <p className="mt-2 text-xl md:text-2xl text-gray-600 font-semibold italic">
+              <p className="mt-2 text-xl md:text-2xl text-muted-foreground font-semibold italic">
                 Professional Assignment Writer
               </p>
               <div className="mt-12 mb-8">
@@ -295,7 +295,7 @@ export default function Home() {
                       <AnimatedCounter targetValue={stat.value} />
                       {stat.suffix}
                     </div>
-                    <p className="text-sm text-gray-600 mt-1">{stat.label}</p>
+                    <p className="text-sm text-muted-foreground mt-1">{stat.label}</p>
                   </div>
                 ))}
               </div>
