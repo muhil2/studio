@@ -353,7 +353,8 @@ export default function Home() {
                   key={index}
                   title={problem.title}
                   iconName={problem.iconName as keyof typeof import('lucide-react')}
-                  color={problem.color}
+                  iconColor={problem.color}
+                  backBackgroundColor="white"
                   frontText={problem.frontText}
                   backText={problem.backText}
                   imageUrl={problem.imageUrl}

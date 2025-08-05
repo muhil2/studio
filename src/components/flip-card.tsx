@@ -10,7 +10,8 @@ type IconName = keyof typeof LucideIcons;
 export function FlipCard({
   title,
   iconName,
-  color,
+  iconColor,
+  backBackgroundColor,
   frontText,
   backText,
   imageUrl,
@@ -18,7 +19,8 @@ export function FlipCard({
 }: {
   title: string;
   iconName: IconName;
-  color: string;
+  iconColor: string;
+  backBackgroundColor?: string;
   frontText: string;
   backText: string;
   imageUrl: string;
@@ -61,10 +63,10 @@ export function FlipCard({
         </div>
         {/* Back */}
         <div className="absolute w-full h-full [backface-visibility:hidden] [transform:rotateY(180deg)] overflow-hidden rounded-lg">
-          <Card className={cn("w-full h-full flex flex-col items-center justify-center p-4", cardClassName)} style={{ backgroundColor: color }}>
-             <Icon className="w-12 h-12 text-white mb-4" />
+          <Card className={cn("w-full h-full flex flex-col items-center justify-center p-4", cardClassName)} style={{ backgroundColor: backBackgroundColor }}>
+             <Icon className="w-12 h-12 mb-4" style={{ color: iconColor }} />
             <CardContent className="p-0 text-center">
-              <p className="font-semibold text-white" dangerouslySetInnerHTML={{ __html: backText }}></p>
+              <p className="font-semibold text-black" dangerouslySetInnerHTML={{ __html: backText }}></p>
             </CardContent>
           </Card>
         </div>
