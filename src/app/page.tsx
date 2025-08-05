@@ -43,7 +43,7 @@ import {
 
 import { AnimatedCounter } from '@/components/animated-counter';
 import { ContactForm } from '@/components/contact-form';
-import { FlipCard } from '@/components/flip-card';
+import { ProblemCard } from '@/components/problem-card';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
@@ -61,46 +61,36 @@ const problems = [
     title: 'Insufficient Time for Assignments',
     iconName: 'TrendingDown',
     color: 'hsl(var(--neon-red))',
-    frontText: 'Insufficient Time for Assignments',
-    backText:
-      '&#x2022; International students often balance part-time jobs (20-30 hours/week) with full-time studies.<br/>&#x2022; 63% of students get only 2-3 hours per day for academic work.<br/>&#x2022; This limited time results in last-minute submissions and lower grades.',
-    imageUrl: "https://imgur.com/brxJyWi.png"
+    text: '&#x2022; International students often balance part-time jobs (20-30 hours/week) with full-time studies.<br/>&#x2022; 63% of students get only 2-3 hours per day for academic work.<br/>&#x2022; This limited time results in last-minute submissions and lower grades.',
+    imageUrl: 'https://imgur.com/brxJyWi.png',
   },
   {
     title: 'Academic Stress & Mental Fatigue',
     iconName: 'BrainCircuit',
     color: 'hsl(var(--neon-red))',
-    frontText: 'Academic Stress & Mental Fatigue',
-    backText:
-      '&#x2022; Balancing studies, jobs, and living abroad causes high mental strain.<br/>&#x2022; 7 out of 10 international students report burnout due to assignment pressure.<br/>&#x2022; This leads to anxiety, poor focus, and a lack of motivation.',
-    imageUrl: "https://imgur.com/XfWUAwW.png"
+    text: '&#x2022; Balancing studies, jobs, and living abroad causes high mental strain.<br/>&#x2022; 7 out of 10 international students report burnout due to assignment pressure.<br/>&#x2022; This leads to anxiety, poor focus, and a lack of motivation.',
+    imageUrl: 'https://imgur.com/XfWUAwW.png',
   },
   {
     title: 'Sleepless & Exhausting Routines',
     iconName: 'Moon',
     color: 'hsl(var(--neon-red))',
-    frontText: 'Sleepless & Exhausting Routines',
-    backText:
-      '&#x2022; Many students survive on less than 5 hours of sleep due to tight deadlines.<br/>&#x2022; 54% admit to pulling all-nighters before submissions.<br/>&#x2022; This results in low-quality, rushed assignments.',
-    imageUrl: "https://imgur.com/Tj4Hx5R.png"
+    text: '&#x2022; Many students survive on less than 5 hours of sleep due to tight deadlines.<br/>&#x2022; 54% admit to pulling all-nighters before submissions.<br/>&#x2022; This results in low-quality, rushed assignments.',
+    imageUrl: 'https://imgur.com/Tj4Hx5R.png',
   },
   {
     title: 'Strict Formatting & Referencing Rules',
     iconName: 'AlertTriangle',
     color: 'hsl(var(--neon-red))',
-    frontText: 'Strict Formatting & Referencing Rules',
-    backText:
-      '&#x2022; Universities abroad are very strict about APA, Harvard, and IEEE formats.<br/>&#x2022; 47% of students lose marks due to formatting errors alone.<br/>&#x2022; This leaves students dissatisfied despite their hard work.',
-    imageUrl: 'https://imgur.com/kLKAuHw.png'
+    text: '&#x2022; Universities abroad are very strict about APA, Harvard, and IEEE formats.<br/>&#x2022; 47% of students lose marks due to formatting errors alone.<br/>&#x2022; This leaves students dissatisfied despite their hard work.',
+    imageUrl: 'https://imgur.com/kLKAuHw.png',
   },
   {
     title: 'Overlapping Deadlines Every Month',
     iconName: 'Clock',
     color: 'hsl(var(--neon-red))',
-    frontText: 'Overlapping Deadlines Every Month',
-    backText:
-      '&#x2022; Multiple courseworks are often due within the same week.<br/>&#x2022; 72% submit assignments just 1–2 hours before the deadline.<br/>&#x2022; This causes stress, panic, and compromised quality.',
-    imageUrl: "https://imgur.com/FncMBnS.png"
+    text: '&#x2022; Multiple courseworks are often due within the same week.<br/>&#x2022; 72% submit assignments just 1–2 hours before the deadline.<br/>&#x2022; This causes stress, panic, and compromised quality.',
+    imageUrl: 'https://imgur.com/FncMBnS.png',
   },
 ];
 
@@ -349,14 +339,12 @@ export default function Home() {
             </h2>
             <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
               {problems.map((problem, index) => (
-                <FlipCard
+                <ProblemCard
                   key={index}
                   title={problem.title}
                   iconName={problem.iconName as keyof typeof import('lucide-react')}
                   iconColor={problem.color}
-                  backBackgroundColor="white"
-                  frontText={problem.frontText}
-                  backText={problem.backText}
+                  text={problem.text}
                   imageUrl={problem.imageUrl}
                   cardClassName="bg-destructive/10 border-2 border-destructive"
                 />
