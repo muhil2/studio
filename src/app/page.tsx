@@ -291,7 +291,7 @@ export default function Home() {
               <div className="grid grid-cols-2 sm:grid-cols-4 gap-y-8 gap-x-6 w-full max-w-3xl mb-10">
                 {heroStats.map((stat) => (
                   <div key={stat.label} className="flex flex-col">
-                    <div className="text-5xl font-bold text-foreground">
+                    <div className="text-5xl font-bold text-foreground bg-gradient-to-r from-purple-500 to-indigo-500 text-transparent bg-clip-text">
                       <AnimatedCounter targetValue={stat.value} />
                       {stat.suffix}
                     </div>
