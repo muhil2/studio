@@ -1,4 +1,6 @@
+'use client';
 
+import { useEffect } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import {
@@ -260,6 +262,15 @@ const socialLinks = [
 ];
 
 export default function Home() {
+  useEffect(() => {
+    // When the component mounts (on initial page load), scroll to the top.
+    window.scrollTo(0, 0);
+    // And remove the hash from the URL to prevent the browser from jumping to a section.
+    if (window.location.hash) {
+      history.replaceState(null, document.title, window.location.pathname + window.location.search);
+    }
+  }, []);
+
   return (
     <div className="flex flex-col min-h-screen bg-background">
       <Header />
