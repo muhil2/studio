@@ -378,7 +378,7 @@ export default function Home() {
                 <Link href={service.href} key={service.title} target={service.href.startsWith('http') ? '_blank' : '_self'} className="group">
                   <Card className={cn(
                       "h-full text-center bg-gray-900 border-gray-800 text-white hover:shadow-xl hover:-translate-y-2 transition-all duration-300 flex flex-col",
-                      service.title === 'And Much More' && "border-2 fire-gradient-border"
+                      service.title === 'And Much More' && "border fire-gradient-border"
                     )}>
                     <CardHeader>
                       <div className="flex justify-center mb-4">
