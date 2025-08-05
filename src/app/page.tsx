@@ -52,6 +52,7 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Separator } from '@/components/ui/separator';
 import { Header } from '@/components/header';
+import { cn } from '@/lib/utils';
 
 const heroStats = [
   { value: 790, label: 'Projects completed', suffix: '+' },
@@ -375,7 +376,10 @@ export default function Home() {
             <div className="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {services.map((service) => (
                 <Link href={service.href} key={service.title} target={service.href.startsWith('http') ? '_blank' : '_self'} className="group">
-                  <Card className="h-full text-center bg-gray-900 border-gray-800 text-white hover:shadow-xl hover:-translate-y-2 transition-all duration-300 flex flex-col">
+                  <Card className={cn(
+                      "h-full text-center bg-gray-900 border-gray-800 text-white hover:shadow-xl hover:-translate-y-2 transition-all duration-300 flex flex-col",
+                      service.title === 'And Much More' && "border-2 fire-gradient-border"
+                    )}>
                     <CardHeader>
                       <div className="flex justify-center mb-4">
                         <div className="p-4 bg-primary/20 rounded-full">
@@ -438,7 +442,7 @@ export default function Home() {
                     <div className="flex flex-col gap-4">
                     {keyBenefits.map((benefit) => (
                         <Card key={benefit.text} className="group flex items-center p-4 border-2 border-transparent hover:border-[var(--glow-color)] hover:shadow-md transition-all" style={{'--glow-color': benefit.color} as React.CSSProperties}>
-                            <benefit.icon className="w-10 h-10 mr-4 flex-shrink-0" style={{color: benefit.color}} />
+                            <benefit.icon className="w-10 h-10 mr-4 flex-shrink-0" style={{color: "hsl(var(--neon-blue))"}} />
                             <p className="font-semibold text-black">{benefit.text}</p>
                         </Card>
                     ))}
