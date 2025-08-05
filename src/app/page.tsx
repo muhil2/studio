@@ -63,7 +63,7 @@ const problems = [
     color: 'hsl(var(--neon-red))',
     frontText: 'Insufficient Time for Assignments',
     backText:
-      'International students often balance part-time jobs (20-30 hours/week) with full-time studies.<br/>63% of students get only 2-3 hours per day for academic work.<br/>This limited time results in last-minute submissions and lower grades.',
+      '&#x2022; International students often balance part-time jobs (20-30 hours/week) with full-time studies.<br/>&#x2022; 63% of students get only 2-3 hours per day for academic work.<br/>&#x2022; This limited time results in last-minute submissions and lower grades.',
     imageUrl: "https://imgur.com/brxJyWi.png"
   },
   {
