@@ -64,7 +64,9 @@ export function FlipCard({
         {/* Back */}
         <div className="absolute w-full h-full [backface-visibility:hidden] [transform:rotateY(180deg)] overflow-hidden rounded-lg">
           <Card className={cn("w-full h-full flex flex-col items-center justify-center p-4", cardClassName)} style={{ backgroundColor: backBackgroundColor }}>
-             <Icon className="w-12 h-12 mb-4" style={{ color: iconColor }} />
+            <div className="p-3 rounded-full mb-4" style={{ backgroundColor: iconColor, color: 'white' }}>
+              <Icon className="w-12 h-12" />
+            </div>
             <CardContent className="p-0 text-center">
               <p className="font-semibold text-black" dangerouslySetInnerHTML={{ __html: backText }}></p>
             </CardContent>
