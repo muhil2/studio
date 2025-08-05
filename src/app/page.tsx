@@ -366,9 +366,6 @@ export default function Home() {
         
         <section id="services" className="py-16 md:py-24 bg-black">
           <div className="container mx-auto px-4">
-            <div className="flex justify-center mb-4">
-              <Star className="w-12 h-12" style={{ color: 'hsl(var(--neon-blue))' }} />
-            </div>
             <h2 className="text-3xl md:text-4xl font-bold text-center font-headline text-white">
               My Services
             </h2>
