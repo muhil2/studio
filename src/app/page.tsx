@@ -48,6 +48,7 @@ import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Separator } from '@/components/ui/separator';
+import { Header } from '@/components/header';
 
 const heroStats = [
   { value: 790, label: 'Projects completed', suffix: '+' },
@@ -261,8 +262,9 @@ const socialLinks = [
 export default function Home() {
   return (
     <div className="flex flex-col min-h-screen bg-background">
+      <Header />
       <main className="flex-grow">
-      <section id="home" className="bg-white text-black py-16 md:py-24">
+      <section id="home" className="bg-white text-black pt-28 pb-16 md:pt-32 md:pb-24">
           <div className="container mx-auto px-4">
             <div className="flex flex-col items-center text-center">
               <p className="font-calibri text-3xl md:text-4xl font-bold mb-8 italic bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 text-transparent bg-clip-text">
