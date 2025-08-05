@@ -334,7 +334,7 @@ export default function Home() {
             <div className="flex justify-center mb-4">
               <AlertTriangle className="w-24 h-24 text-destructive" />
             </div>
-            <h2 className="text-3xl md:text-4xl font-bold text-center font-headline text-foreground">
+            <h2 className="text-3xl md:text-4xl font-bold text-center font-calibri text-foreground">
               The Problem With Submitting Assignments No One Talks About
             </h2>
             <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6 [perspective:1000px]">
