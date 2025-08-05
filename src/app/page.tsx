@@ -41,6 +41,7 @@ import {
   Computer,
   Network,
   BarChart,
+  PlusCircle,
 } from 'lucide-react';
 
 import { AnimatedCounter } from '@/components/animated-counter';
@@ -214,6 +215,12 @@ const services = [
     icon: BarChart,
     href: 'https://drive.google.com/drive/folders/11CHL1C_ldaNMCyzIwi6hl5zo7cyle8Mf',
   },
+  {
+    title: 'And Much More',
+    description: "Don't see what you need? Contact me for a custom request.",
+    icon: PlusCircle,
+    href: '#contact',
+  },
 ];
 
 const testimonials = [
@@ -382,7 +389,7 @@ export default function Home() {
                     </CardContent>
                     <div className="p-6 pt-0">
                       <Button className="bg-yellow-500 hover:bg-yellow-600 text-black font-bold">
-                        View Demo
+                        {service.href === '#contact' ? 'Contact Me' : 'View Demo'}
                       </Button>
                     </div>
                   </Card>
