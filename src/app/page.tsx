@@ -183,7 +183,7 @@ const services = [
     title: 'Thesis & Research Papers',
     description: 'Comprehensive support for your thesis and research projects.',
     icon: BookOpen,
-    href: 'https://wa.me/qr/S4BGHXIR6WOKN1',
+    href: 'https://drive.google.com/drive/folders/1-13R5GwFeLGlZhCNAiE3SKGJ1UU0yaBW',
   },
   {
     title: 'Report Writing',
