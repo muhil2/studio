@@ -119,7 +119,7 @@ const majorBenefits = [
   ];
 
   const keyBenefits = [
-    { icon: ShieldCheck, text: 'Free Turnitin Reports Guaranteeing 0% AI & Plagiarism Detection', color: 'hsl(var(--neon-green))' },
+    { icon: ShieldCheck, text: 'Free Turnitin Reports Guaranteeing 0% AI & Plagiarism Detection', color: 'hsl(var(--neon-blue))' },
     { icon: Target, text: 'In-depth Research & Data-Driven Analytics for Authentic, High-Quality Content', color: 'hsl(var(--neon-red))' },
     { icon: Clock, text: 'Always On-Time — Your Deadlines Are My Priority', color: 'hsl(var(--neon-blue))' },
     { icon: HeartHandshake, text: '24/7 Friendly Support Designed Especially for Students', color: 'hsl(var(--neon-purple))' },
