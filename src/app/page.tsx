@@ -579,7 +579,7 @@ export default function Home() {
                   </div>
                 </div>
               </div>
-              <div className="bg-gray-900 p-8 rounded-lg shadow-lg">
+              <div className="bg-gray-900 p-8 rounded-lg shadow-lg border-2 border-solid fire-gradient-border">
                 <ContactForm />
               </div>
             </div>
