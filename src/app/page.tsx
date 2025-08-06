@@ -94,7 +94,7 @@ const problems = [
     title: 'Overlapping Deadlines Every Month',
     iconName: 'Clock',
     color: 'hsl(var(--neon-red))',
-    text: '&#x2022; Multiple courseworks are often due within the same week.<br/>&#x2022; 72% submit assignments just 1–2 hours before the deadline.<br/>&#x2022; This causes stress, panic, and compromised quality.',
+    text: '&#x2022; Multiple courseworks are often due within the same week.<br/>&#x2022; 72% of students submit assignments just 1–2 hours before the deadline.<br/>&#x2022; This causes stress, panic, and compromised quality.',
     imageUrl: 'https://imgur.com/FncMBnS.png',
   },
 ];
@@ -285,7 +285,7 @@ export default function Home() {
               </p>
               <div className="mt-12 mb-8">
                 <div className="relative w-60 h-60 md:w-80 md:h-80">
-                  <div className="relative w-full h-full rounded-full border-8 border-primary">
+                  <div className="relative w-full h-full rounded-full p-2 bg-gradient-to-r from-purple-400 via-pink-500 to-red-500">
                     <Image
                       src="https://i.imgur.com/QllfG6k.jpeg"
                       alt="Muhil Hadi"
