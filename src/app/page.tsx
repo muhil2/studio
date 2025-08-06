@@ -1,3 +1,4 @@
+
 'use client';
 
 import { useEffect, useRef } from 'react';
@@ -503,9 +504,9 @@ export default function Home() {
               Success Stories from Students Using Our Service
             </p>
             <div className="mt-12 w-full overflow-hidden">
-                <div className="flex animate-marquee hover:[animation-play-state:paused]">
+                <div className="flex animate-marquee-full hover:[animation-play-state:paused]">
                     {[...testimonials, ...testimonials].map((testimonial, index) => (
-                      <div key={index} className="flex-shrink-0 w-full md:w-1/2 lg:w-1/3 p-2" style={{ flexBasis: 'calc(100% / 3)'}}>
+                      <div key={index} className="flex-shrink-0 w-[33.33%] p-2">
                         <Card className="p-6 rounded-xl h-full">
                             <CardContent className="p-0 flex flex-col h-full">
                             <div className="flex items-center mb-4">
@@ -610,3 +611,5 @@ export default function Home() {
     </div>
   );
 }
+
+    
