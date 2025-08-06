@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect } from 'react';
+import { useEffect, useRef } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import {
@@ -43,6 +43,7 @@ import {
   BarChart,
   PlusCircle,
 } from 'lucide-react';
+import Autoplay from "embla-carousel-autoplay";
 
 import { AnimatedCounter } from '@/components/animated-counter';
 import { ContactForm } from '@/components/contact-form';
@@ -53,6 +54,7 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Separator } from '@/components/ui/separator';
 import { Header } from '@/components/header';
 import { cn } from '@/lib/utils';
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@/components/ui/carousel';
 
 const heroStats = [
   { value: 790, label: 'Projects completed', suffix: '+' },
@@ -258,6 +260,8 @@ const socialLinks = [
 ];
 
 export default function Home() {
+  const autoplay = useRef(Autoplay({ delay: 2000, stopOnInteraction: true }));
+
   useEffect(() => {
     // When the component mounts (on initial page load), scroll to the top.
     window.scrollTo(0, 0);
@@ -500,31 +504,44 @@ export default function Home() {
             <p className="mt-4 text-center text-muted-foreground italic max-w-2xl mx-auto">
               Success Stories from Students Using Our Service
             </p>
-            <div className="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {testimonials.map((testimonial, index) => (
-                <Card key={index} className="p-6 shadow-lg rounded-xl">
-                  <CardContent className="p-0">
-                    <div className="flex items-center mb-4">
-                      <Avatar className="h-14 w-14 mr-4 border-2 border-primary">
-                        <AvatarFallback className="bg-primary/20 text-primary font-bold text-xl">{testimonial.initials}</AvatarFallback>
-                      </Avatar>
-                      <div>
-                        <p className="font-bold text-lg text-foreground">{testimonial.name}</p>
-                        <p className="text-sm text-muted-foreground">{testimonial.university}</p>
-                      </div>
+            <Carousel
+              plugins={[autoplay.current]}
+              onMouseEnter={() => autoplay.current.stop()}
+              onMouseLeave={() => autoplay.current.play()}
+              className="w-full mt-12"
+            >
+              <CarouselContent>
+                {testimonials.map((testimonial, index) => (
+                  <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
+                    <div className="p-1">
+                      <Card className="p-6 shadow-lg rounded-xl h-full">
+                        <CardContent className="p-0 flex flex-col h-full">
+                          <div className="flex items-center mb-4">
+                            <Avatar className="h-14 w-14 mr-4 border-2 border-primary">
+                              <AvatarFallback className="bg-primary/20 text-primary font-bold text-xl">{testimonial.initials}</AvatarFallback>
+                            </Avatar>
+                            <div>
+                              <p className="font-bold text-lg text-foreground">{testimonial.name}</p>
+                              <p className="text-sm text-muted-foreground">{testimonial.university}</p>
+                            </div>
+                          </div>
+                          <div className="flex items-center mb-4">
+                            {[...Array(5)].map((_, i) => (
+                              <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
+                            ))}
+                          </div>
+                          <blockquote className="text-foreground/80 italic text-sm flex-grow">
+                            "{testimonial.quote}"
+                          </blockquote>
+                        </CardContent>
+                      </Card>
                     </div>
-                    <div className="flex items-center mb-4">
-                      {[...Array(5)].map((_, i) => (
-                        <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
-                      ))}
-                    </div>
-                    <blockquote className="text-foreground/80 italic text-sm">
-                      "{testimonial.quote}"
-                    </blockquote>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
+                  </CarouselItem>
+                ))}
+              </CarouselContent>
+              <CarouselPrevious />
+              <CarouselNext />
+            </Carousel>
           </div>
         </section>
 
