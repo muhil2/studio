@@ -43,8 +43,6 @@ import {
   BarChart,
   PlusCircle,
 } from 'lucide-react';
-import Autoplay from "embla-carousel-autoplay";
-
 import { AnimatedCounter } from '@/components/animated-counter';
 import { ContactForm } from '@/components/contact-form';
 import { ProblemCard } from '@/components/problem-card';
@@ -260,7 +258,6 @@ const socialLinks = [
 ];
 
 export default function Home() {
-  const autoplay = useRef(Autoplay({ delay: 2000, stopOnInteraction: true }));
 
   useEffect(() => {
     // When the component mounts (on initial page load), scroll to the top.
@@ -289,7 +286,7 @@ export default function Home() {
               </p>
               <div className="mt-12 mb-8">
                 <div className="relative w-60 h-60 md:w-80 md:h-80">
-                  <div className="relative w-full h-full rounded-full p-2 bg-gradient-to-r from-yellow-400 via-orange-500 to-red-600">
+                  <div className="relative w-full h-full rounded-full p-1 bg-gradient-to-r from-yellow-400 via-orange-500 to-red-600">
                     <Image
                       src="https://i.imgur.com/QllfG6k.jpeg"
                       alt="Muhil Hadi"
@@ -504,47 +501,35 @@ export default function Home() {
             <p className="mt-4 text-center text-muted-foreground italic max-w-2xl mx-auto">
               Success Stories from Students Using Our Service
             </p>
-            <Carousel
-              plugins={[autoplay.current]}
-              opts={{
-                loop: true,
-              }}
-              onMouseEnter={() => autoplay.current.stop()}
-              onMouseLeave={() => autoplay.current.play()}
-              className="w-full mt-12"
-            >
-              <CarouselContent>
-                {testimonials.map((testimonial, index) => (
-                  <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
-                    <div className="p-1">
-                      <Card className="p-6 shadow-lg rounded-xl h-full">
-                        <CardContent className="p-0 flex flex-col h-full">
-                          <div className="flex items-center mb-4">
-                            <Avatar className="h-14 w-14 mr-4 border-2 border-primary">
-                              <AvatarFallback className="bg-primary/20 text-primary font-bold text-xl">{testimonial.initials}</AvatarFallback>
-                            </Avatar>
-                            <div>
-                              <p className="font-bold text-lg text-foreground">{testimonial.name}</p>
-                              <p className="text-sm text-muted-foreground">{testimonial.university}</p>
+            <div className="mt-12 w-full overflow-hidden">
+                <div className="flex animate-marquee hover:[animation-play-state:paused]">
+                    {[...testimonials, ...testimonials].map((testimonial, index) => (
+                      <div key={index} className="flex-shrink-0 w-full md:w-1/2 lg:w-1/3 p-2">
+                        <Card className="p-6 shadow-lg rounded-xl h-full">
+                            <CardContent className="p-0 flex flex-col h-full">
+                            <div className="flex items-center mb-4">
+                                <Avatar className="h-14 w-14 mr-4 border-2 border-primary">
+                                <AvatarFallback className="bg-primary/20 text-primary font-bold text-xl">{testimonial.initials}</AvatarFallback>
+                                </Avatar>
+                                <div>
+                                <p className="font-bold text-lg text-foreground">{testimonial.name}</p>
+                                <p className="text-sm text-muted-foreground">{testimonial.university}</p>
+                                </div>
                             </div>
-                          </div>
-                          <div className="flex items-center mb-4">
-                            {[...Array(5)].map((_, i) => (
-                              <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
-                            ))}
-                          </div>
-                          <blockquote className="text-foreground/80 italic text-sm flex-grow">
-                            "{testimonial.quote}"
-                          </blockquote>
-                        </CardContent>
-                      </Card>
-                    </div>
-                  </CarouselItem>
-                ))}
-              </CarouselContent>
-              <CarouselPrevious />
-              <CarouselNext />
-            </Carousel>
+                            <div className="flex items-center mb-4">
+                                {[...Array(5)].map((_, i) => (
+                                <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
+                                ))}
+                            </div>
+                            <blockquote className="text-foreground/80 italic text-sm flex-grow">
+                                "{testimonial.quote}"
+                            </blockquote>
+                            </CardContent>
+                        </Card>
+                      </div>
+                    ))}
+                </div>
+            </div>
           </div>
         </section>
 
