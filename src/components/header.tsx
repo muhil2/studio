@@ -1,4 +1,3 @@
-
 'use client';
 
 import { useState, useEffect } from 'react';
@@ -40,8 +39,12 @@ export function Header() {
     >
       <div className="container mx-auto px-4">
         <div className="flex h-20 items-center justify-between">
-          <Link href="#home" className="text-2xl font-bold text-foreground">
-            Muhil Hadi
+          <Link href="#home" className="flex items-center gap-2 text-2xl font-bold text-foreground">
+            <div className="flex flex-col items-center justify-center p-1 rounded-md bg-primary text-primary-foreground leading-none">
+                <span className="text-[10px] font-semibold tracking-wider uppercase">Assignment</span>
+                <span className="text-base font-bold">YES</span>
+            </div>
+            <span>Muhil Hadi</span>
           </Link>
 
           <nav className="hidden md:flex items-center space-x-6">
