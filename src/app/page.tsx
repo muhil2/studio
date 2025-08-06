@@ -506,8 +506,8 @@ export default function Home() {
             <div className="mt-12 w-full overflow-hidden">
                 <div className="flex animate-marquee-full hover:[animation-play-state:paused]">
                     {[...testimonials, ...testimonials].map((testimonial, index) => (
-                      <div key={index} className="flex-shrink-0 w-[33.33%] p-2">
-                        <Card className="p-6 rounded-xl h-full">
+                      <div key={index} className="flex-shrink-0 w-full md:w-1/2 lg:w-1/3 p-2">
+                        <Card className="p-6 rounded-xl shadow-lg h-[280px] flex flex-col">
                             <CardContent className="p-0 flex flex-col h-full">
                             <div className="flex items-center mb-4">
                                 <Avatar className="h-14 w-14 mr-4 border-2 border-primary">
@@ -523,7 +523,7 @@ export default function Home() {
                                 <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
                                 ))}
                             </div>
-                            <blockquote className="text-foreground/80 italic text-sm flex-grow">
+                            <blockquote className="text-foreground/80 italic text-sm flex-grow overflow-y-auto">
                                 "{testimonial.quote}"
                             </blockquote>
                             </CardContent>
@@ -611,5 +611,3 @@ export default function Home() {
     </div>
   );
 }
-
-    
