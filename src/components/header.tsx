@@ -45,7 +45,7 @@ export function Header() {
                 <Rocket className="w-6 h-6 text-primary" />
               </div>
             </div>
-            <span>Muhil Hadi</span>
+            <span className="font-headline">Muhil Hadi</span>
           </Link>
 
           <nav className="hidden md:flex items-center space-x-6">
