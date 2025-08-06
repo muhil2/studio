@@ -365,7 +365,16 @@ export default function Home() {
         <section id="services" className="py-16 md:py-24 bg-black">
           <div className="container mx-auto px-4">
             <div className="flex justify-center mb-4">
-              <Star className="w-12 h-12 text-blue-500" />
+              <Star className="w-12 h-12 text-yellow-500" style={{ fill: 'url(#fire-gradient)' }} />
+              <svg width="0" height="0" style={{ position: 'absolute' }}>
+                <defs>
+                  <linearGradient id="fire-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                    <stop offset="0%" style={{ stopColor: '#ff4500', stopOpacity: 1 }} />
+                    <stop offset="50%" style={{ stopColor: '#ff8c00', stopOpacity: 1 }} />
+                    <stop offset="100%" style={{ stopColor: '#ffd700', stopOpacity: 1 }} />
+                  </linearGradient>
+                </defs>
+              </svg>
             </div>
             <h2 className="text-3xl md:text-4xl font-bold text-center font-headline text-white">
               My Services
