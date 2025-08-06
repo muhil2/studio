@@ -285,7 +285,7 @@ export default function Home() {
               </p>
               <div className="mt-12 mb-8">
                 <div className="relative w-60 h-60 md:w-80 md:h-80">
-                  <div className="relative w-full h-full rounded-full p-2 bg-gradient-to-r from-purple-400 via-pink-500 to-red-500">
+                  <div className="relative w-full h-full rounded-full p-2 bg-gradient-to-r from-yellow-400 via-orange-500 to-red-600">
                     <Image
                       src="https://i.imgur.com/QllfG6k.jpeg"
                       alt="Muhil Hadi"
