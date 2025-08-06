@@ -163,7 +163,7 @@ const services = [
     href: 'https://drive.google.com/drive/folders/1--jW9E08YAhy8jJwAftWY-eWnBJrjyWF',
   },
   {
-    title: 'Report Writing',
+    title: 'Report/Essay Writing',
     description: 'Expertly written reports on any subject.',
     icon: PenTool,
     href: 'https://drive.google.com/drive/folders/1-JgU7AEHgdo0xRjNCZqcu2Tb0bjR8IFl',
