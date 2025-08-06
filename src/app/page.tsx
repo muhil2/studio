@@ -53,6 +53,7 @@ import { Separator } from '@/components/ui/separator';
 import { Header } from '@/components/header';
 import { cn } from '@/lib/utils';
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@/components/ui/carousel';
+import Autoplay from "embla-carousel-autoplay"
 
 const heroStats = [
   { value: 790, label: 'Projects completed', suffix: '+' },
@@ -504,7 +505,7 @@ export default function Home() {
             <div className="mt-12 w-full overflow-hidden">
                 <div className="flex animate-marquee-full hover:[animation-play-state:paused]">
                     {[...testimonials, ...testimonials].map((testimonial, index) => (
-                      <div key={index} className="flex-shrink-0 w-full md:w-1/2 lg:w-1/3 p-2">
+                      <div key={index} className="flex-shrink-0 w-full md:w-1/2 lg:w-1/3 p-2" style={{ flexBasis: 'calc(100% / 3)'}}>
                         <Card className="p-6 shadow-lg rounded-xl h-full">
                             <CardContent className="p-0 flex flex-col h-full">
                             <div className="flex items-center mb-4">
