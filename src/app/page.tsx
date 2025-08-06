@@ -506,6 +506,9 @@ export default function Home() {
             </p>
             <Carousel
               plugins={[autoplay.current]}
+              opts={{
+                loop: true,
+              }}
               onMouseEnter={() => autoplay.current.stop()}
               onMouseLeave={() => autoplay.current.play()}
               className="w-full mt-12"
