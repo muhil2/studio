@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, Rocket } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
 
@@ -40,6 +40,7 @@ export function Header() {
       <div className="container mx-auto px-4">
         <div className="flex h-20 items-center justify-between">
           <Link href="#home" className="flex items-center gap-2 text-2xl font-bold text-foreground">
+            <Rocket className="w-6 h-6 text-primary" />
             <span>Muhil Hadi</span>
           </Link>
 
