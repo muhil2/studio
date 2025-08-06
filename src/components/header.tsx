@@ -40,8 +40,8 @@ export function Header() {
       <div className="container mx-auto px-4">
         <div className="flex h-20 items-center justify-between">
           <Link href="#home" className="flex items-center gap-2 text-2xl font-bold text-foreground">
-            <div className="p-1 rounded-full bg-gradient-to-r from-purple-400 via-pink-500 to-red-500">
-              <div className="bg-white rounded-full p-1">
+            <div className="p-0.5 rounded-full bg-gradient-to-r from-purple-400 via-pink-500 to-red-500">
+              <div className="bg-white rounded-full p-1.5">
                 <Rocket className="w-6 h-6 text-primary" />
               </div>
             </div>
