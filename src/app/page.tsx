@@ -174,7 +174,7 @@ const services = [
     title: 'Thesis & Research Papers',
     description: 'Comprehensive support for your thesis and research projects.',
     icon: BookOpen,
-    href: 'https://drive.google.com/drive/folders/1-13R5GwFeLGlZhCNAiE3SKGJ1UU0yaBW',
+    href: 'https://wa.me/p/7858189897623910/8801627145339',
   },
   {
     title: 'CSE Assignments (All Course)',
@@ -278,12 +278,12 @@ export default function Home() {
           <div className="container mx-auto px-4">
             <div className="flex flex-col items-center text-center">
               <p className="font-calibri text-3xl md:text-4xl font-bold mb-8 italic bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 text-transparent bg-clip-text">
-                “While You Progress in Life, I’ll Progress Your Assignments”
+                “Completing Your Toughest Assignments Within a Day”
               </p>
               <h1 className="font-headline text-6xl md:text-8xl font-extrabold text-foreground">
                 Muhil Hadi
               </h1>
-              <p className="mt-2 text-xl md:text-2xl font-semibold italic bg-gradient-to-r from-orange-500 via-red-500 to-yellow-500 text-transparent bg-clip-text">
+              <p className="font-headline mt-2 text-xl md:text-2xl font-semibold italic bg-gradient-to-r from-orange-500 via-red-500 to-yellow-500 text-transparent bg-clip-text">
                 Professional Assignment Writer
               </p>
               <div className="mt-12 mb-8">
@@ -313,26 +313,26 @@ export default function Home() {
               </div>
               <div className="flex flex-col sm:flex-row justify-center items-center gap-8">
                 <div className="flex flex-col items-center gap-2">
-                  <Button asChild size="lg" className="relative rounded-full bg-gradient-to-br from-blue-900 via-blue-700 to-blue-500 hover:from-blue-800 hover:to-blue-600 text-white font-bold transition-transform transform hover:scale-105 border-0 fire-gradient-border">
+                  <Button asChild size="lg" className="relative rounded-full bg-gradient-to-br from-blue-900 via-blue-700 to-blue-400 hover:from-blue-800 hover:to-blue-500 text-white font-bold transition-transform transform hover:scale-105 border-2 fire-gradient-border">
                     <Link href="https://wa.me/qr/S4BGHXIR6WOKN1" target="_blank">
                       Hire Me
                     </Link>
                   </Button>
                   <Link href="https://wa.me/qr/S4BGHXIR6WOKN1" target="_blank" aria-label="WhatsApp">
-                    <div className="w-10 h-10 bg-[#25D366] rounded-full flex items-center justify-center hover:opacity-80 transition-opacity">
-                      <WhatsappIcon className="w-6 h-6 text-white" />
+                    <div className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:opacity-80 transition-opacity">
+                      <WhatsappIcon className="w-6 h-6 text-green-400" />
                     </div>
                   </Link>
                 </div>
                 <div className="flex flex-col items-center gap-2">
-                  <Button asChild size="lg" className="relative rounded-full bg-gradient-to-br from-blue-900 via-blue-700 to-blue-500 hover:from-blue-800 hover:to-blue-600 text-white font-bold transition-transform transform hover:scale-105 border-0 fire-gradient-border">
+                  <Button asChild size="lg" className="relative rounded-full bg-gradient-to-br from-blue-900 via-blue-700 to-blue-400 hover:from-blue-800 hover:to-blue-500 text-white font-bold transition-transform transform hover:scale-105 border-2 fire-gradient-border">
                     <Link href="https://www.facebook.com/muhil.hadi.2024" target="_blank">
                       Hire Me
                     </Link>
                   </Button>
                   <Link href="https://www.facebook.com/muhil.hadi.2024" target="_blank" aria-label="Facebook">
-                    <div className="w-10 h-10 bg-[#1877F2] rounded-full flex items-center justify-center hover:opacity-80 transition-opacity">
-                      <Facebook className="w-6 h-6 text-white" />
+                    <div className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:opacity-80 transition-opacity">
+                      <Facebook className="w-6 h-6 text-blue-400" />
                     </div>
                   </Link>
                 </div>
@@ -611,3 +611,5 @@ export default function Home() {
     </div>
   );
 }
+
+    
