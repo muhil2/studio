@@ -371,7 +371,7 @@ export default function Home() {
               <h1 className="font-headline text-6xl md:text-8xl font-extrabold text-foreground">
                 Muhil Hadi
               </h1>
-              <p className="font-calibri mt-2 text-lg md:text-xl font-semibold italic bg-gradient-to-r from-orange-500 via-red-500 to-yellow-500 text-transparent bg-clip-text">
+              <p className="font-calibri mt-2 text-lg font-semibold italic bg-gradient-to-r from-orange-500 via-red-500 to-yellow-500 text-transparent bg-clip-text">
                 Professional Assignment Writer
               </p>
               <div className="mt-12 mb-8">
@@ -477,7 +477,8 @@ export default function Home() {
               {services.map((service) => (
                 <Link href={service.href} key={service.title} target={service.href.startsWith('http') ? '_blank' : '_self'} className="group">
                   <Card className={cn(
-                      "h-full text-center bg-gray-900 border-gray-800 text-white hover:shadow-xl hover:-translate-y-2 transition-all duration-300 flex flex-col"
+                      "h-full text-center bg-gray-900 border-gray-800 text-white hover:shadow-xl hover:-translate-y-2 transition-all duration-300 flex flex-col",
+                      service.title === "And Much More" && "fire-gradient-border bg-gray-900"
                     )}>
                     <CardHeader>
                       <div className="flex justify-center mb-4">
