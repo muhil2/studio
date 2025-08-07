@@ -371,7 +371,7 @@ export default function Home() {
               <h1 className="font-headline text-6xl md:text-8xl font-extrabold text-foreground">
                 Muhil Hadi
               </h1>
-              <p className="font-calibri mt-2 text-xl md:text-2xl font-semibold italic bg-gradient-to-r from-orange-500 via-red-500 to-yellow-500 text-transparent bg-clip-text">
+              <p className="font-calibri mt-2 text-lg md:text-xl font-semibold italic bg-gradient-to-r from-orange-500 via-red-500 to-yellow-500 text-transparent bg-clip-text">
                 Professional Assignment Writer
               </p>
               <div className="mt-12 mb-8">
