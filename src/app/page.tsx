@@ -313,7 +313,7 @@ export default function Home() {
               </div>
               <div className="flex flex-col sm:flex-row justify-center items-center gap-8">
                 <div className="flex flex-col items-center gap-2">
-                  <Button asChild size="lg" className="relative rounded-full bg-[#25D366] hover:bg-[#1EBE57] text-white font-bold transition-transform transform hover:scale-105 border-0 fire-gradient-border">
+                  <Button asChild size="lg" className="relative rounded-full bg-gradient-to-br from-blue-900 via-blue-700 to-blue-500 hover:from-blue-800 hover:to-blue-600 text-white font-bold transition-transform transform hover:scale-105 border-0 fire-gradient-border">
                     <Link href="https://wa.me/qr/S4BGHXIR6WOKN1" target="_blank">
                       Hire Me
                     </Link>
@@ -325,7 +325,7 @@ export default function Home() {
                   </Link>
                 </div>
                 <div className="flex flex-col items-center gap-2">
-                  <Button asChild size="lg" className="relative rounded-full bg-[#1877F2] hover:bg-[#166FE5] text-white font-bold transition-transform transform hover:scale-105 border-0 fire-gradient-border">
+                  <Button asChild size="lg" className="relative rounded-full bg-gradient-to-br from-blue-900 via-blue-700 to-blue-500 hover:from-blue-800 hover:to-blue-600 text-white font-bold transition-transform transform hover:scale-105 border-0 fire-gradient-border">
                     <Link href="https://www.facebook.com/muhil.hadi.2024" target="_blank">
                       Hire Me
                     </Link>
