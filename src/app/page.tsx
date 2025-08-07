@@ -1,4 +1,5 @@
 
+
 'use client';
 
 import { useEffect, useRef } from 'react';
@@ -412,7 +413,7 @@ export default function Home() {
                   </Link>
                 </div>
                 <div className="flex flex-col items-center gap-2">
-                  <Button asChild size="lg" className="bg-blue-600 hover:bg-blue-700 text-white font-bold transition-transform transform hover:scale-105">
+                  <Button asChild size="lg" className="bg-gradient-to-br from-blue-800 to-blue-900 hover:from-blue-700 hover:to-blue-800 text-white font-bold transition-transform transform hover:scale-105 shadow-lg hover:shadow-blue-500/50 border border-blue-400/50">
                     <Link href="https://www.facebook.com/muhil.hadi.2024" target="_blank">
                       Hire Me
                     </Link>
@@ -477,7 +478,7 @@ export default function Home() {
                 <Link href={service.href} key={service.title} target={service.href.startsWith('http') ? '_blank' : '_self'} className="group">
                   <Card className={cn(
                       "h-full text-center bg-gray-900 border-gray-800 text-white hover:shadow-xl hover:-translate-y-2 transition-all duration-300 flex flex-col",
-                      service.title === 'And Much More' ? '' : 'fire-gradient-border'
+                      service.title === 'And Much More' ? 'border-gray-800' : 'fire-gradient-border'
                     )}>
                     <CardHeader>
                       <div className="flex justify-center mb-4">
