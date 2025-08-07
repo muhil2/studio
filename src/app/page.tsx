@@ -406,7 +406,7 @@ export default function Home() {
                     </Link>
                   </Button>
                   <Link href="https://wa.me/qr/S4BGHXIR6WOKN1" target="_blank" aria-label="WhatsApp">
-                    <div className="w-10 h-10 bg-white rounded-full flex items-center justify-center hover:opacity-80 transition-opacity">
+                    <div className="w-10 h-10 bg-white rounded-full flex items-center justify-center hover:opacity-80 transition-opacity border-2 border-green-500">
                       <WhatsappIcon className="w-6 h-6 text-green-500" />
                     </div>
                   </Link>
@@ -418,7 +418,7 @@ export default function Home() {
                     </Link>
                   </Button>
                   <Link href="https://www.facebook.com/muhil.hadi.2024" target="_blank" aria-label="Facebook">
-                    <div className="w-10 h-10 bg-white rounded-full flex items-center justify-center hover:opacity-80 transition-opacity">
+                    <div className="w-10 h-10 bg-white rounded-full flex items-center justify-center hover:opacity-80 transition-opacity border-2 border-blue-600">
                       <Facebook className="w-6 h-6 text-blue-600" />
                     </div>
                   </Link>
