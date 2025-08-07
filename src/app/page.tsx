@@ -313,7 +313,7 @@ export default function Home() {
               </div>
               <div className="flex flex-col sm:flex-row justify-center items-center gap-8">
                 <div className="flex flex-col items-center gap-2">
-                  <Button asChild size="lg" className="bg-[#25D366] hover:bg-[#1EBE57] text-white font-bold transition-transform transform hover:scale-105 border-2 border-solid fire-gradient-border">
+                  <Button asChild size="lg" className="rounded-md bg-[#25D366] hover:bg-[#1EBE57] text-white font-bold transition-transform transform hover:scale-105 border-2 border-solid fire-gradient-border">
                     <Link href="https://wa.me/qr/S4BGHXIR6WOKN1" target="_blank">
                       Hire Me
                     </Link>
@@ -325,7 +325,7 @@ export default function Home() {
                   </Link>
                 </div>
                 <div className="flex flex-col items-center gap-2">
-                  <Button asChild size="lg" className="bg-[#1877F2] hover:bg-[#166FE5] text-white font-bold transition-transform transform hover:scale-105 border-2 border-solid fire-gradient-border">
+                  <Button asChild size="lg" className="rounded-md bg-[#1877F2] hover:bg-[#166FE5] text-white font-bold transition-transform transform hover:scale-105 border-2 border-solid fire-gradient-border">
                     <Link href="https://www.facebook.com/muhil.hadi.2024" target="_blank">
                       Hire Me
                     </Link>
@@ -504,10 +504,10 @@ export default function Home() {
               Success Stories from Students Using Our Service
             </p>
             <div className="mt-12 w-full overflow-hidden">
-                <div className="flex animate-marquee-full hover:[animation-play-state:paused] w-max">
+                <div className="flex animate-marquee hover:[animation-play-state:paused] w-max">
                     {[...testimonials, ...testimonials].map((testimonial, index) => (
-                      <div key={index} className="flex-shrink-0 w-full md:w-1/2 lg:w-[33.33%] p-2" style={{ width: 'calc(100% / 3)' }}>
-                        <Card className="p-6 rounded-xl shadow-lg h-[250px] flex flex-col w-[450px]">
+                      <div key={index} className="flex-shrink-0 w-full md:w-1/2 lg:w-1/3 p-2">
+                        <Card className="p-6 rounded-xl shadow-lg h-[220px] flex flex-col w-[480px]">
                             <CardContent className="p-0 flex flex-col h-full">
                             <div className="flex items-center mb-4">
                                 <Avatar className="h-14 w-14 mr-4 border-2 border-primary">
@@ -611,3 +611,5 @@ export default function Home() {
     </div>
   );
 }
+
+    
