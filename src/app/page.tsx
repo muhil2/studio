@@ -401,28 +401,18 @@ export default function Home() {
               </div>
               <div className="flex flex-col sm:flex-row justify-center items-center gap-8">
                 <div className="flex flex-col items-center gap-2">
-                  <Button asChild size="lg" className="bg-gradient-to-br from-green-500 to-green-700 hover:from-green-600 hover:to-green-800 text-white font-bold transition-transform transform hover:scale-105 shadow-lg hover:shadow-green-500/50 border border-green-400/50">
+                  <Button asChild size="lg" className="bg-gradient-to-br from-green-400 to-green-600 hover:from-green-500 hover:to-green-700 text-white font-bold transition-transform transform hover:scale-105 shadow-lg hover:shadow-green-500/50">
                     <Link href="https://wa.me/qr/S4BGHXIR6WOKN1" target="_blank">
                       Hire Me
                     </Link>
                   </Button>
-                  <Link href="https://wa.me/qr/S4BGHXIR6WOKN1" target="_blank" aria-label="WhatsApp">
-                    <div className="w-10 h-10 bg-white rounded-full flex items-center justify-center hover:opacity-80 transition-opacity border-2 border-green-500">
-                      <WhatsappIcon className="w-6 h-6 text-green-500" />
-                    </div>
-                  </Link>
                 </div>
                 <div className="flex flex-col items-center gap-2">
-                  <Button asChild size="lg" className="bg-gradient-to-br from-blue-800 to-blue-900 hover:from-blue-700 hover:to-blue-800 text-white font-bold transition-transform transform hover:scale-105 shadow-lg hover:shadow-blue-500/50 border border-blue-400/50">
+                  <Button asChild size="lg" className="bg-gradient-to-br from-blue-700 to-blue-900 hover:from-blue-600 hover:to-blue-800 text-white font-bold transition-transform transform hover:scale-105 shadow-lg hover:shadow-blue-500/50">
                     <Link href="https://www.facebook.com/muhil.hadi.2024" target="_blank">
                       Hire Me
                     </Link>
                   </Button>
-                  <Link href="https://www.facebook.com/muhil.hadi.2024" target="_blank" aria-label="Facebook">
-                    <div className="w-10 h-10 bg-white rounded-full flex items-center justify-center hover:opacity-80 transition-opacity border-2 border-blue-600">
-                      <Facebook className="w-6 h-6 text-blue-600" />
-                    </div>
-                  </Link>
                 </div>
               </div>
             </div>
