@@ -503,30 +503,52 @@ export default function Home() {
             <p className="mt-4 text-center text-muted-foreground italic max-w-2xl mx-auto">
               Success Stories from Students Using Our Service
             </p>
-            <div className="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                {testimonials.map((testimonial, index) => (
-                  <Card key={index} className="p-6 rounded-xl shadow-lg flex flex-col">
-                      <CardContent className="p-0 flex flex-col h-full">
-                      <div className="flex items-center mb-4">
-                          <Avatar className="h-14 w-14 mr-4 border-2 border-primary">
-                          <AvatarFallback className="bg-primary/20 text-primary font-bold text-xl">{testimonial.initials}</AvatarFallback>
-                          </Avatar>
-                          <div>
-                          <p className="font-bold text-lg text-foreground">{testimonial.name}</p>
-                          <p className="text-sm text-muted-foreground">{testimonial.university}</p>
-                          </div>
+            <div className="mt-12">
+              <Carousel
+                plugins={[
+                  Autoplay({
+                    delay: 2000,
+                    stopOnInteraction: true,
+                  }),
+                ]}
+                opts={{
+                  align: "start",
+                  loop: true,
+                }}
+                className="w-full"
+              >
+                <CarouselContent>
+                  {testimonials.map((testimonial, index) => (
+                    <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
+                      <div className="p-1 h-full">
+                        <Card className="p-6 rounded-xl shadow-lg flex flex-col h-full">
+                            <CardContent className="p-0 flex flex-col h-full">
+                            <div className="flex items-center mb-4">
+                                <Avatar className="h-14 w-14 mr-4 border-2 border-primary">
+                                <AvatarFallback className="bg-primary/20 text-primary font-bold text-xl">{testimonial.initials}</AvatarFallback>
+                                </Avatar>
+                                <div>
+                                <p className="font-bold text-lg text-foreground">{testimonial.name}</p>
+                                <p className="text-sm text-muted-foreground">{testimonial.university}</p>
+                                </div>
+                            </div>
+                            <div className="flex items-center mb-4">
+                                {[...Array(5)].map((_, i) => (
+                                <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
+                                ))}
+                            </div>
+                            <blockquote className="text-foreground/80 italic text-sm flex-grow">
+                                "{testimonial.quote}"
+                            </blockquote>
+                            </CardContent>
+                        </Card>
                       </div>
-                      <div className="flex items-center mb-4">
-                          {[...Array(5)].map((_, i) => (
-                          <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
-                          ))}
-                      </div>
-                      <blockquote className="text-foreground/80 italic text-sm flex-grow">
-                          "{testimonial.quote}"
-                      </blockquote>
-                      </CardContent>
-                  </Card>
-                ))}
+                    </CarouselItem>
+                  ))}
+                </CarouselContent>
+                <CarouselPrevious />
+                <CarouselNext />
+              </Carousel>
             </div>
           </div>
         </section>
