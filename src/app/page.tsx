@@ -259,6 +259,87 @@ const socialLinks = [
   { name: 'email', icon: Mail, href: 'mailto:assignmentyess@gmail.com', 'aria-label': 'Gmail', color: 'text-red-600', glowColor: 'var(--glow-red)' },
 ];
 
+const TestimonialsScroller = ({
+    testimonials,
+    speed = 'slow',
+  }: {
+    testimonials: typeof import('./page').testimonials;
+    speed?: 'fast' | 'normal' | 'slow';
+  }) => {
+    const scrollerRef = useRef<HTMLUListElement>(null);
+  
+    useEffect(() => {
+      const scroller = scrollerRef.current;
+      if (scroller) {
+        const scrollerInner = scroller.querySelector('.scroller__inner');
+        if (scrollerInner) {
+          const scrollerContent = Array.from(scrollerInner.children);
+          scrollerContent.forEach(item => {
+            const duplicatedItem = item.cloneNode(true) as HTMLElement;
+            duplicatedItem.setAttribute('aria-hidden', 'true');
+            scrollerInner.appendChild(duplicatedItem);
+          });
+        }
+      }
+    }, []);
+  
+    return (
+      <div
+        ref={scrollerRef as React.RefObject<HTMLDivElement>}
+        className="scroller"
+        data-speed={speed}
+      >
+        <ul className="tag-list scroller__inner">
+          {testimonials.map((testimonial, index) => (
+            <li key={index} className="flex-shrink-0">
+                <Card className="p-6 rounded-xl shadow-lg flex flex-col h-full w-[350px] md:w-[450px]">
+                    <CardContent className="p-0 flex flex-col h-full">
+                    <div className="flex items-center mb-4">
+                        <Avatar className="h-14 w-14 mr-4 border-2 border-primary">
+                        <AvatarFallback className="bg-primary/20 text-primary font-bold text-xl">{testimonial.initials}</AvatarFallback>
+                        </Avatar>
+                        <div>
+                        <p className="font-bold text-lg text-foreground">{testimonial.name}</p>
+                        <p className="text-sm text-muted-foreground">{testimonial.university}</p>
+                        </div>
+                    </div>
+                    <div className="flex items-center mb-4">
+                        {[...Array(5)].map((_, i) => (
+                        <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
+                        ))}
+                    </div>
+                    <blockquote className="text-foreground/80 italic text-sm flex-grow">
+                        "{testimonial.quote}"
+                    </blockquote>
+                    </CardContent>
+                </Card>
+            </li>
+          ))}
+        </ul>
+      </div>
+    );
+  };
+  
+  const TestimonialsSection = () => (
+    <section id="testimonials" className="py-16 md:py-24 bg-white">
+      <div className="container mx-auto px-4">
+        <div className="flex justify-center mb-4">
+          <Smile className="w-24 h-24 text-primary" />
+        </div>
+        <h2 className="text-3xl md:text-4xl font-bold text-center font-headline text-foreground">
+          What Our Clients Say
+        </h2>
+        <p className="mt-4 text-center text-muted-foreground italic max-w-2xl mx-auto">
+          Success Stories from Students Using Our Service
+        </p>
+      </div>
+      <div className="mt-12">
+        <TestimonialsScroller testimonials={testimonials} speed="fast" />
+      </div>
+    </section>
+  );
+
+
 export default function Home() {
 
   useEffect(() => {
@@ -319,7 +400,7 @@ export default function Home() {
                     </Link>
                   </Button>
                   <Link href="https://wa.me/qr/S4BGHXIR6WOKN1" target="_blank" aria-label="WhatsApp">
-                    <div className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:opacity-80 transition-opacity">
+                    <div className="w-10 h-10 bg-white rounded-full flex items-center justify-center hover:opacity-80 transition-opacity">
                       <WhatsappIcon className="w-6 h-6 text-green-500" />
                     </div>
                   </Link>
@@ -331,7 +412,7 @@ export default function Home() {
                     </Link>
                   </Button>
                   <Link href="https://www.facebook.com/muhil.hadi.2024" target="_blank" aria-label="Facebook">
-                    <div className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:opacity-80 transition-opacity">
+                    <div className="w-10 h-10 bg-white rounded-full flex items-center justify-center hover:opacity-80 transition-opacity">
                       <Facebook className="w-6 h-6 text-blue-600" />
                     </div>
                   </Link>
@@ -492,66 +573,7 @@ export default function Home() {
             </div>
         </section>
 
-        <section id="testimonials" className="py-16 md:py-24 bg-white">
-          <div className="container mx-auto px-4">
-            <div className="flex justify-center mb-4">
-                <Smile className="w-24 h-24 text-primary" />
-            </div>
-            <h2 className="text-3xl md:text-4xl font-bold text-center font-headline text-foreground">
-              What Our Clients Say
-            </h2>
-            <p className="mt-4 text-center text-muted-foreground italic max-w-2xl mx-auto">
-              Success Stories from Students Using Our Service
-            </p>
-            <div className="mt-12">
-              <Carousel
-                plugins={[
-                  Autoplay({
-                    delay: 2000,
-                    stopOnInteraction: true,
-                  }),
-                ]}
-                opts={{
-                  align: "start",
-                  loop: true,
-                }}
-                className="w-full"
-              >
-                <CarouselContent>
-                  {testimonials.map((testimonial, index) => (
-                    <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
-                      <div className="p-1 h-full">
-                        <Card className="p-6 rounded-xl shadow-lg flex flex-col h-full">
-                            <CardContent className="p-0 flex flex-col h-full">
-                            <div className="flex items-center mb-4">
-                                <Avatar className="h-14 w-14 mr-4 border-2 border-primary">
-                                <AvatarFallback className="bg-primary/20 text-primary font-bold text-xl">{testimonial.initials}</AvatarFallback>
-                                </Avatar>
-                                <div>
-                                <p className="font-bold text-lg text-foreground">{testimonial.name}</p>
-                                <p className="text-sm text-muted-foreground">{testimonial.university}</p>
-                                </div>
-                            </div>
-                            <div className="flex items-center mb-4">
-                                {[...Array(5)].map((_, i) => (
-                                <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
-                                ))}
-                            </div>
-                            <blockquote className="text-foreground/80 italic text-sm flex-grow">
-                                "{testimonial.quote}"
-                            </blockquote>
-                            </CardContent>
-                        </Card>
-                      </div>
-                    </CarouselItem>
-                  ))}
-                </CarouselContent>
-                <CarouselPrevious />
-                <CarouselNext />
-              </Carousel>
-            </div>
-          </div>
-        </section>
+        <TestimonialsSection />
 
         <section id="contact" className="py-16 md:py-24 bg-black">
           <div className="container mx-auto px-4">

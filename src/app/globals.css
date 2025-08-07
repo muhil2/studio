@@ -91,6 +91,30 @@
   body {
     @apply bg-background text-foreground;
   }
+  .scroller {
+    @apply max-w-full overflow-hidden;
+    mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
+  }
+  .scroller__inner {
+    @apply flex gap-4 p-4;
+    animation: scroll 20s linear infinite;
+  }
+  .scroller[data-speed="fast"] .scroller__inner {
+    animation-duration: 10s;
+  }
+  .scroller[data-speed="slow"] .scroller__inner {
+    animation-duration: 30s;
+  }
+
+  @keyframes scroll {
+    to {
+      transform: translate(calc(-50% - 0.5rem));
+    }
+  }
+
+  .tag-list {
+    @apply m-0 p-0 list-none flex flex-nowrap;
+  }
 }
 
 @layer utilities {
