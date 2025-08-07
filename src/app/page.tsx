@@ -332,7 +332,7 @@ export default function Home() {
                   </Button>
                   <Link href="https://www.facebook.com/muhil.hadi.2024" target="_blank" aria-label="Facebook">
                     <div className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:opacity-80 transition-opacity">
-                      <Facebook className="w-6 h-6 text-blue-500" />
+                      <Facebook className="w-6 h-6 text-blue-600" />
                     </div>
                   </Link>
                 </div>
@@ -503,34 +503,30 @@ export default function Home() {
             <p className="mt-4 text-center text-muted-foreground italic max-w-2xl mx-auto">
               Success Stories from Students Using Our Service
             </p>
-            <div className="mt-12 w-full overflow-hidden">
-                <div className="flex animate-marquee-full hover:[animation-play-state:paused] w-max">
-                    {[...testimonials, ...testimonials].map((testimonial, index) => (
-                      <div key={index} className="flex-shrink-0 w-full md:w-1/2 lg:w-1/3 p-2">
-                        <Card className="p-6 rounded-xl shadow-lg h-[220px] flex flex-col w-[520px]">
-                            <CardContent className="p-0 flex flex-col h-full">
-                            <div className="flex items-center mb-4">
-                                <Avatar className="h-14 w-14 mr-4 border-2 border-primary">
-                                <AvatarFallback className="bg-primary/20 text-primary font-bold text-xl">{testimonial.initials}</AvatarFallback>
-                                </Avatar>
-                                <div>
-                                <p className="font-bold text-lg text-foreground">{testimonial.name}</p>
-                                <p className="text-sm text-muted-foreground">{testimonial.university}</p>
-                                </div>
-                            </div>
-                            <div className="flex items-center mb-4">
-                                {[...Array(5)].map((_, i) => (
-                                <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
-                                ))}
-                            </div>
-                            <blockquote className="text-foreground/80 italic text-sm flex-grow overflow-y-auto">
-                                "{testimonial.quote}"
-                            </blockquote>
-                            </CardContent>
-                        </Card>
+            <div className="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                {testimonials.map((testimonial, index) => (
+                  <Card key={index} className="p-6 rounded-xl shadow-lg flex flex-col">
+                      <CardContent className="p-0 flex flex-col h-full">
+                      <div className="flex items-center mb-4">
+                          <Avatar className="h-14 w-14 mr-4 border-2 border-primary">
+                          <AvatarFallback className="bg-primary/20 text-primary font-bold text-xl">{testimonial.initials}</AvatarFallback>
+                          </Avatar>
+                          <div>
+                          <p className="font-bold text-lg text-foreground">{testimonial.name}</p>
+                          <p className="text-sm text-muted-foreground">{testimonial.university}</p>
+                          </div>
                       </div>
-                    ))}
-                </div>
+                      <div className="flex items-center mb-4">
+                          {[...Array(5)].map((_, i) => (
+                          <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
+                          ))}
+                      </div>
+                      <blockquote className="text-foreground/80 italic text-sm flex-grow">
+                          "{testimonial.quote}"
+                      </blockquote>
+                      </CardContent>
+                  </Card>
+                ))}
             </div>
           </div>
         </section>
@@ -611,5 +607,3 @@ export default function Home() {
     </div>
   );
 }
-
-    
