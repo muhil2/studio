@@ -283,7 +283,7 @@ export default function Home() {
               <h1 className="font-headline text-6xl md:text-8xl font-extrabold text-foreground">
                 Muhil Hadi
               </h1>
-              <p className="mt-2 text-xl md:text-2xl text-muted-foreground font-semibold italic">
+              <p className="mt-2 text-xl md:text-2xl font-semibold italic bg-gradient-to-r from-orange-500 via-red-500 to-yellow-500 text-transparent bg-clip-text">
                 Professional Assignment Writer
               </p>
               <div className="mt-12 mb-8">
@@ -504,10 +504,10 @@ export default function Home() {
               Success Stories from Students Using Our Service
             </p>
             <div className="mt-12 w-full overflow-hidden">
-                <div className="flex animate-marquee-full hover:[animation-play-state:paused]">
+                <div className="flex animate-marquee hover:[animation-play-state:paused] w-max">
                     {[...testimonials, ...testimonials].map((testimonial, index) => (
-                      <div key={index} className="flex-shrink-0 w-full md:w-1/2 lg:w-1/3 p-2">
-                        <Card className="p-6 rounded-xl shadow-lg h-[280px] flex flex-col">
+                      <div key={index} className="flex-shrink-0 w-full md:w-1/2 lg:w-[33.33%] p-2" style={{ width: 'calc(100% / 3)' }}>
+                        <Card className="p-6 rounded-xl shadow-lg h-[250px] flex flex-col w-[450px]">
                             <CardContent className="p-0 flex flex-col h-full">
                             <div className="flex items-center mb-4">
                                 <Avatar className="h-14 w-14 mr-4 border-2 border-primary">
