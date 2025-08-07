@@ -103,6 +103,8 @@
   }
 
   .fire-gradient-border {
-    border-image: linear-gradient(to right, #ff4500, #ff8c00, #ffd700) 1;
+    border-style: solid;
+    border-image-slice: 1;
+    border-image-source: linear-gradient(to right, #ff4500, #ff8c00, #ffd700);
   }
 }
