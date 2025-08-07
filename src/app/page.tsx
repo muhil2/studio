@@ -266,26 +266,32 @@ const TestimonialsScroller = ({
     testimonials: typeof import('./page').testimonials;
     speed?: 'fast' | 'normal' | 'slow';
   }) => {
-    const scrollerRef = useRef<HTMLUListElement>(null);
+    const scrollerRef = useRef<HTMLDivElement>(null);
   
     useEffect(() => {
       const scroller = scrollerRef.current;
-      if (scroller) {
-        const scrollerInner = scroller.querySelector('.scroller__inner');
-        if (scrollerInner) {
-          const scrollerContent = Array.from(scrollerInner.children);
-          scrollerContent.forEach(item => {
-            const duplicatedItem = item.cloneNode(true) as HTMLElement;
-            duplicatedItem.setAttribute('aria-hidden', 'true');
-            scrollerInner.appendChild(duplicatedItem);
-          });
+  
+      if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+        if(scroller) {
+            scroller.setAttribute("data-animated", "true");
+
+            const scrollerInner = scroller.querySelector('.scroller__inner');
+            if(scrollerInner) {
+                const scrollerContent = Array.from(scrollerInner.children);
+
+                scrollerContent.forEach(item => {
+                    const duplicatedItem = item.cloneNode(true) as HTMLElement;
+                    duplicatedItem.setAttribute('aria-hidden', 'true');
+                    scrollerInner.appendChild(duplicatedItem);
+                });
+            }
         }
       }
     }, []);
   
     return (
       <div
-        ref={scrollerRef as React.RefObject<HTMLDivElement>}
+        ref={scrollerRef}
         className="scroller"
         data-speed={speed}
       >
@@ -470,8 +476,7 @@ export default function Home() {
               {services.map((service) => (
                 <Link href={service.href} key={service.title} target={service.href.startsWith('http') ? '_blank' : '_self'} className="group">
                   <Card className={cn(
-                      "h-full text-center bg-gray-900 border-gray-800 text-white hover:shadow-xl hover:-translate-y-2 transition-all duration-300 flex flex-col",
-                      service.title === 'And Much More' && ""
+                      "h-full text-center bg-gray-900 border-gray-800 text-white hover:shadow-xl hover:-translate-y-2 transition-all duration-300 flex flex-col"
                     )}>
                     <CardHeader>
                       <div className="flex justify-center mb-4">
