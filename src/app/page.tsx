@@ -313,26 +313,26 @@ export default function Home() {
               </div>
               <div className="flex flex-col sm:flex-row justify-center items-center gap-8">
                 <div className="flex flex-col items-center gap-2">
-                  <Button asChild size="lg" className="relative rounded-full bg-gradient-to-br from-blue-900 via-blue-700 to-blue-400 hover:from-blue-800 hover:to-blue-500 text-white font-bold transition-transform transform hover:scale-105 border-2 fire-gradient-border">
+                  <Button asChild size="lg" className="bg-green-500 hover:bg-green-600 text-white font-bold transition-transform transform hover:scale-105">
                     <Link href="https://wa.me/qr/S4BGHXIR6WOKN1" target="_blank">
                       Hire Me
                     </Link>
                   </Button>
                   <Link href="https://wa.me/qr/S4BGHXIR6WOKN1" target="_blank" aria-label="WhatsApp">
                     <div className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:opacity-80 transition-opacity">
-                      <WhatsappIcon className="w-6 h-6 text-green-400" />
+                      <WhatsappIcon className="w-6 h-6 text-green-500" />
                     </div>
                   </Link>
                 </div>
                 <div className="flex flex-col items-center gap-2">
-                  <Button asChild size="lg" className="relative rounded-full bg-gradient-to-br from-blue-900 via-blue-700 to-blue-400 hover:from-blue-800 hover:to-blue-500 text-white font-bold transition-transform transform hover:scale-105 border-2 fire-gradient-border">
+                  <Button asChild size="lg" className="bg-blue-600 hover:bg-blue-700 text-white font-bold transition-transform transform hover:scale-105">
                     <Link href="https://www.facebook.com/muhil.hadi.2024" target="_blank">
                       Hire Me
                     </Link>
                   </Button>
                   <Link href="https://www.facebook.com/muhil.hadi.2024" target="_blank" aria-label="Facebook">
                     <div className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:opacity-80 transition-opacity">
-                      <Facebook className="w-6 h-6 text-blue-400" />
+                      <Facebook className="w-6 h-6 text-blue-500" />
                     </div>
                   </Link>
                 </div>
