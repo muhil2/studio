@@ -190,7 +190,7 @@ const services = [
     href: 'https://drive.google.com/drive/folders/1-L499PhKn-JwUolD4zSa0kHa762UA_3P',
   },
   {
-    title: 'MS Office',
+    title: 'MS Excel',
     description: 'Proficient handling of all Microsoft Office suite applications.',
     icon: AppWindow,
     href: 'https://drive.google.com/drive/folders/1-ILsW38aCeLnTf6UL1jl1rIHZbqfkqqA',
@@ -353,7 +353,7 @@ export default function Home() {
               <h1 className="font-headline text-6xl md:text-8xl font-extrabold text-foreground">
                 Muhil Hadi
               </h1>
-              <p className="font-calibri mt-2 text-2xl font-semibold italic bg-gradient-to-r from-orange-500 via-red-500 to-yellow-500 text-transparent bg-clip-text">
+              <p className="font-calibri mt-2 text-xl font-semibold italic bg-gradient-to-r from-orange-500 via-red-500 to-yellow-500 text-transparent bg-clip-text">
                 Professional Assignment Writer
               </p>
               <div className="mt-12 mb-8">
