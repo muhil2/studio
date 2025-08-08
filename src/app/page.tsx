@@ -215,19 +215,19 @@ const services = [
     title: 'Software Development',
     description: 'Custom software solutions to meet your needs.',
     icon: Code,
-    href: '#contact',
+    href: 'https://drive.google.com/drive/folders/11s7_lpLTVX6j4hj6z_ATzJlMwqQrDn0F?usp=drive_link',
   },
   {
     title: 'Web Design',
     description: 'Modern and responsive web design services.',
     icon: Brush,
-    href: '#contact',
+    href: 'https://drive.google.com/drive/folders/11s7_lpLTVX6j4hj6z_ATzJlMwqQrDn0F?usp=drive_link',
   },
   {
     title: 'Power BI',
     description: 'Interactive data visualizations and business intelligence.',
     icon: AreaChart,
-    href: '#contact',
+    href: 'https://drive.google.com/drive/folders/11s7_lpLTVX6j4hj6z_ATzJlMwqQrDn0F?usp=drive_link',
   },
   {
     title: 'And Much More',
