@@ -202,24 +202,6 @@ const services = [
     href: 'https://drive.google.com/drive/folders/11NDnkHoB1F1DeYKv0yL07-tY820K9gP-',
   },
   {
-    title: 'Software Development',
-    description: 'Custom software solutions and coding assignments.',
-    icon: Code,
-    href: 'https://drive.google.com/drive/folders/1-20QHR29HnoXSwRIn6nXc5KDjue89L5U',
-  },
-  {
-    title: 'Web Design',
-    description: 'Creative and functional web design services.',
-    icon: Globe,
-    href: 'https://drive.google.com/drive/folders/1-28JZn-zjuFbL8lzaT1vaIfLHkjZFkCq',
-  },
-  {
-    title: 'Power Bi',
-    description: 'Data visualization and business intelligence dashboards.',
-    icon: BarChart,
-    href: 'https://drive.google.com/drive/folders/11CHL1C_ldaNMCyzIwi6hl5zo7cyle8Mf',
-  },
-  {
     title: 'And Much More',
     description: "Don't see what you need? Contact me for a custom request.",
     icon: PlusCircle,
