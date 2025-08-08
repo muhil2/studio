@@ -44,6 +44,7 @@ import {
   Network,
   BarChart,
   PlusCircle,
+  Server,
 } from 'lucide-react';
 import { AnimatedCounter } from '@/components/animated-counter';
 import { ContactForm } from '@/components/contact-form';
@@ -201,6 +202,12 @@ const services = [
     description: 'Reliable solutions for networking assignments and projects.',
     icon: Network,
     href: 'https://drive.google.com/drive/folders/11NDnkHoB1F1DeYKv0yL07-tY820K9gP-',
+  },
+  {
+    title: 'Ethical Hacking',
+    description: 'Expert solutions for ethical hacking projects and assignments.',
+    icon: Server,
+    href: 'https://drive.google.com/drive/folders/1-a_B_6Q9f6Z-5f7xY9Z-8Jq7p_l6qC_H',
   },
   {
     title: 'And Much More',
@@ -446,7 +453,7 @@ export default function Home() {
             <p className="mt-4 text-center text-gray-400 max-w-2xl mx-auto">
               Offering a range of professional services to help you succeed academically and professionally.
             </p>
-            <div className="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {services.map((service) => (
                 <Link href={service.href} key={service.title} target={service.href.startsWith('http') ? '_blank' : '_self'} className="group">
                   <Card className={cn(
