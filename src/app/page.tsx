@@ -45,6 +45,8 @@ import {
   BarChart,
   PlusCircle,
   Server,
+  Brush,
+  AreaChart,
 } from 'lucide-react';
 import { AnimatedCounter } from '@/components/animated-counter';
 import { ContactForm } from '@/components/contact-form';
@@ -208,6 +210,24 @@ const services = [
     description: 'Expert solutions for ethical hacking projects and assignments.',
     icon: Server,
     href: 'https://drive.google.com/drive/folders/15tEfBeGtIALTN5J2zi3giclxtKFKtJJB?usp=sharing',
+  },
+  {
+    title: 'Software Development',
+    description: 'Custom software solutions to meet your needs.',
+    icon: Code,
+    href: '#contact',
+  },
+  {
+    title: 'Web Design',
+    description: 'Modern and responsive web design services.',
+    icon: Brush,
+    href: '#contact',
+  },
+  {
+    title: 'Power BI',
+    description: 'Interactive data visualizations and business intelligence.',
+    icon: AreaChart,
+    href: '#contact',
   },
   {
     title: 'And Much More',
